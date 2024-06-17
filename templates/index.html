@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function updateProgress() {
+            fetch('/progress')
+                .then(response => response.json())
+                .then(data => {
+                    const progress = document.getElementById('progress-bar');
+                    const progressText = document.getElementById('progress-text');
+                    const percentage = (data.processed_posts / data.max_posts) * 100;
+                    progress.style.width = percentage + '%';
+
+                    if (data.processed_posts === 0) {
+                        progressText.innerText = 'Setting up';
+                    } else {
+                        progressText.innerText = data.processed_posts + ' / ' + data.max_posts + ' posts processed';
+                    }
+                });
+        }
+        setInterval(updateProgress, 1000);
+
+        function startScraping() {
+            const subreddit = document.getElementById('subreddit').value;
+            const maxPosts = document.getElementById('max_posts').value;
+
+            const progressText = document.getElementById('progress-text');
+            progressText.innerText = 'Setting up';
+
+            fetch('/start_scraping', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ subreddit: subreddit, max_posts: maxPosts }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Reddit Posts Extracter</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>Enter Subreddit Details</h1>
+            <form id="scraping-form" onsubmit="startScraping(); return false;">
+                <label for="subreddit">Subreddit:</label>
+                <input type="text" id="subreddit" name="subreddit" required>
+                <label for="max_posts">Max Posts:</label>
+                <input type="number" id="max_posts" name="max_posts" required>
+                <button type="submit">Start Extracting</button>
+            </form>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div id="progress-text" class="progress-text">0 / 0 posts processed</div>
+        </div>
+    </section>
+
+</body>
+</html>
