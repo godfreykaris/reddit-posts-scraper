@@ -1,5 +1,5 @@
 import threading
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from modules.config import Config
 from modules.driver_utils import DriverUtils
 from modules.scraper import SubredditScraper
@@ -8,17 +8,26 @@ import os
 
 app = Flask(__name__)
 
-# Initialize drivers and scraper globally
-available_cpus = os.cpu_count()
-if available_cpus is None or available_cpus < 1:
-    available_cpus = 1
+# Global variables for the driver and scraper
+shared.driver = None
+shared.scraper = None
 
-if shared.threads_number > available_cpus:
-    if available_cpus > 1:
-        shared.threads_number = available_cpus - 1
-    else:
-        shared.threads_number = 1
+# Initialize the global driver
+def initialize_driver():
+    if shared.driver is None:
+        shared.driver = DriverUtils.init_driver()
 
+# Initialize driver when the app starts
+initialize_driver()
+
+# Route to quit the application and close the driver
+@app.route('/quit')
+def quit_app():
+    global shared
+    if shared.driver:
+        shared.driver.quit()
+        shared.driver = None
+    return redirect(url_for('index'))
 
 @app.route('/')
 def index():
@@ -35,22 +44,26 @@ def start_scraping():
     shared.scroll_position = 0
     shared.threads = []
 
-    shared.drivers = [DriverUtils.init_driver() for _ in range(shared.threads_number)]
-    scraper = SubredditScraper(shared.drivers, shared.threads_number)
+    shared.processing_started = False
+    shared.processing_completed = False
 
+    # Reinitialize the driver if it's not initialized or has been closed
+    initialize_driver()
+
+    shared.scraper = SubredditScraper(shared.driver)
     Config.setup_json_file()
-    scraper.update_scraper(subreddit, max_posts)
-    scraper.scrape_subreddit()
+    shared.scraper.update_scraper(subreddit, max_posts)
+    shared.scraper.scrape_subreddit()
 
-    # scraper_thread = threading.Thread(target=scraper.scrape_subreddit)
-    # scraper_thread.start()
     return jsonify({'message': 'Scraping started'}), 200
 
 @app.route('/progress')
 def progress():
     return jsonify({
         'processed_posts': shared.processed_posts_count,
-        'max_posts': shared.max_post_number
+        'max_posts': shared.max_post_number,
+        'processing_done': shared.processing_completed,
+        'processing_started': shared.processing_started
     })
 
 @app.route('/reset', methods=['POST'])
@@ -58,7 +71,6 @@ def reset():
     shared.processed_posts_count = 0
     shared.max_post_number = 0
     return jsonify({'message': 'Reset complete'}), 200
-
 
 if __name__ == "__main__":
     app.run(debug=False)

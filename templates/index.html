@@ -6,6 +6,8 @@
     <title>Reddit Scraper</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <script>
+        let progressInterval;
+
         function updateProgress() {
             fetch('/progress')
                 .then(response => response.json())
@@ -17,14 +19,21 @@
 
                     if (data.processed_posts === 0) {
                         progressText.innerText = 'Setting up';
-                    } else {
+                    } 
+                    else 
+                    {
                         progressText.innerText = data.processed_posts + ' / ' + data.max_posts + ' posts processed';
+                    }
+
+                    if (data.processing_done == true) {
+                        clearInterval(progressInterval); // Clear interval when processing is completed
                     }
                 });
         }
-        setInterval(updateProgress, 1000);
-
+        
         function startScraping() {
+            progressInterval = setInterval(updateProgress, 1000);
+
             const subreddit = document.getElementById('subreddit').value;
             const maxPosts = document.getElementById('max_posts').value;
 
@@ -42,6 +51,15 @@
             .then(data => {
                 console.log(data.message);
             });
+        }
+        
+        function quitApp() {
+            fetch('/quit')
+                .then(response => {
+                    console.log("Application quit successfully.");
+                    // Optionally handle the response or update UI
+                })
+                .catch(error => console.error('Error quitting application:', error));
         }
     </script>
 </head>
@@ -72,9 +90,13 @@
             <div class="progress-container">
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
-            <div id="progress-text" class="progress-text">0 / 0 posts processed</div>
+            <div id="progress-text" class="progress-text"></div>
         </div>
     </section>
+
+    <footer>
+        <button onclick="quitApp()">Quit Application</button>
+    </footer>
 
 </body>
 </html>

@@ -11,13 +11,11 @@ terminate_event = threading.Event()
 processed_posts_count = 0
 processed_posts_lock = threading.Lock()
 
-# Lock for recording posts
-recording_post_lock = threading.Lock()
-
-# Threads and chrome drivers
-threads = []
-threads_number = 3
-drivers = None
+# Set threads_number to 1
+threads_number = 1
 
 # Max post number
 max_post_number = 0
+
+processing_started = False
+processing_completed = False

@@ -1,18 +1,17 @@
 import json
-import os
 import time
-
+import os
 from selenium.webdriver.common.by import By
 from modules.config import Config
 from modules.driver_utils import DriverUtils
+from bs4 import BeautifulSoup
 import modules.shared as shared
 
 class PostProcessor:
     @staticmethod
-    def write_post_to_json(title, author, content):
+    def write_post_to_json(title, content):
         post = {
             'Title': title,
-            'Author': author,
             'Content': content
         }
 
@@ -31,51 +30,47 @@ class PostProcessor:
             json_file.write('\n]')
 
     @staticmethod
-    def extract_posts(driver):
-        max_retries = 3
-        retry_count = 0
-        while retry_count < max_retries:
-            try:
-                posts = driver.find_elements(By.CSS_SELECTOR, "article[aria-label]")
-                return posts
-            except Exception as e:
-                if not DriverUtils.is_driver_alive(driver):
-                    print("Driver is no longer alive. Terminating function.")
-                    return None
+    def process_posts(driver, min_posts=3000):
+        previous_html = None
 
-                retry_count += 1
-                if retry_count == max_retries:
-                    print(f"Failed after {max_retries} attempts due to: {e}")
-                    raise
-                else:
-                    print(f"Retrying ({retry_count}/{max_retries}) after exception: {e}")
-                    time.sleep(2)
+        shared.processing_started = True
 
-    @staticmethod
-    def process_posts(posts, driver):
-        
-        for post in posts:
-            try:
-                title = post.find_element(By.CSS_SELECTOR, "a[href^='/r/']").text
-                author = post.find_element(By.CSS_SELECTOR, "a[href^='/user/']").text[2:]
+        while shared.processed_posts_count < min_posts:
+            DriverUtils.scroll_to_bottom(driver)
+            new_html = DriverUtils.get_document_element(driver)
 
-                content_element = post.find_element(By.CSS_SELECTOR, "div[id$='-post-rtjson-content']")
-                post_content = content_element.text.strip() if content_element else ""
+            if not DriverUtils.new_posts_loaded(previous_html, new_html):
+                print("No new posts loaded. Terminating.")
+                break
+            
+            previous_html = new_html
 
-                with shared.recording_post_lock:
-                    PostProcessor.write_post_to_json(title, author, post_content)
+            soup = BeautifulSoup(new_html, 'html.parser')
+            post_containers = soup.find_all('div', {'id': '-post-rtjson-content'})
 
-                with shared.processed_posts_lock:
+            for container in post_containers:
+                try:
+                    title_element = container.find_previous('span', class_='flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]')
+                    title = title_element.text.strip() if title_element else "No title"
+
+                    content_paragraphs = container.find_all('p')
+                    content = '\n'.join([p.text.strip() for p in content_paragraphs])
+
+                    PostProcessor.write_post_to_json(title, content)
+
                     shared.processed_posts_count += 1
-                    if not shared.processed_posts_count % 20:
-                        print(f"Processed posts: {shared.processed_posts_count}")
+                    if shared.processed_posts_count >= min_posts:
+                        break
 
-                if shared.processed_posts_count >= shared.max_post_number:
-                    print(f"Processed {shared.processed_posts_count} posts. Terminating...")
-                    shared.terminate_event.set()
-                    return
+                except Exception as e:
+                    print(f"Error processing post: {e}")
 
-            except Exception as e:
-                if not DriverUtils.is_driver_alive(driver):
-                    print("Driver is no longer alive. Terminating function.")
-                    return None
+            if shared.processed_posts_count >= shared.max_post_number:
+                print(f"Processed {shared.processed_posts_count} posts. Terminating...")
+                shared.terminate_event.set()
+                break
+
+        PostProcessor.finalize_json_file()
+        shared.processing_completed = True
+        return shared.processed_posts_count
+

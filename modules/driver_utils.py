@@ -1,29 +1,36 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 from modules.config import Config
+import time
 
 class DriverUtils:
     @staticmethod
     def init_driver():
-        return webdriver.Chrome(service=Service(Config.driver_path), options=Config.get_chrome_options())
-
-    @staticmethod
-    def is_driver_alive(driver):
-        try:
-            driver.current_url
-            return True
-        except WebDriverException:
-            return False
+        driver_path = "chromedriver/chromedriver.exe"  # Adjust path as necessary
+        service = Service(driver_path)
+        
+        driver = webdriver.Chrome(service=service, options=Config.get_chrome_options())
+        driver.maximize_window()  # Maximize the window
+        
+        return driver
 
     @staticmethod
     def access_subreddit(subreddit, driver):
-        url = f'https://www.reddit.com/r/{subreddit}/'
+        url = f"https://www.reddit.com/r/{subreddit}/"
         driver.get(url)
-        time.sleep(3)
+        time.sleep(5)  
 
     @staticmethod
-    def get_initial_scroll_position(driver):
+    def scroll_to_bottom(driver):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        return driver.execute_script("return window.pageYOffset;")
+        time.sleep(2)
+
+    @staticmethod
+    def get_document_element(driver):
+        return driver.execute_script("return document.documentElement.outerHTML;")
+
+    @staticmethod
+    def new_posts_loaded(old_html, new_html):
+        return old_html != new_html
