@@ -8,12 +8,11 @@ class SubredditScraper:
     def __init__(self, driver):
         self.driver = driver
 
-    def update_scraper(self, subreddit, max_posts):
-        self.subreddit = subreddit
+    def update_scraper(self, max_posts):
         shared.max_post_number = max_posts
 
     def scrape_subreddit(self):
-        DriverUtils.access_subreddit(self.subreddit, self.driver)
+        DriverUtils.access_subreddit(self.driver)
         time.sleep(3)
         
         posts_collected = PostProcessor.process_posts(self.driver, min_posts=shared.max_post_number)

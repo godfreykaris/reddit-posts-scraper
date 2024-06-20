@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from modules.config import Config
+import modules.shared as shared
 import time
 
 class DriverUtils:
@@ -17,9 +18,8 @@ class DriverUtils:
         return driver
 
     @staticmethod
-    def access_subreddit(subreddit, driver):
-        url = f"https://www.reddit.com/r/{subreddit}/"
-        driver.get(url)
+    def access_subreddit(driver):
+        driver.get(shared.reddit_url)
         time.sleep(5)  
 
     @staticmethod

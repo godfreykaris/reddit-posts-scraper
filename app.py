@@ -39,6 +39,20 @@ def start_scraping():
     subreddit = data.get('subreddit')
     max_posts = int(data.get('max_posts'))
 
+    category = data.get('category', 'hot')  # Default to 'hot' if no category is provided
+
+    # Construct the URL based on the selected category
+    base_url = f"https://www.reddit.com/r/{subreddit}/"
+    if category == "hot":
+        shared.reddit_url = base_url + "hot/"
+    elif category == "new":
+        shared.reddit_url = base_url + "new/"
+    elif category == "top":
+        shared.reddit_url = base_url + "top/?t=all"
+    else:
+        print("Invalid category. Defaulting to Hot.")
+        shared.reddit_url = base_url + "hot/"
+
     shared.processed_posts_count = 0  # Reset the processed posts count
     shared.max_post_number = max_posts  # Update the max_post_number
     shared.scroll_position = 0
@@ -52,7 +66,7 @@ def start_scraping():
 
     shared.scraper = SubredditScraper(shared.driver)
     Config.setup_json_file()
-    shared.scraper.update_scraper(subreddit, max_posts)
+    shared.scraper.update_scraper(max_posts)
     shared.scraper.scrape_subreddit()
 
     return jsonify({'message': 'Scraping started'}), 200

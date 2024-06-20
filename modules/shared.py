@@ -17,5 +17,8 @@ threads_number = 1
 # Max post number
 max_post_number = 0
 
+# Reddit Posts URL
+reddit_url = ''
+
 processing_started = False
 processing_completed = False

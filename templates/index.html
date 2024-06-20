@@ -19,23 +19,22 @@
 
                     if (data.processed_posts === 0) {
                         progressText.innerText = 'Setting up';
-                    } 
-                    else 
-                    {
+                    } else {
                         progressText.innerText = data.processed_posts + ' / ' + data.max_posts + ' posts processed';
                     }
 
-                    if (data.processing_done == true) {
+                    if (data.processing_completed) {
                         clearInterval(progressInterval); // Clear interval when processing is completed
                     }
                 });
         }
-        
+
         function startScraping() {
             progressInterval = setInterval(updateProgress, 1000);
 
             const subreddit = document.getElementById('subreddit').value;
             const maxPosts = document.getElementById('max_posts').value;
+            const category = document.getElementById('category').value;
 
             const progressText = document.getElementById('progress-text');
             progressText.innerText = 'Setting up';
@@ -45,14 +44,14 @@
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ subreddit: subreddit, max_posts: maxPosts }),
+                body: JSON.stringify({ subreddit: subreddit, max_posts: maxPosts, category: category }),
             })
             .then(response => response.json())
             .then(data => {
                 console.log(data.message);
             });
         }
-        
+
         function quitApp() {
             fetch('/quit')
                 .then(response => {
@@ -83,14 +82,20 @@
             <form id="scraping-form" onsubmit="startScraping(); return false;">
                 <label for="subreddit">Subreddit:</label>
                 <input type="text" id="subreddit" name="subreddit" required>
-                <label for="max_posts">Max Posts:</label>
+                <label for="max_posts">Posts Limit:</label>
                 <input type="number" id="max_posts" name="max_posts" required>
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="hot">Hot</option>
+                    <option value="new">New</option>
+                    <option value="top">Top</option>
+                </select>
                 <button type="submit">Start Extracting</button>
             </form>
             <div class="progress-container">
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
-            <div id="progress-text" class="progress-text"></div>
+            <div id="progress-text" class="progress-text">0 / 0 posts processed</div>
         </div>
     </section>
 
