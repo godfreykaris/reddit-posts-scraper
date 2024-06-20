@@ -7,6 +7,7 @@ A web scraping application designed to extract posts from a specified subreddit.
 - Extracts posts from a specified subreddit based on user input.
 - Allows selection of the number of posts to be scraped.
 - Provides options to select categories like "hot", "new", and "top" for scraping.
+- If fewer posts are available than requested, it scrapes the maximum available posts.
 - Displays real-time progress of the scraping process.
 - Includes a user interface for easy interaction.
 
