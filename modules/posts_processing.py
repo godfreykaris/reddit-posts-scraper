@@ -46,16 +46,22 @@ class PostProcessor:
             previous_html = new_html
 
             soup = BeautifulSoup(new_html, 'html.parser')
-            post_containers = soup.find_all('div', {'id': '-post-rtjson-content'})
+            post_containers = soup.find_all('article', {'class': 'w-full m-0'})
 
             for container in post_containers:
                 try:
-                    title_element = container.find_previous('span', class_='flex flex-col justify-center min-w-0 shrink py-[var(--rem6)]')
-                    title = title_element.text.strip() if title_element else "No title"
+                    # Extract title
+                    title = container.get('aria-label', 'No title').strip()
 
-                    content_paragraphs = container.find_all('p')
-                    content = '\n'.join([p.text.strip() for p in content_paragraphs])
+                    # Extract author
+                    author_element = container.find('a', href=lambda href: href and '/user/' in href)
+                    author = author_element.text.strip() if author_element else "Unknown author"
 
+                    # Extract content
+                    content_div = container.find('div', id=lambda id: id and 'post-rtjson-content' in id)
+                    content = content_div.get_text(separator='\n').strip() if content_div else "No content"
+
+                    # Write post to JSON
                     PostProcessor.write_post_to_json(title, content)
 
                     shared.processed_posts_count += 1
