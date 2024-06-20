@@ -31,7 +31,7 @@ Before you begin, ensure you have met the following requirements:
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/reddit-scraper.git
+git clone https://github.com/godfreykaris/reddit-posts-scraper.git
 cd reddit-scraper
 ```
 
@@ -82,13 +82,16 @@ Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000)
 4. Click "Quit Application" to stop the scraping and close the application.
 
 ## Project Structure
+```
 reddit-scraper/
 ├── app.py
 ├── modules/
 │   ├── config.py
 │   ├── driver_utils.py
-│   ├── post_processor.py
+│   ├── posts_processing.py
 │   ├── shared.py
+|   ├── scraper.py
+|   ├── threading_utils.py
 ├── static/
 │   ├── styles.css
 ├── templates/
@@ -97,6 +100,7 @@ reddit-scraper/
 │   ├── chromedriver.exe (ensure this matches your Chrome version)
 ├── requirements.txt
 ├── README.md
+```
 
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
