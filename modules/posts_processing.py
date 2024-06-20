@@ -9,9 +9,10 @@ import modules.shared as shared
 
 class PostProcessor:
     @staticmethod
-    def write_post_to_json(title, content):
+    def write_post_to_json(title, author, content):
         post = {
             'Title': title,
+            'Author': author,
             'Content': content
         }
 
@@ -62,7 +63,7 @@ class PostProcessor:
                     content = content_div.get_text(separator='\n').strip() if content_div else "No content"
 
                     # Write post to JSON
-                    PostProcessor.write_post_to_json(title, content)
+                    PostProcessor.write_post_to_json(title, author, content)
 
                     shared.processed_posts_count += 1
                     if shared.processed_posts_count >= min_posts:
