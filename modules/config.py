@@ -5,8 +5,7 @@ class Config:
     @staticmethod
     def get_chrome_options():
         chrome_options = Options()
-        # chrome_options.add_argument("--headless=new")
-        # chrome_options.page_load_strategy = 'none'
+        chrome_options.add_argument("--headless=new")
         chrome_options.add_argument("disable-infobars")
         chrome_options.add_argument("--disable-extensions")
         chrome_options.add_argument("--disable-dev-shm-usage")
