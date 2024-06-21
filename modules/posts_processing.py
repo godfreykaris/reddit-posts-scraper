@@ -16,8 +16,8 @@ class PostProcessor:
             'Content': content
         }
 
-        mode = 'a' if os.path.exists(Config.json_filename) else 'w'
-        with open(Config.json_filename, mode, encoding='utf-8') as json_file:
+        mode = 'a' if os.path.exists(shared.output_file_path) else 'w'
+        with open(shared.output_file_path, mode, encoding='utf-8') as json_file:
             if mode == 'a':
                 json_file.write(',\n')
             else:
@@ -27,7 +27,7 @@ class PostProcessor:
 
     @staticmethod
     def finalize_json_file():
-        with open(Config.json_filename, 'a', encoding='utf-8') as json_file:
+        with open(shared.output_file_path, 'a', encoding='utf-8') as json_file:
             json_file.write('\n]')
 
     @staticmethod
@@ -36,11 +36,21 @@ class PostProcessor:
 
         shared.processing_started = True
 
+        max_trials = 4
+        trials = 0
+
         while shared.processed_posts_count < min_posts:
             DriverUtils.scroll_to_bottom(driver)
             new_html = DriverUtils.get_document_element(driver)
 
             if not DriverUtils.new_posts_loaded(previous_html, new_html):
+                if trials < max_trials:
+                    previous_html = new_html
+                    trials += 1
+                    print(f"{trials} Trials made")
+                    time.sleep(trials)
+                    continue
+
                 print("No new posts loaded. Terminating.")
                 break
             
@@ -77,7 +87,5 @@ class PostProcessor:
                 shared.terminate_event.set()
                 break
 
-        PostProcessor.finalize_json_file()
-        shared.processing_completed = True
         return shared.processed_posts_count
 

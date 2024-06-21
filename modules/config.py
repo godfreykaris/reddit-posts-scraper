@@ -1,12 +1,12 @@
 import os
 from selenium.webdriver.chrome.options import Options
-
+import modules.shared as shared
 class Config:
     @staticmethod
     def get_chrome_options():
         chrome_options = Options()
         # chrome_options.add_argument("--headless=new")
-        chrome_options.page_load_strategy = 'none'
+        # chrome_options.page_load_strategy = 'none'
         chrome_options.add_argument("disable-infobars")
         chrome_options.add_argument("--disable-extensions")
         chrome_options.add_argument("--disable-dev-shm-usage")
@@ -21,9 +21,8 @@ class Config:
         return chrome_options
 
     driver_path = "chromedriver/chromedriver.exe"
-    json_filename = "processed_posts.json"
 
     @staticmethod
     def setup_json_file():
-        if os.path.exists(Config.json_filename):
-            os.remove(Config.json_filename)
+        if os.path.exists(shared.output_file_path):
+            os.remove(shared.output_file_path)

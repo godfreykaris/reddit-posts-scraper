@@ -1,3 +1,4 @@
+import random
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -25,7 +26,7 @@ class DriverUtils:
     @staticmethod
     def scroll_to_bottom(driver):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
+        time.sleep(random.uniform(3.0, 4.5))
 
     @staticmethod
     def get_document_element(driver):

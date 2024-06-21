@@ -1,7 +1,9 @@
+import sys
 import threading
-from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
 from modules.config import Config
 from modules.driver_utils import DriverUtils
+from modules.posts_processing import PostProcessor
 from modules.scraper import SubredditScraper
 import modules.shared as shared
 import os
@@ -12,6 +14,8 @@ app = Flask(__name__)
 shared.driver = None
 shared.scraper = None
 
+shared.output_file_path = os.path.join(os.getcwd(), "scraped_posts.json")
+
 # Initialize the global driver
 def initialize_driver():
     if shared.driver is None:
@@ -19,15 +23,6 @@ def initialize_driver():
 
 # Initialize driver when the app starts
 initialize_driver()
-
-# Route to quit the application and close the driver
-@app.route('/quit')
-def quit_app():
-    global shared
-    if shared.driver:
-        shared.driver.quit()
-        shared.driver = None
-    return redirect(url_for('index'))
 
 @app.route('/')
 def index():
@@ -40,18 +35,11 @@ def start_scraping():
     max_posts = int(data.get('max_posts'))
 
     category = data.get('category', 'hot')  # Default to 'hot' if no category is provided
-
-    # Construct the URL based on the selected category
-    base_url = f"https://www.reddit.com/r/{subreddit}/"
-    if category == "hot":
-        shared.reddit_url = base_url + "hot/"
-    elif category == "new":
-        shared.reddit_url = base_url + "new/"
-    elif category == "top":
-        shared.reddit_url = base_url + "top/?t=all"
+    categories_to_scrape = []
+    if category == "all":
+        categories_to_scrape = ["hot", "new", "top"]
     else:
-        print("Invalid category. Defaulting to Hot.")
-        shared.reddit_url = base_url + "hot/"
+        categories_to_scrape = [category]
 
     shared.processed_posts_count = 0  # Reset the processed posts count
     shared.max_post_number = max_posts  # Update the max_post_number
@@ -67,7 +55,26 @@ def start_scraping():
     shared.scraper = SubredditScraper(shared.driver)
     Config.setup_json_file()
     shared.scraper.update_scraper(max_posts)
-    shared.scraper.scrape_subreddit()
+
+    for cat in categories_to_scrape:
+        print(cat)
+        base_url = f"https://www.reddit.com/r/{subreddit}/"
+        if cat == "hot":
+            shared.reddit_url = base_url + "hot/"
+        elif cat == "new":
+            shared.reddit_url = base_url + "new/"
+        elif cat == "top":
+            shared.reddit_url = base_url + "top/?t=all"
+        else:
+            print("Invalid category. Skipping category.")
+            continue
+
+        shared.scraper.scrape_subreddit()
+
+        if cat == categories_to_scrape[-1] or shared.processed_posts_count >= shared.max_post_number:
+            PostProcessor.finalize_json_file()
+            shared.processing_completed = True
+            break
 
     return jsonify({'message': 'Scraping started'}), 200
 
@@ -85,6 +92,12 @@ def reset():
     shared.processed_posts_count = 0
     shared.max_post_number = 0
     return jsonify({'message': 'Reset complete'}), 200
+
+@app.route('/download', methods=['GET'])
+def download_file():
+    directory = os.path.dirname(shared.output_file_path)
+    filename = os.path.basename(shared.output_file_path)
+    return send_from_directory(directory, filename, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=False)

@@ -30,6 +30,9 @@
                         {
                             progressText.innerText = `Found ${data.processed_posts} currently available posts`;
                         }
+
+                        // Show download button
+                        document.getElementById('download-button').style.display = 'block';
                     }
                 });
         }
@@ -44,6 +47,9 @@
             const progressText = document.getElementById('progress-text');
             progressText.innerText = 'Setting up';
 
+             // Hide download button
+             document.getElementById('download-button').style.display = 'none';
+            
             // Display progress bar and start updating progress
             const progressContainer = document.querySelector('.progress-container');
             progressContainer.style.display = 'block';
@@ -61,14 +67,6 @@
             });
         }
 
-        function quitApp() {
-            fetch('/quit')
-                .then(response => {
-                    console.log("Application quit successfully.");
-                    // Optionally handle the response or update UI
-                })
-                .catch(error => console.error('Error quitting application:', error));
-        }
     </script>
 </head>
 <body>
@@ -95,6 +93,7 @@
                 <input type="number" id="max_posts" name="max_posts" required>
                 <label for="category">Category:</label>
                 <select id="category" name="category" required>
+                    <option value="all">All</option>
                     <option value="hot">Hot</option>
                     <option value="new">New</option>
                     <option value="top">Top</option>
@@ -105,13 +104,10 @@
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
             <div id="progress-text" class="progress-text">0 / 0 posts processed</div>
-
+            
+            <button id="download-button" style="display: none;" onclick="window.location.href='/download'">Download Posts</button>
         </div>
     </section>
-
-    <footer>
-        <button onclick="quitApp()">Quit Application</button>
-    </footer>
 
 </body>
 </html>

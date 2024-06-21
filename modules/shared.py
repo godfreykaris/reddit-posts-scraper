@@ -20,5 +20,8 @@ max_post_number = 0
 # Reddit Posts URL
 reddit_url = ''
 
+# Output filepath
+output_file_path = ""
+
 processing_started = False
 processing_completed = False
