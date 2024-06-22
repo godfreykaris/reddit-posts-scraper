@@ -4,17 +4,19 @@ A web scraping application designed to extract posts from a specified subreddit.
 
 ## Features
 
-- Extracts posts from a specified subreddit based on user input.
-- Allows selection of the number of posts to be scraped.
-- Provides options to select categories like "all", "hot", "new", and "top" for scraping.
-- If fewer posts are available than requested, it scrapes the maximum available posts.
-- Displays real-time progress of the scraping process.
-- Includes a user interface for easy interaction.
+- **Scrapes Multiple Categories**: Allows scraping from multiple categories such as 'hot', 'new', 'top', or all categories combined.
+- **Multi-threaded Scraping**: Utilizes threads for concurrent scraping when either multiple categories are selected or no specific category is specified, optimizing performance.
+- **Output Formats**: Supports output formats including JSON, YAML, and XML.
+- **Dynamic Output File Naming**: Automatically names output files based on specified file path and optional format.
+- **Progress Monitoring**: Provides real-time progress updates during the scraping process.
+- **Error Handling**: Handles errors gracefully, skipping invalid categories and displaying relevant messages.
+- **Customizable Limits**: Allows setting a limit on the number of posts to scrape.
+- **Verbose Mode**: Enables verbose mode to print detailed processing information.
+
 
 ## Technologies Used
 
 - Python
-- Flask
 - Selenium
 - BeautifulSoup
 
@@ -67,20 +69,25 @@ pip install -r requirements.txt
 Ensure you have the chromedriver executable in your PATH or specify its location in the `DriverUtils` class if it's located elsewhere.
 Adjust any configuration settings in `config.py` if necessary.
 
-## Running the Application
-To start the application, run:
-
-```bash
-python app.py
-```
-
-Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to access the application.
 
 ## Usage
-1. Enter the subreddit name and the number of posts you want to scrape.
-2. Click "Start Extracting" to begin the scraping process.
-3. Monitor the progress through the progress bar and status text.
-4. Click "Quit Application" to stop the scraping and close the application.
+To start scraping posts from Reddit, use the following command:
+
+```bash
+python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v
+```
+
+# Options
+
+The following options are available to customize the scraping process:
+
+- **-s, --subreddit**: Name of the subreddit to scrape (**REQUIRED**).
+- **-c, --categories**: Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new`, `top`).
+- **-l, --limit**: Limit on the number of posts to scrape per category (default is unlimited).
+- **-o, --output**: Output file path for the scraped posts (default is `scraped_posts.[format]` in the current directory).
+- **-f, --format**: Output format for the scraped posts (`json`, `yaml`, `xml`; default is `json`).
+- **-v, --verbose**: Enable verbose mode to print detailed processing information.
+
 
 ## Project Structure
 ```
@@ -93,10 +100,6 @@ reddit-scraper/
 │   ├── shared.py
 |   ├── scraper.py
 |   ├── threading_utils.py
-├── static/
-│   ├── styles.css
-├── templates/
-│   ├── index.html
 ├── chromedriver/
 │   ├── chromedriver.exe (ensure this matches your Chrome version)
 ├── requirements.txt

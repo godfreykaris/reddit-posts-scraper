@@ -6,15 +6,33 @@ import modules.shared as shared
 
 class SubredditScraper:
     def __init__(self, driver):
+        """
+        Initialize SubredditScraper with a WebDriver instance.
+
+        Args:
+        - driver: Selenium WebDriver instance for web interaction.
+        """
         self.driver = driver
 
-    def update_scraper(self, max_posts):
-        shared.max_post_number = max_posts
+    def update_scraper(self, limit):
+        """
+        Update the scraper's limit for the number of posts to scrape.
+
+        Args:
+        - limit (int): Maximum number of posts to scrape.
+        """
+        shared.limit = limit  # Update the shared limit variable
 
     def scrape_subreddit(self):
-        DriverUtils.access_subreddit(self.driver)
-        time.sleep(3)
-        
-        posts_collected = PostProcessor.process_posts(self.driver, min_posts=shared.max_post_number)
+        """
+        Perform scraping of a subreddit using the configured WebDriver instance.
 
-        print(f"Collected {posts_collected} posts.")
+        This method accesses the subreddit's page, waits for 3 seconds, 
+        and collects posts using the PostProcessor class.
+
+        It prints the total number of collected posts.
+        """
+        DriverUtils.access_subreddit(self.driver)  # Access the subreddit using the WebDriver
+        time.sleep(3)  # Wait for 3 seconds for the page to load
+
+        PostProcessor.process_posts(self.driver)  # Process posts using PostProcessor

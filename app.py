@@ -1,103 +1,157 @@
-import sys
 import threading
-from flask import Flask, request, jsonify, render_template, redirect, url_for, send_from_directory
+import argparse
+import os
+
+import xml.etree.ElementTree as ET
 from modules.config import Config
 from modules.driver_utils import DriverUtils
 from modules.posts_processing import PostProcessor
 from modules.scraper import SubredditScraper
 import modules.shared as shared
-import os
 
-app = Flask(__name__)
 
-# Global variables for the driver and scraper
-shared.driver = None
-shared.scraper = None
+def initialize_driver(category):
+    """
+    Initialize the WebDriver if it's not already initialized for a specific category.
 
-shared.output_file_path = os.path.join(os.getcwd(), "scraped_posts.json")
+    Args:
+    - category (str): Category for which to initialize the driver.
+    """
+    if shared.drivers.get(category) is None:
+        shared.drivers[category] = DriverUtils.init_driver()
 
-# Initialize the global driver
-def initialize_driver():
-    if shared.driver is None:
-        shared.driver = DriverUtils.init_driver()
+def ensure_output_file_exists(output_path):
+    """
+    Ensure that the output file exists by creating it if it doesn't already exist.
 
-# Initialize driver when the app starts
-initialize_driver()
+    Args:
+    - output_path (str): Path to the output file.
+    """
+    if os.path.exists(output_path):
+        os.remove(output_path)  # Remove the existing file if it exists
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+    # Create the directory if it does not exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-@app.route('/start_scraping', methods=['POST'])
-def start_scraping():
-    data = request.json
-    subreddit = data.get('subreddit')
-    max_posts = int(data.get('max_posts'))
+    # Create an empty file
+    with open(output_path, 'w'):
+        pass
 
-    category = data.get('category', 'hot')  # Default to 'hot' if no category is provided
-    categories_to_scrape = []
-    if category == "all":
-        categories_to_scrape = ["hot", "new", "top"]
-    else:
-        categories_to_scrape = [category]
+def scrape_category(subreddit, category, limit, verbose, output_path):
+    """
+    Scrape posts from a specific category of subreddit.
 
-    shared.processed_posts_count = 0  # Reset the processed posts count
-    shared.max_post_number = max_posts  # Update the max_post_number
+    Args:
+    - subreddit (str): Name of the subreddit to scrape.
+    - category (str): Category to scrape ('hot', 'new', 'top').
+    - limit (int): Limit on the number of posts to scrape.
+    - verbose (bool): Enable verbose mode to print processing details.
+    - format_type (str): Desired output format ('json', 'yaml', 'xml').
+    - output_path (str): Output file path for the scraped posts.
+    """
+    print(f"Thread {threading.get_ident()}: Scraping {category} category....")
+    initialize_driver(category)
+
+    # Set up shared variables
+    shared.processed_posts_count = 0
+    shared.limit = limit if limit is not None else float('inf')
     shared.scroll_position = 0
-    shared.threads = []
+    shared.verbose = verbose
+    shared.output_file_path = output_path
 
-    shared.processing_started = False
+    shared.scraper = SubredditScraper(shared.drivers[category])
+    Config.setup_output_file()
+
+    shared.scraper.update_scraper(shared.limit)
+
+    base_url = f"https://www.reddit.com/r/{subreddit}/"
+    if category == "hot":
+        shared.reddit_url = base_url + "hot/"
+    elif category == "new":
+        shared.reddit_url = base_url + "new/"
+    elif category == "top":
+        shared.reddit_url = base_url + "top/?t=all"
+    else:
+        print(f"Thread {threading.get_ident()}: Invalid category {category}. Skipping category.\n")
+        return
+    
+    shared.scraper.scrape_subreddit()
+
+    # Finalize the output file
+    with shared.lock:
+        PostProcessor.finalize_file()
+
+def start_scraping(subreddit, limit=None, categories=["all"], output_path=None, verbose=False, format_type='json'):
+    """
+    Start scraping posts from the specified subreddit.
+
+    Args:
+    - subreddit (str): Name of the subreddit to scrape.
+    - limit (int): Limit on the number of posts to scrape (default is infinite).
+    - categories (list): List of categories to scrape ('hot', 'new', 'top', or 'all'; default is ['all']).
+    - output_path (str): Output file path for the scraped posts.
+    - verbose (bool): Enable verbose mode to print processing details.
+    - format_type (str): Desired output format ('json', 'yaml', 'xml'; default is 'json').
+    """
+
+    print("Working....")
+
+    # Reset global variables
+    shared.threads = {}
     shared.processing_completed = False
 
-    # Reinitialize the driver if it's not initialized or has been closed
-    initialize_driver()
-
-    shared.scraper = SubredditScraper(shared.driver)
-    Config.setup_json_file()
-    shared.scraper.update_scraper(max_posts)
-
-    for cat in categories_to_scrape:
-        print(cat)
-        base_url = f"https://www.reddit.com/r/{subreddit}/"
-        if cat == "hot":
-            shared.reddit_url = base_url + "hot/"
-        elif cat == "new":
-            shared.reddit_url = base_url + "new/"
-        elif cat == "top":
-            shared.reddit_url = base_url + "top/?t=all"
+    # Set the output file path based on user input or default
+    if output_path:
+        # Check if the provided output_path ends with .json, .yaml, or .xml
+        if output_path.endswith('.json'):
+            shared.output_file_path = output_path
+            shared.format_type = 'json'
+        elif output_path.endswith('.yaml'):
+            shared.output_file_path = output_path
+            shared.format_type = 'yaml'
+        elif output_path.endswith('.xml'):
+            shared.output_file_path = output_path
+            shared.format_type = 'xml'
         else:
-            print("Invalid category. Skipping category.")
+            # If no valid extension is found, use the base name and add the format_type extension
+            shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{shared.format_type}"
+    else:
+        # If no output_path is provided, use the default path with format_type
+        shared.output_file_path = os.path.join(os.getcwd(), f"reddit-posts\\scraped_posts.{shared.format_type}")
+
+    # Ensure the output file exists
+    ensure_output_file_exists(shared.output_file_path)
+
+    # Create threads for each category
+    for category in categories:
+        if category not in ['hot', 'new', 'top', 'all']:
+            print(f"Invalid category '{category}'. Skipping category.")
             continue
 
-        shared.scraper.scrape_subreddit()
+        thread = threading.Thread(target=scrape_category, args=(subreddit, category, limit, verbose, shared.output_file_path))
+        shared.threads[category] = thread
+        thread.start()
 
-        if cat == categories_to_scrape[-1] or shared.processed_posts_count >= shared.max_post_number:
-            PostProcessor.finalize_json_file()
-            shared.processing_completed = True
-            break
+    # Wait for all threads to complete
+    for category, thread in shared.threads.items():
+        thread.join()
 
-    return jsonify({'message': 'Scraping started'}), 200
-
-@app.route('/progress')
-def progress():
-    return jsonify({
-        'processed_posts': shared.processed_posts_count,
-        'max_posts': shared.max_post_number,
-        'processing_done': shared.processing_completed,
-        'processing_started': shared.processing_started
-    })
-
-@app.route('/reset', methods=['POST'])
-def reset():
-    shared.processed_posts_count = 0
-    shared.max_post_number = 0
-    return jsonify({'message': 'Reset complete'}), 200
-
-@app.route('/download', methods=['GET'])
-def download_file():
-    directory = os.path.dirname(shared.output_file_path)
-    filename = os.path.basename(shared.output_file_path)
-    return send_from_directory(directory, filename, as_attachment=True)
+    shared.processing_completed = True
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    parser = argparse.ArgumentParser(description="Scrape posts from a subreddit.")
+    parser.add_argument("-s", "--subreddit", required=True, help="Name of the subreddit to scrape")
+    parser.add_argument("-l", "--limit", type=int, help="Limit on the number of posts to scrape (default is infinite)")
+    parser.add_argument("-c", "--categories", nargs='*', default=["hot", "new", "top"], help="Categories to scrape (default is 'hot', 'new', 'top')")
+    parser.add_argument("-o", "--output", help="Output file path for the scraped posts (default is 'scraped_posts.json' in the current directory)")
+    parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode to print processing details")
+    parser.add_argument("-f", "--format", choices=['json', 'yaml', 'xml'], default='json', help="Output format for the scraped posts (default is 'json')")
+
+    args = parser.parse_args()
+
+    start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+
+    if shared.processed_posts_count == 0:
+        print("No posts loaded. Please confirm the subreddit name and try again.")
+    else:
+        print(f"Output file: {shared.output_file_path}")
