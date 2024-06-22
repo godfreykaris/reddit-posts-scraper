@@ -111,11 +111,13 @@ class PostProcessor:
                 if trials < max_trials:
                     previous_html = new_html
                     trials += 1
-                    print(f"{thread_color}Thread {thread_id}: [{max_trials - trials}] Remaining scrolling trials.{Colors.RESET}")
+                    if shared.verbose:
+                        print(f"{thread_color}Thread {thread_id}: [{max_trials - trials}] Remaining scrolling trials.{Colors.RESET}")
                     time.sleep(trials)
                     continue
 
-                print(f"{thread_color}Thread {thread_id}: No new posts loaded. Terminating.{Colors.RESET}")
+                if shared.verbose:
+                    print(f"{thread_color}Thread {thread_id}: No new posts loaded. Terminating.{Colors.RESET}")
                 break
 
             previous_html = new_html
@@ -156,7 +158,8 @@ class PostProcessor:
                 print(f"{thread_color}Thread {thread_id}: Processed posts: {shared.processed_posts_count}{Colors.RESET}")
 
             if shared.processed_posts_count >= shared.limit:
-                print(f"{thread_color}Thread {thread_id}: Processed {shared.processed_posts_count} posts. Terminating...{Colors.RESET}")
+                if shared.verbose:
+                    print(f"{thread_color}Thread {thread_id}: Processed {shared.processed_posts_count} posts. Terminating...{Colors.RESET}")
                 break
 
         PostProcessor.finalize_file()

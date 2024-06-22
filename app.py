@@ -152,6 +152,6 @@ if __name__ == "__main__":
     start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
 
     if shared.processed_posts_count == 0:
-        print("No posts loaded. Please confirm the subreddit name and try again.")
+        print("\nNo posts loaded. Please confirm the subreddit name and try again.")
     else:
-        print(f"Output file: {shared.output_file_path}")
+        print(f"\nOutput file: {shared.output_file_path}")
