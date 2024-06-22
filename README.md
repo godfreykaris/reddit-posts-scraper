@@ -77,16 +77,27 @@ To start scraping posts from Reddit, use the following command:
 python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v
 ```
 
-# Options
+## Available Options
 
 The following options are available to customize the scraping process:
 
-- **-s, --subreddit**: (**Required**)  Name of the subreddit to scrape.
-- **-c, --categories**: (**Optional**) Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new`, `top`).
-- **-l, --limit**: (**Optional**) Limit on the number of posts to scrape per category (default is unlimited).
-- **-o, --output**: (**Optional/Recommended**) Output file path for the scraped posts (default is `scraped_posts.[format]` in the current directory).
-- **-f, --format**: (**Optional**) Output format for the scraped posts (`json`, `yaml`, `xml`; default is `json`).
-- **-v, --verbose**: (**Optional**) Enable verbose mode to print detailed processing information.
+- **`-s, --subreddit`**: (**Required**)  
+  Name of the subreddit to scrape.
+
+- **`-c, --categories`**: (**Optional**)  
+  Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new`, `top`).
+
+- **`-l, --limit`**: (**Optional**)  
+  Limit on the number of posts to scrape per category (default is unlimited).
+
+- **`-o, --output`**: (**Optional/Recommended**)  
+  Output file path for the scraped posts (default is `scraped_posts.[format]` in the current directory).
+
+- **`-f, --format`**: (**Optional**)  
+  Output format for the scraped posts (`json`, `yaml`, `xml`; default is `json`).
+
+- **`-v, --verbose`**: (**Optional**)  
+  Enable verbose mode to print detailed processing information.
 
 
 ## Project Structure
