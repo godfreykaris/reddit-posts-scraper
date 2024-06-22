@@ -105,8 +105,10 @@ The following options are available to customize the scraping process:
 reddit-scraper/
 ├── app.py
 ├── modules/
+│   ├── colors.py
 │   ├── config.py
 │   ├── driver_utils.py
+│   ├── file_write_error.py
 │   ├── posts_processing.py
 │   ├── shared.py
 |   ├── scraper.py

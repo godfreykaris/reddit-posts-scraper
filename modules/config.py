@@ -14,14 +14,16 @@ class Config:
         chrome_options = Options()  # Initialize Chrome Options
         
         # Add various arguments to Chrome Options
-        chrome_options.add_argument("--headless-=new")  # Set headless mode
+        chrome_options.add_argument("--headless=new")  # Set headless mode
         chrome_options.add_argument("disable-infobars")  # Disable infobars
         chrome_options.add_argument("--disable-extensions")  # Disable extensions
         chrome_options.add_argument("--disable-dev-shm-usage")  # Disable dev-shm-usage
         chrome_options.add_argument("user-agent=Chrome/126.0.0.0")  # Set user agent
         chrome_options.add_argument('--ignore-ssl-errors=yes')  # Ignore SSL errors
         chrome_options.add_argument('--ignore-certificate-errors')  # Ignore certificate errors
-        
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--no-sandbox')
+
         # Set log level to only log errors
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Exclude logging
