@@ -81,7 +81,7 @@ python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <forma
 
 The following options are available to customize the scraping process:
 
-- **-s, --subreddit**: (**Required**) Name of the subreddit to scrape.
+- **-s, --subreddit**: (**Required**)  Name of the subreddit to scrape.
 - **-c, --categories**: (**Optional**) Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new`, `top`).
 - **-l, --limit**: (**Optional**) Limit on the number of posts to scrape per category (default is unlimited).
 - **-o, --output**: (**Optional/Recommended**) Output file path for the scraped posts (default is `scraped_posts.[format]` in the current directory).
