@@ -85,7 +85,7 @@ The following options are available to customize the scraping process:
   Name of the subreddit to scrape.
 
 - **`-c, --categories`**: (**Optional**)  
-  Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new`, `top`).
+  Categories to scrape (`hot`, `new`, `top`, or `all`; default is `hot`, `new` and `top`).
 
 - **`-l, --limit`**: (**Optional**)  
   Limit on the number of posts to scrape per category (default is unlimited).
