@@ -100,7 +100,7 @@ The following options are available to customize the scraping process:
 - **`-v, --verbose`**: (**Optional**)  
   Enable verbose mode to print detailed processing information.
 
-## Flask Application
+## Flask Application (Web Interface)
 The application can also be run using Flask, providing a web interface to initiate and monitor the scraping process.
 
 Ensure the Flask application (app.py) is properly configured and dependencies are installed as described above.
