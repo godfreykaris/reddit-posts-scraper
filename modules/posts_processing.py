@@ -14,18 +14,16 @@ from modules.colors import Colors
 import modules.shared as shared
 
 
-# Thread color mapping
-thread_colors = {}
-
-def get_thread_color():
-    thread_id = threading.get_ident()
-    if thread_id not in thread_colors:
-        # Assign a color to the thread if it doesn't have one
-        colors = [Colors.RED, Colors.GREEN, Colors.BLUE]
-        thread_colors[thread_id] = colors[len(thread_colors) % len(colors)]
-    return thread_colors[thread_id]
-
 class PostProcessor:
+    @staticmethod
+    def get_thread_color():
+        thread_id = threading.get_ident()
+        if thread_id not in shared.thread_colors:
+            # Assign a color to the thread if it doesn't have one
+            colors = [Colors.RED, Colors.GREEN, Colors.BLUE]
+            shared.thread_colors[thread_id] = colors[len(shared.thread_colors) % len(colors)]
+        return shared.thread_colors[thread_id]
+
     @staticmethod
     def clean_value(value):
         lines = [line.strip() for line in value.splitlines()]
@@ -35,7 +33,7 @@ class PostProcessor:
     @staticmethod
     def write_post_to_file(data):
         file_path = shared.output_file_path
-        thread_color = get_thread_color()
+        thread_color = PostProcessor.get_thread_color()
 
         try:
             if shared.format_type == 'json':
@@ -100,7 +98,7 @@ class PostProcessor:
         trials = 0
 
         terminate_processing = False
-        thread_color = get_thread_color()
+        thread_color = PostProcessor.get_thread_color()
         thread_id = threading.get_ident()
 
         while shared.processed_posts_count < shared.limit and not terminate_processing:

@@ -1,55 +1,89 @@
 import threading
-import time
+import os
+from modules.config import Config
 from modules.posts_processing import PostProcessor
 from modules.driver_utils import DriverUtils
+from modules.scraper import SubredditScraper
 import modules.shared as shared
 
 class ThreadManager:
-    def __init__(self, subreddit, drivers, initial_scroll_position):
+    def __init__(self, subreddit, category, limit, verbose, output_path):
         """
-        Initialize ThreadManager with subreddit, drivers, and initial scroll position.
+        Initialize ThreadManager with subreddit, category, limit, verbose mode, and output path.
 
         Args:
         - subreddit (str): Name of the subreddit to scrape.
-        - drivers (list): List of WebDriver instances.
-        - initial_scroll_position (int): Initial scroll position for scraping.
+        - category (str): Category to scrape ('hot', 'new', 'top').
+        - limit (int): Limit on the number of posts to scrape.
+        - verbose (bool): Enable verbose mode to print processing details.
+        - output_path (str): Output file path for the scraped posts.
         """
-        self.subreddit = subreddit  # Initialize subreddit name
-        self.driver = drivers[0]  # Use the first WebDriver instance from the list
-        self.initial_scroll_position = initial_scroll_position  # Initialize initial scroll position
+        self.subreddit = subreddit
+        self.category = category
+        self.limit = limit
+        self.verbose = verbose
+        self.output_path = output_path
 
-    def scroll_and_extract(self):
+    def scrape_category(self):
         """
-        Method to scroll through the subreddit page and extract posts.
-
-        This method accesses the subreddit's page, scrolls down in a threaded manner, 
-        and extracts posts using the PostProcessor class.
-
-        The scrolling continues until the processed post count reaches the shared limit 
-        or termination event is set.
+        Scrape posts from a specific category of subreddit.
         """
-        if shared.scroll_position == 0:
-            shared.scroll_position = self.initial_scroll_position  # Set initial scroll position if not already set
+        print(f"Thread {threading.get_ident()}: Scraping {self.category} category....")
+        DriverUtils.initialize_driver(self.category)
 
-        DriverUtils.access_subreddit(self.subreddit, self.driver)  # Access the subreddit using the WebDriver
+        # Set up shared variables
+        shared.processed_posts_count = 0
+        shared.limit = self.limit if self.limit is not None else float('inf')
+        shared.scroll_position = 0
+        shared.verbose = self.verbose
+        shared.output_file_path = self.output_path
 
-        while shared.processed_posts_count < shared.limit and not shared.terminate_event.is_set():
-            with shared.scroll_mutex:
-                # Execute JavaScript to scroll down
-                self.driver.execute_script(f"window.scrollTo(0, {shared.scroll_position});")
-                shared.scroll_position += self.initial_scroll_position  # Increment scroll position
-            time.sleep(2)  # Wait for 2 seconds after scrolling
-            posts = PostProcessor.extract_posts(self.driver)  # Extract posts using PostProcessor
-            if posts is not None:
-                PostProcessor.process_posts(posts, self.driver)  # Process extracted posts
+        shared.scraper = SubredditScraper(shared.drivers[self.category])
+        Config.setup_output_file()
+
+        shared.scraper.update_scraper(shared.limit)
+
+        base_url = f"https://www.reddit.com/r/{self.subreddit}/"
+        if self.category == "hot":
+            shared.reddit_url = base_url + "hot/"
+        elif self.category == "new":
+            shared.reddit_url = base_url + "new/"
+        elif self.category == "top":
+            shared.reddit_url = base_url + "top/?t=all"
+        else:
+            print(f"Thread {threading.get_ident()}: Invalid category {self.category}. Skipping category.\n")
+            return
+        
+        shared.scraper.scrape_subreddit()
+
+        # Terminate the output file correctly like with a ] for JSON files
+        with shared.lock:
+            PostProcessor.finalize_file()
 
     def start_thread(self):
         """
-        Method to start a new thread for scrolling and extracting posts.
+        Method to start a new thread for scraping a category.
 
-        This method initializes a new thread that executes the scroll_and_extract method.
+        This method initializes a new thread that executes the scrape_category method.
         It updates the shared threads list with the started thread.
         """
-        thread = threading.Thread(target=self.scroll_and_extract)  # Create a new thread
-        thread.start()  # Start the thread
-        shared.threads = [thread]  # Update the shared threads list with the started thread
+        thread = threading.Thread(target=self.scrape_category)
+        thread.start()
+        return thread
+
+def ensure_output_file_exists(output_path):
+    """
+    Ensure that the output file exists by creating it if it doesn't already exist.
+
+    Args:
+    - output_path (str): Path to the output file.
+    """
+    if os.path.exists(output_path):
+        os.remove(output_path)  # Remove the existing file if it exists
+
+    # Create the directory if it does not exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # Create an empty file
+    with open(output_path, 'w'):
+        pass

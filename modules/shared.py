@@ -5,12 +5,11 @@ drivers = {}  # Dictionary to store drivers for each category
 threads = {}  # Dictionary to store threads for each category
 lock = threading.Lock()  # Lock to synchronize access to shared variables
 
+# Thread color mapping for each thread to print its output in a drifferent color
+thread_colors = {}
+
 # Global variable to count processed posts
 processed_posts_count = 0
-processed_posts_lock = threading.Lock()
-
-# Set threads_number to 1
-threads_number = 1
 
 # Maximum post number
 limit = 0
@@ -26,6 +25,3 @@ reddit_url = ''
 
 # Output filepath
 output_file_path = ""
-
-processing_started = False
-processing_completed = False

@@ -6,12 +6,35 @@ from selenium.webdriver.common.by import By
 from modules.config import Config
 import modules.shared as shared
 import time
+import psutil
 
 class DriverUtils:
     @staticmethod
-    def init_driver():
+    def close_existing_chrome_instances():
         """
-        Initialize and return a Chrome WebDriver instance.
+        Close existing Chrome instances by terminating their processes.
+        """
+        for proc in psutil.process_iter(['pid', 'name']):
+            if proc.info['name'] == 'chrome' or proc.info['name'] == 'chrome.exe':
+                proc.terminate()
+                try:
+                    proc.wait(timeout=3)
+                except psutil.TimeoutExpired:
+                    proc.kill()
+    @staticmethod
+    def initialize_driver(category):
+        """
+        Initialize the WebDriver if it's not already initialized for a specific category.
+
+        Args:
+        - category (str): Category for which to initialize the driver.
+        """
+        if shared.drivers.get(category) is None:
+            shared.drivers[category] = DriverUtils.create_driver()
+    @staticmethod
+    def create_driver():
+        """
+        Create and return a Chrome WebDriver instance.
 
         Returns:
         - webdriver.Chrome: Initialized Chrome WebDriver instance.

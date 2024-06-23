@@ -1,5 +1,6 @@
 import os
 from selenium.webdriver.chrome.options import Options
+from fake_useragent import UserAgent
 import modules.shared as shared
 
 class Config:
@@ -18,16 +19,22 @@ class Config:
         chrome_options.add_argument("disable-infobars")  # Disable infobars
         chrome_options.add_argument("--disable-extensions")  # Disable extensions
         chrome_options.add_argument("--disable-dev-shm-usage")  # Disable dev-shm-usage
-        chrome_options.add_argument("user-agent=Chrome/126.0.0.0")  # Set user agent
         chrome_options.add_argument('--ignore-ssl-errors=yes')  # Ignore SSL errors
         chrome_options.add_argument('--ignore-certificate-errors')  # Ignore certificate errors
         chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
 
         # Set log level to only log errors
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Exclude logging
         
+        # Use fake_useragent to generate a random user-agent
+        ua = UserAgent()
+        user_agent = ua.random
+        chrome_options.add_argument(f"user-agent={user_agent}")  # Set user agent
+
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+
         return chrome_options  # Return configured Chrome Options instance
 
     @staticmethod
