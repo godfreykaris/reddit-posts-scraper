@@ -138,6 +138,7 @@ def start_scraping_route():
     wait_for_threads_to_complete()
 
     shared.processing = False
+    shared.processing_done = True
 
     DriverUtils.quit_all_drivers()
 

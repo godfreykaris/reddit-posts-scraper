@@ -141,6 +141,7 @@ class PostProcessor:
 
             for container in post_containers:
                 if shared.processing_done:
+                    terminate_processing = True
                     break
                 try:
                     title = container.get('aria-label', 'No title').strip()
