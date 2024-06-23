@@ -1,18 +1,22 @@
-import threading
-import argparse
 import os
-
+import sys
+import argparse
 import requests
-
-from modules.posts_processing import PostProcessor
-import modules.shared as shared
+from flask import Flask, render_template, jsonify, request, send_from_directory
 from modules.driver_utils import DriverUtils
-from modules.threading_utils import ThreadManager, remove_existing_output_file
+from modules.threading_utils import ThreadManager
+import modules.shared as shared
+from modules.posts_processing import PostProcessor
+
+app = Flask(__name__)
+
+# Define the directory where scraped posts will be stored
+DOWNLOAD_DIRECTORY = os.path.join(os.getcwd(), 'downloads')
 
 def parse_arguments():
     """
     Parse command-line arguments.
-    
+
     Returns:
     - args (Namespace): Parsed command-line arguments.
     """
@@ -52,9 +56,10 @@ def initialize_shared_variables(output_path, format_type):
         else:
             shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
     else:
-        shared.output_file_path = os.path.join(os.getcwd(), f"reddit-posts\\scraped_posts.{format_type}")
+        shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"scraped_posts.{format_type}")
 
-    remove_existing_output_file(shared.output_file_path)
+    ThreadManager.remove_existing_output_file(shared.output_file_path)
+    ThreadManager.recreate_directory(shared.output_file_path)
 
 def create_threads(subreddit, limit, categories, verbose):
     """
@@ -86,10 +91,49 @@ def wait_for_threads_to_complete():
     for category, thread in shared.threads.items():
         thread.join()
 
-    shared.processing_completed = True
 
-    PostProcessor.finalize_file()
+@app.route('/')
+def index():
+    """
+    Render the index.html template.
+    """
+    return render_template('index.html')
 
+@app.route('/start_scraping_route', methods=['POST'])
+def start_scraping_route():
+    """
+    Endpoint to start scraping process.
+
+    Expects form data with subreddit, max_posts, category, download_folder_input, file_name_input, and file_type_input.
+    """
+    data = request.json
+    subreddit = data.get('subreddit', '')
+    max_posts = int(data.get('max_posts', 0))
+    category = data.get('category', '')
+    file_name = data.get('file_name_input', '')
+    file_type = data.get('file_type_input', '')
+
+    # Joining download_folder, file_name, and file_type into output_path
+    output_path = os.path.join(DOWNLOAD_DIRECTORY, f"{file_name}.{file_type}")
+
+    print(output_path)
+    try:
+        # Check internet connection before proceeding
+        requests.get('https://www.google.com', timeout=5)
+    except (requests.ConnectionError, requests.Timeout):
+        return jsonify({'message': 'Unable to connect to the internet. Please check your connection.'}), 500
+
+    # Close any existing chrome instances
+    DriverUtils.close_existing_chrome_instances()
+
+    # Initialize shared variables and setup output file
+    initialize_shared_variables(output_path, file_type)
+
+    category = [category]
+    # Create threads for scraping
+    create_threads(subreddit, max_posts, category, verbose=True)
+
+    return jsonify({'message': 'Scraping started successfully.'}), 200
 
 def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=False, format_type='json'):
     """
@@ -98,18 +142,16 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     Args:
     - subreddit (str): Name of the subreddit to scrape.
     - limit (int): Limit on the number of posts to scrape (default is infinite).
-    - categories (list): List of categories to scrape ('hot', 'new', 'top', or 'all'; default is  all i.e. ['hot', 'new', 'top']).
+    - categories (list): List of categories to scrape ('hot', 'new', 'top', or 'all'; default is all i.e. ['hot', 'new', 'top']).
     - output_path (str): Output file path for the scraped posts.
     - verbose (bool): Enable verbose mode to print processing details.
     - format_type (str): Desired output format ('json', 'yaml', 'xml'; default is 'json').
     """
-    
     try:
         # Check internet connection
         requests.get('https://www.google.com', timeout=5)
     except (requests.ConnectionError, requests.Timeout):
-        print("\n⚠️  Unable to connect to the internet. Please check your internet connection and try again.")
-        return
+        return "\n⚠️  Unable to connect to the internet. Please check your internet connection and try again."
     
     # Close any existing chrome instances
     DriverUtils.close_existing_chrome_instances()
@@ -121,11 +163,43 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
 
     # Check if any posts were processed
     if shared.processed_posts_count == 0:
-        print("\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again.")
+        return "\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again."
     else:
-        print(f"\n✅ Output file: {shared.output_file_path}")
+        return f"\n✅ Output file: {shared.output_file_path}"
+    
+@app.route('/progress')
+def progress():
+    """
+    Endpoint to fetch scraping progress.
+    """
+    processed_posts = shared.processed_posts_count
+    max_posts = shared.limit
+    processing_done = shared.processing_done
+
+    return jsonify({
+        'processed_posts': processed_posts,
+        'max_posts': max_posts,
+        'processing_done': processing_done
+    })
+
+@app.route('/download')
+def download():
+    """
+    Endpoint to download scraped posts.
+    """
+    filename = os.path.basename(shared.output_file_path)
+    return send_from_directory(os.path.dirname(shared.output_file_path), filename, as_attachment=True)
 
 if __name__ == "__main__":
-    args = parse_arguments()
-    start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+    if len(sys.argv) > 1:
+        args = parse_arguments()
+        start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+
+        if shared.processed_posts_count == 0:
+            print("\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again.")
+        else:
+            print(f"\n✅ Output file: {shared.output_file_path}")
+    else:
+        # If no command-line arguments, run the Flask app
+        app.run(debug=True)
 

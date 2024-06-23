@@ -29,7 +29,7 @@ class PostProcessor:
         lines = [line.strip() for line in value.splitlines()]
         clean_lines = [line for line in lines if line]
         return ' '.join(clean_lines)
-
+                
     @staticmethod
     def write_post_to_file(data):
         file_path = shared.output_file_path
@@ -46,7 +46,8 @@ class PostProcessor:
                     data['Content'] = PostProcessor.clean_value(data['Content'])
                     json.dump(data, json_file, ensure_ascii=False)
             elif shared.format_type == 'yaml':
-                with open(file_path, 'a', encoding='utf-8') as yaml_file:
+                mode = 'a' if os.path.exists(file_path) else 'w'
+                with open(file_path, mode, encoding='utf-8') as yaml_file:
                     yaml_file.write('---\n')
                     data['Content'] = PostProcessor.clean_value(data['Content'])
                     yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
@@ -124,6 +125,8 @@ class PostProcessor:
             post_containers = soup.find_all('article', {'class': 'w-full m-0'})
 
             for container in post_containers:
+                if shared.processing_done:
+                    break
                 try:
                     title = container.get('aria-label', 'No title').strip()
                     author_element = container.find('a', href=lambda href: href and '/user/' in href)
@@ -158,6 +161,10 @@ class PostProcessor:
             if shared.processed_posts_count >= shared.limit:
                 if shared.verbose:
                     print(f"{thread_color}Thread {thread_id}: Processed {shared.processed_posts_count} posts. Terminating...{Colors.RESET}")
+                
+                if not shared.processing_done:
+                    shared.processing_done = True
+                    PostProcessor.finalize_file()
                 break
 
         return shared.processed_posts_count

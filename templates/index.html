@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Reddit Scraper</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Scrape Reddit Posts</h1>
+            <form onsubmit="startScraping(); return false;">
+                <input type="text" id="subreddit" name="subreddit" placeholder="Subreddit (Required)" required>
+                <input type="number" id="max_posts" name="max_posts" placeholder="Posts Number Limit (Optional)" required>
+                <select id="category" name="category">
+                    <option value="hot">Hot</option>
+                    <option value="new">New</option>
+                    <option value="top">Top</option>
+                    <option value="all">All</option>
+                </select>
+                <input type="text" id="file_name_input" name="file_name_input" placeholder="Output File Name e.g. posts (Optional)">
+                <select id="file_type_input" name="file_type_input">
+                    <option value="json">JSON</option>
+                    <option value="yaml">YAML</option>
+                    <option value="xml">XML</option>
+                </select>
+                <button type="submit">Start Scraping</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0%</div>
+            <!-- Centering the download button container using inline styles -->
+        <div id="download-button-container" class="download-button-container" style="display:none; text-align: center;">
+            <div>
+                <a href="{{ url_for('download') }}" id="download-button">Download Scraped Posts</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Reddit Scraper &copy; 2024</p>
+    </footer>
+
+    <script>
+        function startScraping() {
+            const subreddit = document.getElementById('subreddit').value;
+            const maxPosts = document.getElementById('max_posts').value;
+            const category = document.getElementById('category').value;
+            const fileNameInput = document.getElementById('file_name_input').value;
+            const fileTypeInput = document.getElementById('file_type_input').value;
+
+            const formData = {
+                subreddit: subreddit,
+                max_posts: maxPosts,
+                category: category,
+                file_name_input: fileNameInput,
+                file_type_input: fileTypeInput
+            };
+
+            fetch('/start_scraping_route', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data.message);
+                showProgress();
+            })
+            .catch(error => {
+                console.error('Error during scraping:', error);
+                alert('Error during scraping. Please try again.');
+            });
+        }
+
+        function showProgress() {
+            const progressContainer = document.querySelector('.progress-container');
+            progressContainer.style.display = 'block';
+
+            let interval = setInterval(() => {
+                fetch('/progress')
+                .then(response => response.json())
+                .then(data => {
+                    const progress = document.querySelector('.progress-bar');
+                    const progressText = document.querySelector('.progress-text');
+                    const percentage = (data.processed_posts / data.max_posts) * 100;
+                    progress.style.width = percentage + '%';
+                    progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
+
+                    if (data.processing_done) {
+                        clearInterval(interval);
+                        progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
+                        document.getElementById('download-button-container').style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching progress:', error);
+                    clearInterval(interval);
+                    alert('Error fetching progress. Please try again.');
+                });
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

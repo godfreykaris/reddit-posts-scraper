@@ -67,12 +67,17 @@ class ThreadManager:
         thread.start()
         return thread
 
-def remove_existing_output_file(output_path):
-    """
-    Remove the output file if it exists
+    def remove_existing_output_file(output_path):
+        """
+        Remove the output file if it exists
 
-    Args:
-    - output_path (str): Path to the output file.
-    """
-    if os.path.exists(output_path):
-        os.remove(output_path)  # Remove the existing file if it exists
+        Args:
+        - output_path (str): Path to the output file.
+        """
+        if os.path.exists(output_path):
+            os.remove(output_path)  # Remove the existing file if it exists
+    
+    def recreate_directory(file_path):
+        directory = os.path.dirname(file_path)
+        if not os.path.exists(directory):
+            os.makedirs(directory)

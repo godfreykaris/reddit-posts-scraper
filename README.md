@@ -77,7 +77,8 @@ To start scraping posts from Reddit, use the following command:
 python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v
 ```
 
-## Available Options
+## Commandline
+### Available Options
 
 The following options are available to customize the scraping process:
 
@@ -99,6 +100,17 @@ The following options are available to customize the scraping process:
 - **`-v, --verbose`**: (**Optional**)  
   Enable verbose mode to print detailed processing information.
 
+## Flask Application
+The application can also be run using Flask, providing a web interface to initiate and monitor the scraping process.
+
+Ensure the Flask application (app.py) is properly configured and dependencies are installed as described above.
+
+### Start the Flask application:
+
+```bash
+python app.py
+```
+Access the application through your web browser at http://localhost:5000.
 
 ## Project Structure
 ```
@@ -113,6 +125,10 @@ reddit-scraper/
 │   ├── shared.py
 |   ├── scraper.py
 |   ├── threading_utils.py
+├── static/
+│   ├── styles.css
+├── templates/
+│   ├── index.html
 ├── chromedriver/
 │   ├── chromedriver.exe (ensure this matches your Chrome version)
 ├── requirements.txt
@@ -128,7 +144,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 - BeautifulSoup
 - Selenium
-
+- Flask
 ## Additional Notes
 
 1. **chromedriver:**
