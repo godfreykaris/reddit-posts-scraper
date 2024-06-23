@@ -47,6 +47,16 @@ class DriverUtils:
         driver.maximize_window()  # Maximize the window
         
         return driver  # Return the initialized WebDriver instance
+    
+    @staticmethod
+    def quit_all_drivers():
+        for category, driver in shared.drivers.items():
+            try:
+                print(f"Quitting driver for category: {category}")
+                driver.quit()
+                    
+            except Exception as e:
+                print(f"Error quitting driver for category {category}: {e}")
 
     @staticmethod
     def access_subreddit(driver):

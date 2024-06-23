@@ -27,5 +27,5 @@ reddit_url = ''
 output_file_path = ""
 
 # Used for communication with the frontend incase the user decides to use the flask app
-processing_started = False
+processing = False
 processing_done = False

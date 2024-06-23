@@ -29,7 +29,21 @@ class PostProcessor:
         lines = [line.strip() for line in value.splitlines()]
         clean_lines = [line for line in lines if line]
         return ' '.join(clean_lines)
-                
+    
+    @staticmethod
+    def clean_xml(value):
+        
+        # Replace characters not allowed in XML with XML entities
+        value = value.replace('&', '&amp;')  # Replace '&' with '&amp;'
+        value = value.replace('<', '&lt;')   # Replace '<' with '&lt;'
+        value = value.replace('>', '&gt;')   # Replace '>' with '&gt;'
+        # Add more replacements as necessary for other special characters
+
+        # Optionally, remove any non-printable characters
+        value = ''.join(ch for ch in value if ch.isprintable())
+
+        return value.strip()  # Strip leading/trailing whitespace  
+       
     @staticmethod
     def write_post_to_file(data):
         file_path = shared.output_file_path
@@ -52,7 +66,7 @@ class PostProcessor:
                     data['Content'] = PostProcessor.clean_value(data['Content'])
                     yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
             elif shared.format_type == 'xml':
-                root = None
+                # Check if the file already exists
                 if os.path.exists(file_path):
                     tree = ET.parse(file_path)
                     root = tree.getroot()
@@ -63,12 +77,13 @@ class PostProcessor:
 
                 post_element = ET.SubElement(root, 'post')
                 for key, value in data.items():
-                    clean_value = PostProcessor.clean_value(value)
+                    clean_value = PostProcessor.clean_xml(value)
                     ET.SubElement(post_element, key).text = clean_value
 
                 tree = ET.ElementTree(root)
                 with open(file_path, 'wb') as xml_file:
                     tree.write(xml_file, encoding='utf-8')
+
         except Exception as e:
             raise FileWriteError(f"{thread_color}Failed to write to file '{file_path}': {str(e)}{Colors.RESET}")
 

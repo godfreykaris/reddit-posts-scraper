@@ -40,7 +40,10 @@ def initialize_shared_variables(output_path, format_type):
     """
     # Reset global variables
     shared.threads = {}
-    shared.processing_completed = False
+    shared.drivers = {}
+    shared.processing_done = False
+    shared.processing = True
+    shared.processed_posts_count = 0
 
     # Set the output file path based on user input or default
     if output_path:
@@ -108,7 +111,7 @@ def start_scraping_route():
     """
     data = request.json
     subreddit = data.get('subreddit', '')
-    max_posts = int(data.get('max_posts', 0))
+    max_posts = float('inf')#int(data.get('max_posts', float('inf')))
     category = data.get('category', '')
     file_name = data.get('file_name_input', '')
     file_type = data.get('file_type_input', '')
@@ -116,12 +119,12 @@ def start_scraping_route():
     # Joining download_folder, file_name, and file_type into output_path
     output_path = os.path.join(DOWNLOAD_DIRECTORY, f"{file_name}.{file_type}")
 
-    print(output_path)
     try:
         # Check internet connection before proceeding
         requests.get('https://www.google.com', timeout=5)
     except (requests.ConnectionError, requests.Timeout):
-        return jsonify({'message': 'Unable to connect to the internet. Please check your connection.'}), 500
+        message = 'Unable to connect to the internet. Please check your connection.'
+        return jsonify({'message': message}), 500
 
     # Close any existing chrome instances
     DriverUtils.close_existing_chrome_instances()
@@ -132,8 +135,13 @@ def start_scraping_route():
     category = [category]
     # Create threads for scraping
     create_threads(subreddit, max_posts, category, verbose=True)
+    wait_for_threads_to_complete()
 
-    return jsonify({'message': 'Scraping started successfully.'}), 200
+    shared.processing = False
+
+    DriverUtils.quit_all_drivers()
+
+    return jsonify({'message': 'Scraping Done.'}), 200
 
 def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=False, format_type='json'):
     """
@@ -161,6 +169,8 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     create_threads(subreddit, limit, categories, verbose)
     wait_for_threads_to_complete()
 
+    DriverUtils.quit_all_drivers()
+
     # Check if any posts were processed
     if shared.processed_posts_count == 0:
         return "\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again."
@@ -173,13 +183,17 @@ def progress():
     Endpoint to fetch scraping progress.
     """
     processed_posts = shared.processed_posts_count
-    max_posts = shared.limit
+    if shared.limit == float('inf'):
+        max_posts = 'As many as available'
+    else:
+        max_posts = shared.limit
     processing_done = shared.processing_done
 
     return jsonify({
         'processed_posts': processed_posts,
         'max_posts': max_posts,
-        'processing_done': processing_done
+        'processing_done': processing_done,
+        'processing': shared.processing
     })
 
 @app.route('/download')
