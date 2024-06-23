@@ -71,13 +71,13 @@ Adjust any configuration settings in `config.py` if necessary.
 
 
 ## Usage
+## Command Line Interface
 To start scraping posts from Reddit, use the following command:
 
 ```bash
 python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v
 ```
 
-## Commandline
 ### Available Options
 
 The following options are available to customize the scraping process:
