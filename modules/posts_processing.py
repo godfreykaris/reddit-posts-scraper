@@ -76,7 +76,7 @@ class PostProcessor:
         if shared.format_type not in ['json', 'yaml', 'xml']:
             raise ValueError(f"Invalid format type: {shared.format_type}")
 
-        file_path = f"{shared.output_file_path}.{shared.format_type}"
+        file_path = f"{shared.output_file_path}"
 
         if shared.format_type == 'json':
             with open(file_path, 'a', encoding='utf-8') as json_file:
@@ -159,7 +159,5 @@ class PostProcessor:
                 if shared.verbose:
                     print(f"{thread_color}Thread {thread_id}: Processed {shared.processed_posts_count} posts. Terminating...{Colors.RESET}")
                 break
-
-        PostProcessor.finalize_file()
 
         return shared.processed_posts_count

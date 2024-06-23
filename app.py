@@ -4,9 +4,10 @@ import os
 
 import requests
 
+from modules.posts_processing import PostProcessor
 import modules.shared as shared
 from modules.driver_utils import DriverUtils
-from modules.threading_utils import ThreadManager, ensure_output_file_exists
+from modules.threading_utils import ThreadManager, remove_existing_output_file
 
 def parse_arguments():
     """
@@ -53,7 +54,7 @@ def initialize_shared_variables(output_path, format_type):
     else:
         shared.output_file_path = os.path.join(os.getcwd(), f"reddit-posts\\scraped_posts.{format_type}")
 
-    ensure_output_file_exists(shared.output_file_path)
+    remove_existing_output_file(shared.output_file_path)
 
 def create_threads(subreddit, limit, categories, verbose):
     """
@@ -86,6 +87,9 @@ def wait_for_threads_to_complete():
         thread.join()
 
     shared.processing_completed = True
+
+    PostProcessor.finalize_file()
+
 
 def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=False, format_type='json'):
     """

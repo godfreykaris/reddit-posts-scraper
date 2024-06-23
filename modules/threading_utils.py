@@ -56,10 +56,6 @@ class ThreadManager:
         
         shared.scraper.scrape_subreddit()
 
-        # Terminate the output file correctly like with a ] for JSON files
-        with shared.lock:
-            PostProcessor.finalize_file()
-
     def start_thread(self):
         """
         Method to start a new thread for scraping a category.
@@ -71,19 +67,12 @@ class ThreadManager:
         thread.start()
         return thread
 
-def ensure_output_file_exists(output_path):
+def remove_existing_output_file(output_path):
     """
-    Ensure that the output file exists by creating it if it doesn't already exist.
+    Remove the output file if it exists
 
     Args:
     - output_path (str): Path to the output file.
     """
     if os.path.exists(output_path):
         os.remove(output_path)  # Remove the existing file if it exists
-
-    # Create the directory if it does not exist
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
-    # Create an empty file
-    with open(output_path, 'w'):
-        pass
