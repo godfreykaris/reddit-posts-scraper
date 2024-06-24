@@ -174,13 +174,20 @@ class PostProcessor:
             if shared.verbose:
                 print(f"{thread_color}Thread {thread_id}: Processed posts: {shared.processed_posts_count}{Colors.RESET}")
 
-            if shared.processed_posts_count >= shared.limit:
+            if shared.limit == float('inf') or shared.limit == 'Infinity':
+                # If limit is infinity, the condition will never be true
+                continue_processing = True
+            else:
+                continue_processing = shared.processed_posts_count < shared.limit
+
+            if not continue_processing:
                 if shared.verbose:
                     print(f"{thread_color}Thread {thread_id}: Processed {shared.processed_posts_count} posts. Terminating...{Colors.RESET}")
-                
+
                 if not shared.processing_done:
                     shared.processing_done = True
                     PostProcessor.finalize_file()
                 break
+
 
         return shared.processed_posts_count

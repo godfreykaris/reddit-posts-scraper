@@ -138,13 +138,16 @@ def start_scraping_route():
     wait_for_threads_to_complete()
 
     shared.processing = False
-    shared.processing_done = True
+
+    if not shared.processing_done:
+        shared.processing_done = True
+        PostProcessor.finalize_file()
 
     DriverUtils.quit_all_drivers()
 
     return jsonify({'message': 'Scraping Done.'}), 200
 
-def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=False, format_type='json'):
+def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=True, format_type='json'):
     """
     Start scraping posts from the specified subreddit.
 
@@ -168,7 +171,12 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     print("Working....")
     initialize_shared_variables(output_path, format_type)
     create_threads(subreddit, limit, categories, verbose)
+    print("Use -v when running the command to see the progress.")
     wait_for_threads_to_complete()
+
+    if not shared.processing_done:
+        shared.processing_done = True
+        PostProcessor.finalize_file()
 
     DriverUtils.quit_all_drivers()
 
