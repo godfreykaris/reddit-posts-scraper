@@ -61,6 +61,10 @@ def initialize_shared_variables(output_path, format_type):
     else:
         shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"scraped_posts.{format_type}")
 
+
+    # Initialize  the original path
+    shared.original_filepath_path = shared.output_file_path
+
     ThreadManager.remove_existing_output_file(shared.output_file_path)
     ThreadManager.recreate_directory(shared.output_file_path)
 
@@ -111,7 +115,7 @@ def start_scraping_route():
     """
     data = request.json
     subreddit = data.get('subreddit', '')
-    max_posts = float('inf')#int(data.get('max_posts', float('inf')))
+    max_posts = int(data.get('max_posts', float('inf')))
     category = data.get('category', '')
     file_name = data.get('file_name_input', '')
     file_type = data.get('file_type_input', '')
@@ -132,18 +136,28 @@ def start_scraping_route():
     # Initialize shared variables and setup output file
     initialize_shared_variables(output_path, file_type)
 
-    category = [category]
+    categories = [category]
+
+    # Ensure that we don't create too many webdrivers
+    if len(categories) > 1:
+        shared.maximum_workers = 2
+    elif shared.limit < 500 and len(categories) == 1:
+        shared.maximum_workers = 5
+
     # Create threads for scraping
-    create_threads(subreddit, max_posts, category, verbose=True)
+    create_threads(subreddit, max_posts, categories, verbose=True)
     wait_for_threads_to_complete()
 
     shared.processing = False
-
+    
+    if shared.processed_posts_count > 0:
+        PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
-        PostProcessor.finalize_file()
 
     DriverUtils.quit_all_drivers()
+     # Close any existing chrome instances
+    DriverUtils.close_existing_chrome_instances()
 
     return jsonify({'message': 'Scraping Done.'}), 200
 
@@ -170,15 +184,24 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
 
     print("Working....")
     initialize_shared_variables(output_path, format_type)
+    
+    # Ensure that we don't create too many webdrivers
+    if len(categories) > 1:
+        shared.maximum_workers = 2
+    elif shared.limit < 500 and len(categories) == 1:
+        shared.maximum_workers = 5
+
     create_threads(subreddit, limit, categories, verbose)
-    print("Use -v when running the command to see the progress.")
     wait_for_threads_to_complete()
 
+    if shared.processed_posts_count > 0:
+        PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
-        PostProcessor.finalize_file()
 
     DriverUtils.quit_all_drivers()
+     # Close any existing chrome instances
+    DriverUtils.close_existing_chrome_instances()
 
     # Check if any posts were processed
     if shared.processed_posts_count == 0:
@@ -221,7 +244,7 @@ if __name__ == "__main__":
         if shared.processed_posts_count == 0:
             print("\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again.")
         else:
-            print(f"\n✅ Output file: {shared.output_file_path}")
+            print(f"\n✅ Output file(s): {shared.original_filepath_path}. Other generated files are in the same location.")
     else:
         # If no command-line arguments, run the Flask app
         app.run(debug=True)

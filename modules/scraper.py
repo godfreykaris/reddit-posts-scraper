@@ -33,5 +33,13 @@ class SubredditScraper:
         It prints the total number of collected posts.
         """
         DriverUtils.access_subreddit(self.driver)  # Access the subreddit using the WebDriver
+        # Initialize four worker drivers
+        worker_drivers = [DriverUtils.create_driver() for _ in range(shared.maximum_workers)]
 
-        PostProcessor.process_posts(self.driver)  # Process posts using PostProcessor
+        try:
+            # Process posts using PostProcessor and the worker drivers
+            PostProcessor.process_posts(self.driver, worker_drivers)
+        finally:
+            # Quit the worker drivers to free resources
+            for driver in worker_drivers:
+                driver.quit()

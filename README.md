@@ -119,6 +119,7 @@ reddit-scraper/
 ├── modules/
 │   ├── colors.py
 │   ├── config.py
+│   ├── core.py
 │   ├── driver_utils.py
 │   ├── file_write_error.py
 │   ├── posts_processing.py

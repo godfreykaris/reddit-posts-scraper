@@ -56,7 +56,8 @@ class DriverUtils:
                 driver.quit()
                     
             except Exception as e:
-                print(f"Error quitting driver for category {category}: {e}")
+                # print(f"Error quitting driver for category {category}: {e}") -------> For Debugging
+                pass
 
     @staticmethod
     def access_subreddit(driver):
@@ -67,7 +68,7 @@ class DriverUtils:
         - driver (webdriver.Chrome): Chrome WebDriver instance.
         """
         driver.get(shared.reddit_url)  # Load the URL specified in shared.reddit_url
-        time.sleep(5)  # Wait for 5 seconds to allow the page to load
+        time.sleep(random.uniform(4.0, 5.3))  # Wait for approximately 5 seconds to allow the page to load
 
     @staticmethod
     def scroll_to_bottom(driver):

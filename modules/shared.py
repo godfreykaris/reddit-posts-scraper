@@ -8,6 +8,9 @@ lock = threading.Lock()  # Lock to synchronize access to shared variables
 # Thread color mapping for each thread to print its output in a drifferent color
 thread_colors = {}
 
+# Worker threads limit
+maximum_workers = 8
+
 # Global variable to count processed posts
 processed_posts_count = 0
 
@@ -24,7 +27,8 @@ format_type = "json"
 reddit_url = ''
 
 # Output filepath
-output_file_path = ""
+output_file_path = "" # This can change based on the file exceeding size limit
+original_filepath_path = ""
 
 # Used for communication with the frontend incase the user decides to use the flask app
 processing = False
