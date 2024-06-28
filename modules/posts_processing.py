@@ -76,7 +76,7 @@ class PostProcessor:
             ext = shared.format_type.lower()
 
             # Check if the file exists and its size
-            if os.path.exists(file_path) and get_file_size(file_path) > 2 * 1024 * 1024:  # 2MB in bytes
+            if os.path.exists(file_path) and get_file_size(file_path) > 5 * 1024 * 1024:  # 5MB in bytes
                 if shared.format_type == 'json':
                     with open(file_path, 'a', encoding='utf-8') as json_file:
                         json_file.write('\n]')
