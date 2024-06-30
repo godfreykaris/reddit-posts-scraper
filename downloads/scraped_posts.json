@@ -1,0 +1,1969 @@
+[
+{
+    "post_author": "Froggypwns",
+    "post_id": "1d5lf1b",
+    "post_score": "4",
+    "post_time": "Saturday, June 1, 2024 at 3:00:43 PM GMT+3",
+    "flair_text": "Help",
+    "post_title": "Simple questions and Help thread - Month of June",
+    "comments": [
+        {
+            "author": "sYfPxiq2sDlIltLc5ux1",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "m8rph8",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "Specific_Frame8537",
+            "score": "1",
+            "content": "I'm about to build a new PC with no optical drive and all I've got is my setup tool on a USB, will a new PC just look for a license when I log in to Microsoft?",
+            "replies": []
+        },
+        {
+            "author": "Intelligent-Ant-9164",
+            "score": "1",
+            "content": "Is there any possibility that I can use old, windows installed hard drive as an external drive, which are being shown as dynamic drive on disk management",
+            "replies": []
+        },
+        {
+            "author": "bladerking12",
+            "score": "1",
+            "content": "So i got my custom gaming pc built and i installed windows 11 pro without a product key. How long can i use it for without activating it? Really dont have the 200 euros right now to buy the license and i can live with the watermark.",
+            "replies": []
+        },
+        {
+            "author": "fall1ngwithin",
+            "score": "1",
+            "content": "I have a computer with Windows 11 on it , and I have never once downloaded anything that could contain a virus. I've ran scans and I don't even have anything on my computer other than 2 games. However, every time I shut off my computer, I am unsure if it will work again because the following happens ;\nOnce I log in, none of the apps start up (like wallpaper engine)\nI cannot run commands, or open any app at all other than my files in general. No matter how many times I click an app it won't run. (Along with not being able to run commands, I can't open settings, task manager, etc.)\nI cannot shut off, sleep, or restart my pc unless I hold down the physical computer's button.\nI have tried everything to fix this. At this point I have wiped my computer a total of 3 times and reinstalled everything. I reinstall the games from the microsoft store as well so I have no clue if I could've downloaded any sort of virus ? I'm sure I haven't.\nOnce I reset my computer, it works again. And because I fear of this happening again, nowadays I put my computer to sleep instead of actually shutting it off. Once I interact with it again and it's not asleep anymore, it still works ... ? ?\nI'm just lost, how do I fix this ? Should I take my computer checked by a professional , is this a computer itself problem or is Windows 11 the reason ? Please help me :( (quick thing to note if it helps; one time when my computer did this it managed to run using kernel debugging however I couldn't open apps I needed while running it and upon turning it off my computer went back to being this way)",
+            "replies": [
+                {
+                    "author": "tortilla_mia",
+                    "score": "1",
+                    "content": "First thing I would point out is that although you said you don't have anything on the computer except 2 games, you ALSO said that none of the apps start up like wallpaper engine and that you reinstalled \"everything\". This doesn't sound like you've got nothing on the computer.\nI would troubelshoot by starting with a clean install of Windows 11. Either a factory reset that removes your user files or a fresh install from new media like a USB stick created with the Windows 11 Media Creation Tool (https://www.microsoft.com/en-ca/software-download/windows11). Then, I would see if the computer exhibits the problem. E.g. can you shut off, sleep, or restart the PC normally?\nIf so, then I would install programs one at a time and test the problem after each program to see if the problem returns.\nThe problem as you've described does not sound like virus behavior so that might be some comfort.",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "tortilla_mia",
+            "score": "1",
+            "content": "I just setup a new Windows 11 machine and logged in with my microsoft account during the setup. My user folder (e.g. C:\\User\\Jon) has a typo and I'd really like it to be my preferred spelling (e.g. \"Jonny\"). Is there a way I can fix this? Do I need to change something in my microsoft account somewhere so it is set up correctly forever into the future?\nI saw some suggestions for registry changes that will fix it on this computer specifically, but I don't want to have to do that every time I set up a new computer.\nedit: It appears that the default behavior is to use the first 5 letters of the user name. I have a name that is 6 letters long and thought I made a typo where I left off the final letter which is why I was looking to \"fix\" it but it appears there is actually nothing to fix here.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "soldier201101",
+    "post_id": "1do8fdf",
+    "post_score": "3",
+    "post_time": "Tuesday, June 25, 2024 at 6:13:56 PM GMT+3",
+    "flair_text": "Feature",
+    "post_title": "for someone wondering what is that popular font in windows movie maker 2.6 back then , it called seogre prints",
+    "comments": [
+        {
+            "author": "Commercial_Plate_111",
+            "score": "3",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "NicDima",
+            "score": "2",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "ECrispy",
+    "post_id": "1dq2ng5",
+    "post_score": "6",
+    "post_time": "Friday, June 28, 2024 at 12:26:52 AM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Will Windows boot if I disable Secure Boot?",
+    "comments": [
+        {
+            "author": "tomscharbach",
+            "score": "7",
+            "content": "",
+            "replies": [
+                {
+                    "author": "ECrispy",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Artistic-Camera-4345",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I did too. I followed the steps to register the key on the 'MAK key verification' screen. the iso doesn't boot even after that.",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I didnt downvote anyone",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Advanced_Refuse4066",
+            "score": "2",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "SamuelTheGamer",
+            "score": "1",
+            "content": "Also if you used ventoy to format the usb there was a solution to the secure boot error when I had the same problem and searched the error on google",
+            "replies": [
+                {
+                    "author": "ECrispy",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Artistic-Camera-4345",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I did too. I followed the steps to register the key on the 'MAK key verification' screen. the iso doesn't boot even after that.",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I didnt downvote anyone",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Clarkky",
+            "score": "1",
+            "content": "You notice all the different responses OP ? Like I said it varies on the machine the manufacturer and the OS. For you that down voted me, are you 12 ?",
+            "replies": [
+                {
+                    "author": "ECrispy",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Artistic-Camera-4345",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I did too. I followed the steps to register the key on the 'MAK key verification' screen. the iso doesn't boot even after that.",
+                    "replies": []
+                },
+                {
+                    "author": "ECrispy",
+                    "score": "2",
+                    "content": "I didnt downvote anyone",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "nsneerful",
+            "score": "0",
+            "content": "Yes, you might be confusing UEFI boot with secure boot. I'm no expert in this regard, but I can pretty much tell you:\nUEFI boot is a different boot method than BIOS/legacy, and Windows 11 explicitly required UEFI boot;\nsecure boot is nothing else than verifying the keys of the OS you're booting into.\nIn other words, any OS that boots with UEFI will boot both with secure boot enabled and disabled.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "GroundbreakingAd3589",
+    "post_id": "1dp7xhs",
+    "post_score": "4",
+    "post_time": "Wednesday, June 26, 2024 at 10:57:19 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "How do i see the full activation key of my windows?",
+    "comments": [
+        {
+            "author": "jenesaispasquijesuis",
+            "score": "5",
+            "content": "If Windows was activated digitally, it should reactivate once you connect to the internet after reinstalling. Additionally, if you use the in-built recovery/reset options, you won't even have to enter a key or select an edition.",
+            "replies": []
+        },
+        {
+            "author": "Froggypwns",
+            "score": "4",
+            "content": "https://www.microsoft.com/store/productId/9PKVZCPRX9NV\nYou can use that, however with digital entitlement you do not need a key, just reinstall the same edition and it will activate automatically.",
+            "replies": []
+        },
+        {
+            "author": "dansutton21",
+            "score": "2",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "Clarkky",
+            "score": "2",
+            "content": "In newer computers the activation key is hard coded to the motherboard. It will activate as the Windows version it's coded for",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "jakedesnake",
+    "post_id": "1do67uq",
+    "post_score": "3",
+    "post_time": "Tuesday, June 25, 2024 at 4:38:01 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Running (portable) software off of a network, or even a cloud drive - Win10 / Win11 - what are the pitfalls?",
+    "comments": [
+        {
+            "author": "recluseMeteor",
+            "score": "2",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "One-Cardiologist-462",
+            "score": "2",
+            "content": "",
+            "replies": [
+                {
+                    "author": "jakedesnake",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "jakedesnake",
+                    "score": "1",
+                    "content": "But in the case of laptops, how do they tackle people going out of the offices? (You won't have access to the share if you're not on the same network)",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "TurboFool",
+            "score": "2",
+            "content": "This is fairly standard in office environments, honestly. A lot of office software resides on a network location, and the executable and back end sit there. Especially if it's light and portable, and not something at risk if the connection goes down (like constantly writing vital data), you should be fine.",
+            "replies": [
+                {
+                    "author": "jakedesnake",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "jakedesnake",
+                    "score": "1",
+                    "content": "But in the case of laptops, how do they tackle people going out of the offices? (You won't have access to the share if you're not on the same network)",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "rorrors",
+            "score": "1",
+            "content": "I am running porable software from shares as well. The smaller applications i call Tools, and are on network share, the bigger apps on c:\\PortableApps\\\nMakes live much easer when you don't have to reinstall all software, when reinstalling or new computer.\nWhats your top 50list of Porable Apps, a printscreen would be cool. Always hoping to find some additional tools of software that is portable.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Xenophage2112",
+    "post_id": "1dqrck9",
+    "post_score": "4",
+    "post_time": "Friday, June 28, 2024 at 9:59:05 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Windows 3.11 Retro Music Video",
+    "comments": []
+},
+{
+    "post_author": "Automatic_Resource36",
+    "post_id": "1dp2did",
+    "post_score": "4",
+    "post_time": "Wednesday, June 26, 2024 at 7:07:55 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Can you use W365 with Windows IoT",
+    "comments": [
+        {
+            "author": "Creative_Onion_1440",
+            "score": "1",
+            "content": "Pretty sure Windows 10 LTSC IoT is intended for kiosks, POS, digital signage, medical devices, etc that are embedded-like.\nMS probably doesn't want you to use Windows 10 IoT editions as your personal workstation.",
+            "replies": []
+        },
+        {
+            "author": "condog1035",
+            "score": "1",
+            "content": "You cannot technically buy windows iot/ltsc unless you are a Microsoft partner. A lot of the keys you'll find online are grey market and could be revoked at any time.\nBut barring that, any software that works on windows should work on iot since it's based on the same foundation.",
+            "replies": [
+                {
+                    "author": "allaboutcomputer",
+                    "score": "1",
+                    "content": "The programs which require the Explorer Shell would not work on the Minimal Shell of IoT.",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "TuanDungN-090211",
+            "score": "1",
+            "content": "I don't think so, because no one gonna want a IoT device on the cloud.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Suspicious-Ad8201",
+    "post_id": "1dqbjdh",
+    "post_score": "0",
+    "post_time": "Friday, June 28, 2024 at 7:52:50 AM GMT+3",
+    "flair_text": "Concept / Idea",
+    "post_title": "Windows 11 more color mode",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "BrainstainOG",
+            "score": "2",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "kakha_k",
+            "score": "1",
+            "content": "No to as you wanted and imagined it. Impossible with stock settings.",
+            "replies": []
+        },
+        {
+            "author": "optiplex990pc",
+            "score": "2",
+            "content": "if you manage to enable aero lite, you may be able to get more colors",
+            "replies": [
+                {
+                    "author": "Suspicious-Ad8201",
+                    "score": "1",
+                    "content": "I have Aero light but how to change colors after selecting Aero",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Internal-Park7660",
+    "post_id": "1dqizeo",
+    "post_score": "5",
+    "post_time": "Friday, June 28, 2024 at 3:55:36 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "How to Force Enable the Charms Bar in Windows 10 or Windows 11?",
+    "comments": [
+        {
+            "author": "PandaMan12321",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Internal-Park7660",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "YueLing182",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Internal-Park7660",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "oneofembois1",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Internal-Park7660",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "YueLing182",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Internal-Park7660",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Brando230",
+    "post_id": "1dp97qs",
+    "post_score": "0",
+    "post_time": "Wednesday, June 26, 2024 at 11:51:48 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Ability to Split Out Wi-Fi and Sound Context Menus?",
+    "comments": [
+        {
+            "author": "r_portugal",
+            "score": "0",
+            "content": "They can be hidden (ie moved into the ^ submenu), so I just hide the volume and use EarTrumpet.",
+            "replies": []
+        },
+        {
+            "author": "Aztekker985",
+            "score": "1",
+            "content": "ExplorerPatcher is free and open source and can accomplish what you want to do.\nhttps://github.com/valinet/ExplorerPatcher",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "therealmrinman",
+    "post_id": "1dnc4h3",
+    "post_score": "156",
+    "post_time": "Monday, June 24, 2024 at 3:20:08 PM GMT+3",
+    "flair_text": "Humor",
+    "post_title": " PC literally DIES meme",
+    "comments": [
+        {
+            "author": "toyfreddym8",
+            "score": "24",
+            "content": "",
+            "replies": [
+                {
+                    "author": "SuperFLEB",
+                    "score": "27",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Froggypwns",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Advanced_Refuse4066",
+                    "score": "6",
+                    "content": "Windows started as a GUI for DOS and thus inherited a lot of its quirks. DOS reserved a bunch of file names to access devices, kinda like linux does with the /dev/ folder where the files there aren't really files, just aliases to devices and filesystem operations really translate to device operations.\nCON stands for CONsole and programs can open it as a file and write to the console that way, or read it and save whatever is on the console. Other reserved names would be COM1-9 which mapped to the serial ports so programs talking to serial devices can simply open the \"com1\" and read or write to data and that data will be received/sent from that serial port. LPT1-9 which mapped to the PC's parallel port; PRN would be the default printer/LPT port; NUL for when you want to send data to the shadow realm; AUX would be the default serial port\nAnd to maintain backwards compatibility with old apps(given that Win32 started with Windows 9x which was still built on DOS) Microsoft doesn't attempt to remove the blacklist.\nThere is also this great video by Tom Scott explaining what is going on: https://www.youtube.com/watch?v=bC6tngl0PTI",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "duvagin",
+            "score": "15",
+            "content": "",
+            "replies": [
+                {
+                    "author": "SuperFLEB",
+                    "score": "27",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Froggypwns",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Advanced_Refuse4066",
+                    "score": "6",
+                    "content": "Windows started as a GUI for DOS and thus inherited a lot of its quirks. DOS reserved a bunch of file names to access devices, kinda like linux does with the /dev/ folder where the files there aren't really files, just aliases to devices and filesystem operations really translate to device operations.\nCON stands for CONsole and programs can open it as a file and write to the console that way, or read it and save whatever is on the console. Other reserved names would be COM1-9 which mapped to the serial ports so programs talking to serial devices can simply open the \"com1\" and read or write to data and that data will be received/sent from that serial port. LPT1-9 which mapped to the PC's parallel port; PRN would be the default printer/LPT port; NUL for when you want to send data to the shadow realm; AUX would be the default serial port\nAnd to maintain backwards compatibility with old apps(given that Win32 started with Windows 9x which was still built on DOS) Microsoft doesn't attempt to remove the blacklist.\nThere is also this great video by Tom Scott explaining what is going on: https://www.youtube.com/watch?v=bC6tngl0PTI",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "xXWarMachineRoXx",
+            "score": "6",
+            "content": "Ai will solve thus /s\nAnyone please so explain why can’t we name it con??",
+            "replies": [
+                {
+                    "author": "SuperFLEB",
+                    "score": "27",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Froggypwns",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Advanced_Refuse4066",
+                    "score": "6",
+                    "content": "Windows started as a GUI for DOS and thus inherited a lot of its quirks. DOS reserved a bunch of file names to access devices, kinda like linux does with the /dev/ folder where the files there aren't really files, just aliases to devices and filesystem operations really translate to device operations.\nCON stands for CONsole and programs can open it as a file and write to the console that way, or read it and save whatever is on the console. Other reserved names would be COM1-9 which mapped to the serial ports so programs talking to serial devices can simply open the \"com1\" and read or write to data and that data will be received/sent from that serial port. LPT1-9 which mapped to the PC's parallel port; PRN would be the default printer/LPT port; NUL for when you want to send data to the shadow realm; AUX would be the default serial port\nAnd to maintain backwards compatibility with old apps(given that Win32 started with Windows 9x which was still built on DOS) Microsoft doesn't attempt to remove the blacklist.\nThere is also this great video by Tom Scott explaining what is going on: https://www.youtube.com/watch?v=bC6tngl0PTI",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "KDAM71",
+            "score": "3",
+            "content": "Literally a pc cannot die.",
+            "replies": []
+        },
+        {
+            "author": "KDAM71",
+            "score": "1",
+            "content": "0:00\n0:00\n0:00",
+            "replies": []
+        },
+        {
+            "author": "Crucco",
+            "score": "1",
+            "content": "In Windows, you cannot name a folder \"con\" because it is a reserved keyword from the days of MS-DOS. These reserved keywords were used to represent system devices or actions. For example, \"con\" stands for \"console,\" aka the command prompt, or terminal.\nWindows 11 maintains this restriction for backward compatibility.\nNo idea though why running con/con in the video makes Windows crash with the blue screen of death.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "canadas",
+    "post_id": "1dpe47n",
+    "post_score": "169",
+    "post_time": "Thursday, June 27, 2024 at 3:30:04 AM GMT+3",
+    "flair_text": "Feature",
+    "post_title": "Why does Windows keep making everything stupider?",
+    "comments": [
+        {
+            "author": "bogglingsnog",
+            "score": "66",
+            "content": "",
+            "replies": [
+                {
+                    "author": "shindabito",
+                    "score": "25",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "angryscientistjunior",
+                    "score": "29",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "OGigachaod",
+                    "score": "22",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "zhifan1",
+            "score": "48",
+            "content": "",
+            "replies": [
+                {
+                    "author": "shindabito",
+                    "score": "25",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "angryscientistjunior",
+                    "score": "29",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "OGigachaod",
+                    "score": "22",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "ScottIPease",
+            "score": "16",
+            "content": "There are IMO two main things going on (and a few smaller ones, but those for another post maybe).\nOne is that marketing teams and devs gotta justify their existence, there always has to be something to be 'improved' or they lose their jobs. Whether things really need 'improving' does not matter, the only thing that matters is they keep making money by constant change, even 'perfect' can never be admitted to be perfect.\nAnother is that many companies are pulling features or forcing usage of free features that were not pushed before, AKA: enshitification.\nThe reason for pulling features or pulling parts of those features like:\nTaking away customization options or hiding them.\nHiding useful menus (or making them ugly/difficult to use) so that later they can say: \"no one uses these features, so we are simplifying things by removing them!\".\nShutting down windows backup, then forcing them to OneDrive. Part of this though is to get people using OneDrive where people will of course start to fill it up and thus need to pay for an upgrade... or later down the road take away the free part, forcing people to pay.\nPushing the snipping tool, which is irritating at the least, now you have to do things like drag or click things just for your picture, no more just clicking 'print screen' and knowing your pic is in the screenshots folder that you can go get later when it is convenient.\nFor Google, just to pick on someone else for a moment: It is things like now it will not turn on the speakerphone when you ask it to when making a call or deciding that now after a recent update the assistant cannot even skip a song or set a reminder/alarm when you do not have cell signal.\nFor many of the base features that these services had, the various companies will then down the road offer \"Windows Plus\", \"Windows Media Edition\", Google+ or the like or simply push people into the paid version of their products that already exist.\nWithin 5-10 years this will shift a bit into pushing everyone off of hardware machines with installed software, you will use your phone or a new version of a dumb client that you have to rent all software for in packs or plans that are reminiscent to cable TV packs...\nWant Office?\nYou need to pay for Windows per month and the Plus pack that gives you more comprehensive menus, ability to take screenshots, has \"handy utilities\" such as notepad, calculator, and more!\", these are the prereqs to have the productivity pack, which is a base version of MS Office (of course with further upgrades available for a fee).\nOh, you also want games? pick one of our 5 packs/tiers for different games! (of course all the best games will be in diff tiers/packs, and the pack you pay for also comes with a bunch of crap).\nDon't forget the Social media pack!\nAnd especially don't forget to add how much storage you want to rent, running out when doing that big business project or when in that big game would be devastating, but never fear, we allow you to upgrade it on the fly in case you fill it up!\nForget to pay your bill? \"Sorry, it appears your payment did not go through, this machine will not allow any activity other than paying your bill.\"\nYes, what I did with the product names was intentional...\nEdit: OneDrive, not OneNote, lol",
+            "replies": []
+        },
+        {
+            "author": "aeveltstra",
+            "score": "28",
+            "content": "Good iconography helps a lot. Bad iconography, does not.\nWindows applications have given developers the choice of showing toolbars with just buttons, just labels, or combined, since as long as I can remember. What they should have done with Windows 11 is give people the option to turn button labels on or off.\nI guess someone at Microsoft decided to run a test on Windows 11 users to see how a change in design language would be accepted… and then they rolled it back because people didn’t like it.",
+            "replies": []
+        },
+        {
+            "author": "AccidentAnnual",
+            "score": "13",
+            "content": "\"Hello user, it's update time. Let's remove Steam and Firfox from your start bar, shall we?\"\nWhat? Why?\n\"Look at that, icons-be-gone, lol. Now let's restart.\"\nHello? The restarting is taking ages!\n\"Yes. After 30 years we still don't give info on hanging processes, idiot. Just hang in there. 99% is done, but there is still the greedy 1%. By the way, we care about carbon, did you know that?\"\nGetting impatient here.\n\"Do not turn off your computer!!1!\"",
+            "replies": []
+        },
+        {
+            "author": "BlueNeckpunch",
+            "score": "11",
+            "content": "It's simple. The paradigm shift of the User experience from being information creators to information consumers is just more profitable for them",
+            "replies": []
+        },
+        {
+            "author": "vanagoon",
+            "score": "8",
+            "content": "WinAero Tweaker has a setting to always show the full menus and has lots of setting to remedy windows annoyances. Doesn't do dumb stuff like messing with windows internals - a lot of it is settings that affect the GUI.\nOpen Shell is a fantastic start menu replacement that's completely free.\nhttps://github.com/Open-Shell/Open-Shell-Menu",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "LavishnessMedium8899",
+    "post_id": "1dr76g6",
+    "post_score": "0",
+    "post_time": "Saturday, June 29, 2024 at 12:12:57 PM GMT+3",
+    "flair_text": "Concept / Idea",
+    "post_title": "Made windows 10 look like windows 7 :D rate it",
+    "comments": [
+        {
+            "author": "NikoStrelkov",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "FuckmulaOneIsShit",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "vistaflip",
+            "score": "1",
+            "content": "Use Revert8plus",
+            "replies": []
+        },
+        {
+            "author": "TheBloodhoundKnight",
+            "score": "1",
+            "content": "No",
+            "replies": []
+        },
+        {
+            "author": "PandaMan12321",
+            "score": "1",
+            "content": "Sorry but this doesnt look like windows 7 at all",
+            "replies": []
+        },
+        {
+            "author": "interactor",
+            "score": "1",
+            "content": "7/10",
+            "replies": []
+        },
+        {
+            "author": "oneofembois1",
+            "score": "1",
+            "content": "At least you tried.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Particular_Camel_889",
+    "post_id": "1drlf0y",
+    "post_score": "92",
+    "post_time": "Sunday, June 30, 2024 at 12:23:39 AM GMT+3",
+    "flair_text": "Meta",
+    "post_title": "My cousins found these things that I made when I was 8/9",
+    "comments": [
+        {
+            "author": "TopUnderstanding5305",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lazy-Requirement-646",
+                    "score": "1",
+                    "content": "ra",
+                    "replies": []
+                },
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "I'm guessing it blue screens the kids that come to your house to steal candy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "p90rushb",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "Bourriks",
+            "score": "1",
+            "content": "Back when Windows logo was elegant.\nIt's a great job.",
+            "replies": []
+        },
+        {
+            "author": "False_Shoulder_4429",
+            "score": "1",
+            "content": "Windows Vista: 💀",
+            "replies": [
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lazy-Requirement-646",
+                    "score": "1",
+                    "content": "ra",
+                    "replies": []
+                },
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "I'm guessing it blue screens the kids that come to your house to steal candy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "evm127",
+            "score": "1",
+            "content": "I once made a windows vista pumpkin for halloween the most scariest thing ever windows vista",
+            "replies": [
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lazy-Requirement-646",
+                    "score": "1",
+                    "content": "ra",
+                    "replies": []
+                },
+                {
+                    "author": "Particular_Camel_889",
+                    "score": "1",
+                    "content": "I'm guessing it blue screens the kids that come to your house to steal candy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "allaboutcomputer",
+            "score": "1",
+            "content": "Woah!",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "HelloitsWojan",
+    "post_id": "1do13qm",
+    "post_score": "506",
+    "post_time": "Tuesday, June 25, 2024 at 11:34:01 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "On this day, in 1998, Microsoft released Windows 98",
+    "comments": [
+        {
+            "author": "AsstDepUnderlord",
+            "score": "54",
+            "content": "And the era of USB began! I seem to remember that it “worked” in win95…but it was rough.",
+            "replies": [
+                {
+                    "author": "Signal-Session-6637",
+                    "score": "37",
+                    "content": "We used to say it stood for “unsupported bus”.",
+                    "replies": []
+                },
+                {
+                    "author": "cisco_bee",
+                    "score": "13",
+                    "content": "98SE was 🔥",
+                    "replies": []
+                },
+                {
+                    "author": "DiodeInc",
+                    "score": "7",
+                    "content": "You have nothing to lose by waiting",
+                    "replies": []
+                },
+                {
+                    "author": "IllustriousNoodles",
+                    "score": "13",
+                    "content": "This looks really cozy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "duvagin",
+            "score": "32",
+            "content": "Should I upgrade now or wait for the rumoured Second Edition ?",
+            "replies": [
+                {
+                    "author": "Signal-Session-6637",
+                    "score": "37",
+                    "content": "We used to say it stood for “unsupported bus”.",
+                    "replies": []
+                },
+                {
+                    "author": "cisco_bee",
+                    "score": "13",
+                    "content": "98SE was 🔥",
+                    "replies": []
+                },
+                {
+                    "author": "DiodeInc",
+                    "score": "7",
+                    "content": "You have nothing to lose by waiting",
+                    "replies": []
+                },
+                {
+                    "author": "IllustriousNoodles",
+                    "score": "13",
+                    "content": "This looks really cozy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "iamgarffi",
+            "score": "32",
+            "content": "Yes! I never stopped using it :-)",
+            "replies": [
+                {
+                    "author": "Signal-Session-6637",
+                    "score": "37",
+                    "content": "We used to say it stood for “unsupported bus”.",
+                    "replies": []
+                },
+                {
+                    "author": "cisco_bee",
+                    "score": "13",
+                    "content": "98SE was 🔥",
+                    "replies": []
+                },
+                {
+                    "author": "DiodeInc",
+                    "score": "7",
+                    "content": "You have nothing to lose by waiting",
+                    "replies": []
+                },
+                {
+                    "author": "IllustriousNoodles",
+                    "score": "13",
+                    "content": "This looks really cozy",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Briggs-and-Stratton",
+            "score": "19",
+            "content": "26years ago",
+            "replies": []
+        },
+        {
+            "author": "HolierThanYow",
+            "score": "7",
+            "content": "Ahh the queues and excitement at the stores when that happened. Seems almost quaint now.",
+            "replies": []
+        },
+        {
+            "author": "megadonkeyx",
+            "score": "7",
+            "content": "Always thought the packaging looked like a washing machine detergent box",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "wak_trader",
+    "post_id": "1dq1puq",
+    "post_score": "2",
+    "post_time": "Thursday, June 27, 2024 at 11:47:06 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Dock Task Bar still supported in 2024?",
+    "comments": [
+        {
+            "author": "lefty1117",
+            "score": "3",
+            "content": "I think Stardock has a product.",
+            "replies": [
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "charging 12 euros for a simple feature its kind of crazy i thought they would have it bundled with start 11v2 but no....",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "nvm looks like the forums are still active ill try it out and let you know!",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "this is perfect thank you so much",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "0",
+                    "content": "this looks nice is it still supported though the website looks outdated",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "mackid1993",
+            "score": "2",
+            "content": "",
+            "replies": [
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "charging 12 euros for a simple feature its kind of crazy i thought they would have it bundled with start 11v2 but no....",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "nvm looks like the forums are still active ill try it out and let you know!",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "this is perfect thank you so much",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "0",
+                    "content": "this looks nice is it still supported though the website looks outdated",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "xwin2023",
+            "score": "1",
+            "content": "Winstep Nexus",
+            "replies": [
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "charging 12 euros for a simple feature its kind of crazy i thought they would have it bundled with start 11v2 but no....",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "nvm looks like the forums are still active ill try it out and let you know!",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "1",
+                    "content": "this is perfect thank you so much",
+                    "replies": []
+                },
+                {
+                    "author": "wak_trader",
+                    "score": "0",
+                    "content": "this looks nice is it still supported though the website looks outdated",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "S1mpleHero",
+    "post_id": "1dqdsf1",
+    "post_score": "8",
+    "post_time": "Friday, June 28, 2024 at 10:19:09 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "The Windows NT Workstation 4.0 Daily Driver Project",
+    "comments": [
+        {
+            "author": "jd31068",
+            "score": "2",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "The-Windows-Guy",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Lost_Instruction4491",
+    "post_id": "1do91eu",
+    "post_score": "1",
+    "post_time": "Tuesday, June 25, 2024 at 6:40:13 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Help for returning windows user",
+    "comments": [
+        {
+            "author": "[deleted]",
+            "score": "",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "AsstDepUnderlord",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Lost_Instruction4491",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Paradoxbuilder",
+    "post_id": "1dotso8",
+    "post_score": "5",
+    "post_time": "Wednesday, June 26, 2024 at 11:44:01 AM GMT+3",
+    "flair_text": "Feature",
+    "post_title": "There are lots of programs that hide data even after I uninstalled them. Any way to track them down? ",
+    "comments": [
+        {
+            "author": "Vexoly",
+            "score": "7",
+            "content": "Geek Uninstaller\nAlso WizTree is better than WinDirStat",
+            "replies": []
+        },
+        {
+            "author": "TommyCatFold",
+            "score": "5",
+            "content": "Usually the leftover are in %appdata% and/or programdata folder + registry.",
+            "replies": []
+        },
+        {
+            "author": "Tun-Tavern-1775",
+            "score": "3",
+            "content": "Revo works for me. As much as I can tell and far better than the junk O/S remove app thingy.\nhttps://www.revouninstaller.com/",
+            "replies": []
+        },
+        {
+            "author": "Puzzleheaded_Low2034",
+            "score": "1",
+            "content": "Came here to write WinDirStat 😂",
+            "replies": []
+        },
+        {
+            "author": "Plus-Environment-889",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "the_abortionat0r",
+            "score": "1",
+            "content": "Theres almost no windows programs that clean them selves up and sometimes thats intentional. You'll need to use special programs as mentioned by others.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Dismal_Taste5508",
+    "post_id": "1drqs72",
+    "post_score": "3",
+    "post_time": "Sunday, June 30, 2024 at 4:57:27 AM GMT+3",
+    "flair_text": "Concept / Idea",
+    "post_title": "Windows 7/10 dual boot",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "SolidusKal",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Moist_Inspection_485",
+    "post_id": "1dpq8vj",
+    "post_score": "215",
+    "post_time": "Thursday, June 27, 2024 at 3:36:41 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Can my pc run windows 10?",
+    "comments": [
+        {
+            "author": "Malk_McJorma",
+            "score": "223",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Moist_Inspection_485",
+                    "score": "32",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Top-Dinner9131",
+                    "score": "15",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "EmptyBrook",
+            "score": "90",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Moist_Inspection_485",
+                    "score": "32",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Top-Dinner9131",
+                    "score": "15",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "rkpjr",
+            "score": "19",
+            "content": "So, you've got a single core, 32bit CPU.\nThe 32bit CPU limits RAM 4BG, if the motherboard can support it. And that's below what I'd recommend for any Win10 use cases.\nAlso, this computer is almost guaranteed to have an HDD, and that's going to further slow you down.\nSo, to answer your question. YES you can install Windows 10 on this computer.\nYou will hate it; even if you upgrade RAM, and get an SSD it'll still be very slow.",
+            "replies": []
+        },
+        {
+            "author": "Shady_Jezus",
+            "score": "15",
+            "content": "From what I found on the internet, you have 1 core 1 thread cpu from 2009. Your processor is older than a lot of reddit users. Windows 7 is just about all it can do.",
+            "replies": []
+        },
+        {
+            "author": "GheorgheGheorghiuBej",
+            "score": "43",
+            "content": "It can run 10.\n.\n.\n.\n.\n.\nDebian 10.",
+            "replies": []
+        },
+        {
+            "author": "GeForce66",
+            "score": "8",
+            "content": "Unfortunately with those specs you should seek out a replacement.\nWin 10 would be unbearably slow, even for Win 7 the specs you have are on the lower end.",
+            "replies": []
+        },
+        {
+            "author": "Bedu009",
+            "score": "31",
+            "content": "32 bit? You're cooked bud",
+            "replies": []
+        },
+        {
+            "author": "Vulpes_macrotis",
+            "score": "6",
+            "content": "Honest suggestion: Just buy new PC. Some low end laptop from around '10s won't be any good. 2GB maybe much in the '00s, but we are two decades away from that time. Didn't Windows 7 or 8 need 4GB ram recommended?",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "No_Principle_150",
+    "post_id": "1dp4cc7",
+    "post_score": "0",
+    "post_time": "Wednesday, June 26, 2024 at 8:28:57 PM GMT+3",
+    "flair_text": "News",
+    "post_title": "I found my grandpa's windows 7 computer!",
+    "comments": [
+        {
+            "author": "sahui",
+            "score": "13",
+            "content": "Cool story bro",
+            "replies": []
+        },
+        {
+            "author": "Inviz57",
+            "score": "7",
+            "content": "I heard something buzzing in my room. It sounded like a bee. I thought it was a bee, but it was a fly!",
+            "replies": []
+        },
+        {
+            "author": "Banmers",
+            "score": "3",
+            "content": "that’s insane, was it fully updated?!",
+            "replies": []
+        },
+        {
+            "author": "No_Principle_150",
+            "score": "1",
+            "content": "it doesnt turn on tho, the charger is broken or lost.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "EmperorPHNX",
+    "post_id": "1dnvli2",
+    "post_score": "6",
+    "post_time": "Tuesday, June 25, 2024 at 5:45:38 AM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "I have a folder called ''Game_2018'' in this location, have no idea what it is and substance folder takes 478mb, anyone have any idea about what is this and safe to delete?",
+    "comments": [
+        {
+            "author": "JouniFlemming",
+            "score": "11",
+            "content": "",
+            "replies": [
+                {
+                    "author": "EmperorPHNX",
+                    "score": "3",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "You sure about that? Because I have nothing against NSFW games, I played some there and there, but I didn't played this game ever in my life 😂\nEdit: I just searched game_2018 Unreal and found lots of game, but couldn't find that game inside of them how you were able to find this game from that search?",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "JaggedMetalOs",
+            "score": "3",
+            "content": "",
+            "replies": [
+                {
+                    "author": "EmperorPHNX",
+                    "score": "3",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "You sure about that? Because I have nothing against NSFW games, I played some there and there, but I didn't played this game ever in my life 😂\nEdit: I just searched game_2018 Unreal and found lots of game, but couldn't find that game inside of them how you were able to find this game from that search?",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "recluseMeteor",
+            "score": "1",
+            "content": "It seems this might be from a NSFW game named “Dream Eater”. That's what I could find by searching for “Game_2018” and “Unreal” (the name of the game engine these files belong to).",
+            "replies": [
+                {
+                    "author": "EmperorPHNX",
+                    "score": "3",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "EmperorPHNX",
+                    "score": "1",
+                    "content": "You sure about that? Because I have nothing against NSFW games, I played some there and there, but I didn't played this game ever in my life 😂\nEdit: I just searched game_2018 Unreal and found lots of game, but couldn't find that game inside of them how you were able to find this game from that search?",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "nothingelseinme",
+            "score": "1",
+            "content": "Most likely some indie/independent studio game. Could be anything. You could try one-by-one opening each file quickly in Notepad.",
+            "replies": []
+        },
+        {
+            "author": "Tag1Oner2",
+            "score": "1",
+            "content": "Substance is Adobe's texture painting / editing / capture and to a lesser extent modeling suite which is more or less industry standard and I'd be amazed if it didn't have integration with Unreal (where it probably uses its own shader compilation plugin) so that would be my first guess.",
+            "replies": []
+        },
+        {
+            "author": "G0mp3r",
+            "score": "1",
+            "content": "Delete it and see which app no longer works and recover it from the bin. Otherwise, use the new free disk space wisely",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Kasen_Dev",
+    "post_id": "1dqnxyk",
+    "post_score": "0",
+    "post_time": "Friday, June 28, 2024 at 7:34:07 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "I activated windows through a sketchy kms site. Is there a way to uninstall it?",
+    "comments": [
+        {
+            "author": "WTFpe0ple",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "AccumulatedFilth",
+            "score": "0",
+            "content": "",
+            "replies": [
+                {
+                    "author": "AutoMativeX",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Kasen_Dev",
+                    "score": "0",
+                    "content": "Yeah I ended up removing the key and clearing all my drives and did a fresh install.",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Zyphonix_",
+            "score": "0",
+            "content": "To be 100% certain, a fresh install.\nAlso clear the key saved in your BIOS.",
+            "replies": [
+                {
+                    "author": "AutoMativeX",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Kasen_Dev",
+                    "score": "0",
+                    "content": "Yeah I ended up removing the key and clearing all my drives and did a fresh install.",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "MasterSlenderTR",
+    "post_id": "1dqth61",
+    "post_score": "207",
+    "post_time": "Friday, June 28, 2024 at 11:31:00 PM GMT+3",
+    "flair_text": "Feature",
+    "post_title": "Overkill Windows 7 Build",
+    "comments": [
+        {
+            "author": "iamxenon007",
+            "score": "57",
+            "content": "",
+            "replies": [
+                {
+                    "author": "csch1992",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "shepherd15_",
+                    "score": "7",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ShadowSystem64",
+                    "score": "26",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "LugianLithos",
+            "score": "41",
+            "content": "",
+            "replies": [
+                {
+                    "author": "csch1992",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "shepherd15_",
+                    "score": "7",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ShadowSystem64",
+                    "score": "26",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "EvlG",
+            "score": "48",
+            "content": "I love Windows 7, not bloated, 0 AI shit, no Ads, no tons of preinstalled shit. Of course Windows 10/11 have more modern technologies and way ahead in stability, but I miss so much the seven.",
+            "replies": [
+                {
+                    "author": "csch1992",
+                    "score": "18",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "shepherd15_",
+                    "score": "7",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "ShadowSystem64",
+                    "score": "26",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "hunter_finn",
+            "score": "30",
+            "content": "Honestly this looks way better and more modern than the flat \"style\" we got to stuck with since Windows 8.\ni haven't gone as far to stick with Windows 7 myself, but i do have vaporvance Aero10 for Windows 10 1903-22H2 at DeviantArt with uxtheme patcher and DWMBlurGlass on my Windows 10 install.",
+            "replies": []
+        },
+        {
+            "author": "SignificantOpening57",
+            "score": "7",
+            "content": "How is It not 9,9 and mine Is...",
+            "replies": []
+        },
+        {
+            "author": "ExoticAssociation817",
+            "score": "7",
+            "content": "This is definitely what the score index expected, but it never fucking got there any any point 😂",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Onett199X",
+    "post_id": "1dpuvqx",
+    "post_score": "3",
+    "post_time": "Thursday, June 27, 2024 at 7:03:33 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "How can I keep my lock screen on and awake for longer? (Windows 11 Laptop docked)",
+    "comments": [
+        {
+            "author": "lsmith0244",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "lsmith0244",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Onett199X",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "OkMany3232",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "lsmith0244",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Onett199X",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "M337ING",
+    "post_id": "1do94yc",
+    "post_score": "9",
+    "post_time": "Tuesday, June 25, 2024 at 6:44:30 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Surface Laptop review: Microsoft’s best MacBook Air competitor yet",
+    "comments": []
+},
+{
+    "post_author": "Texheun",
+    "post_id": "1drjsiw",
+    "post_score": "2",
+    "post_time": "Saturday, June 29, 2024 at 11:07:11 PM GMT+3",
+    "flair_text": "New Feature - Insider",
+    "post_title": "Idea: Sticky notes app on phone.",
+    "comments": [
+        {
+            "author": "ferdinanddavidenko",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "OkMany3232",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "itsWindows11",
+            "score": "1",
+            "content": "I thought the Microsoft 365 mobile app included a feature to view sticky notes?",
+            "replies": []
+        },
+        {
+            "author": "redvariation",
+            "score": "1",
+            "content": "I use Google Keep on my Pixel. It's also available via web page on any browser and syncs. It's a great simple notes app/todo list/etc.",
+            "replies": []
+        },
+        {
+            "author": "Scared_Conclusion_88",
+            "score": "1",
+            "content": "Add your Microsoft account to Apple Notes and your sticky notes will appear in the app under the \"Outlook\" section of the sidebar.\nOn your iPhone/iPad go: Settings>Notes>Accounts>Add Account>Outlook.com.\nSticky Notes must be signed into the same Microsoft account with sync enabled.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "sebbi1201",
+    "post_id": "1dnlu4g",
+    "post_score": "14",
+    "post_time": "Monday, June 24, 2024 at 10:19:12 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Question on how to enable TPM 2.0",
+    "comments": [
+        {
+            "author": "Professional_Ad_6463",
+            "score": "5",
+            "content": "",
+            "replies": [
+                {
+                    "author": "sebbi1201",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Soccera1",
+                    "score": "1",
+                    "content": "The BIOS even has an option to save a screenshot!",
+                    "replies": []
+                },
+                {
+                    "author": "sebbi1201",
+                    "score": "-1",
+                    "content": "I like how that’s what you choose to comment on someone’s post asking a genuine question but alright.\nKids these days",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "WilNotJr",
+            "score": "4",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "Advanced_Refuse4066",
+            "score": "1",
+            "content": "Can you tell us what motherboard is this?\nBy the looks of that UEFI screen(I remember seeing that style on an ASUS H81 board), I would assume your CPU and motherboard are just too old to support fTPM.\nYou would need a dedicated TPM module if your motherboard support adding one(though I'm unsure if you can add a TPM 2.0 module on a motherboard this old). Otherwise, you're screwed and you need to upgrade your machine.",
+            "replies": []
+        },
+        {
+            "author": "iamgarffi",
+            "score": "1",
+            "content": "If your motherboard doesn’t come with an actual chip, you can add it. Many boards have pinout ports for them.",
+            "replies": []
+        },
+        {
+            "author": "Soccera1",
+            "score": "1",
+            "content": "Your system is too old. You'll be able to use Windows 10 for the time being, however it's not a good idea to run an EOL system. Windows 10 is going EOL in 2025, so you'll have one more year. After that, you'll have to either bypass the TPM 2.0 requirement and run Windows 11 and play CS, switch to Linux and play CS, or play Valorant on a vulnerable system.",
+            "replies": []
+        },
+        {
+            "author": "AsstDepUnderlord",
+            "score": "1",
+            "content": "No offense, but is this really the best picture you could get?\nKids today.",
+            "replies": [
+                {
+                    "author": "sebbi1201",
+                    "score": "2",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Soccera1",
+                    "score": "1",
+                    "content": "The BIOS even has an option to save a screenshot!",
+                    "replies": []
+                },
+                {
+                    "author": "sebbi1201",
+                    "score": "-1",
+                    "content": "I like how that’s what you choose to comment on someone’s post asking a genuine question but alright.\nKids these days",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "diamondsw",
+    "post_id": "1dpsgde",
+    "post_score": "2",
+    "post_time": "Thursday, June 27, 2024 at 5:20:48 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Windows Copilot Plus Wallpapers",
+    "comments": [
+        {
+            "author": "Alaknar",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "diamondsw",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Alaknar",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "red-fox-972x",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "diamondsw",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "Alaknar",
+                    "score": "1",
+                    "content": "",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "LittlePinoyBoi2",
+    "post_id": "1docw3u",
+    "post_score": "4",
+    "post_time": "Tuesday, June 25, 2024 at 9:22:09 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Updating a Custom ISO",
+    "comments": [
+        {
+            "author": "byte-cookies",
+            "score": "1",
+            "content": "If you install a custom image of Windows with crap uninstalled, it'll be installed without that crap.",
+            "replies": [
+                {
+                    "author": "LittlePinoyBoi2",
+                    "score": "1",
+                    "content": "Perfect, just wanted to make sure it was consistent between updates",
+                    "replies": []
+                },
+                {
+                    "author": "LittlePinoyBoi2",
+                    "score": "1",
+                    "content": "Thanks! I was mainly worried about the telemetry settings, so appreciate the reply!",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "dansutton21",
+            "score": "-2",
+            "content": "Windows updates wouldn’t affect settings you’ve applied.",
+            "replies": [
+                {
+                    "author": "LittlePinoyBoi2",
+                    "score": "1",
+                    "content": "Perfect, just wanted to make sure it was consistent between updates",
+                    "replies": []
+                },
+                {
+                    "author": "LittlePinoyBoi2",
+                    "score": "1",
+                    "content": "Thanks! I was mainly worried about the telemetry settings, so appreciate the reply!",
+                    "replies": []
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Desperate_Brush_1392",
+    "post_id": "1drlbv1",
+    "post_score": "1",
+    "post_time": "Sunday, June 30, 2024 at 12:19:31 AM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "scheduled tasks that are not mentioned in official docs",
+    "comments": [
+        {
+            "author": "SomeDudeNamedMark",
+            "score": "1",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "zupobaloop",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "NomadJago",
+    "post_id": "1doa3d8",
+    "post_score": "0",
+    "post_time": "Tuesday, June 25, 2024 at 7:24:09 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "Will I be able to disable Copilot/AI on Windows 12 ?",
+    "comments": [
+        {
+            "author": "Froggypwns",
+            "score": "27",
+            "content": "",
+            "replies": []
+        },
+        {
+            "author": "halfanothersdozen",
+            "score": "15",
+            "content": "",
+            "replies": [
+                {
+                    "author": "MechanicalTurkish",
+                    "score": "4",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "NomadJago",
+                    "score": "2",
+                    "content": "That bodes well, I hope it will be possible in Windows 12.",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "theonlyredditaccount",
+            "score": "10",
+            "content": "It’s not Windows 12, it’s 11.\nYou can disable any Copilot features from the normal Settings menu, so no, you don’t need Pro.",
+            "replies": []
+        },
+        {
+            "author": "Longjumping-Fall-784",
+            "score": "3",
+            "content": "There are already many tutorials about disabling AI and even from settings, not sure what's the matter with W12 if it doesn't even exist so avoid getting scammed, I can only advice to check guides for doing that on W11 because It's the current latest version of Windows.",
+            "replies": []
+        },
+        {
+            "author": "lapadut",
+            "score": "2",
+            "content": "You bet ya can, as soon as you find a time machine!",
+            "replies": []
+        },
+        {
+            "author": "Smoothyworld",
+            "score": "2",
+            "content": "What Windows 12? Let's stop future predicting right now and concentrate on what is here now",
+            "replies": []
+        },
+        {
+            "author": "Powerfader1",
+            "score": "1",
+            "content": "I eliminated it using registry in Windows 11",
+            "replies": [
+                {
+                    "author": "MechanicalTurkish",
+                    "score": "4",
+                    "content": "",
+                    "replies": []
+                },
+                {
+                    "author": "NomadJago",
+                    "score": "2",
+                    "content": "That bodes well, I hope it will be possible in Windows 12.",
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "author": "Gitaside",
+            "score": "1",
+            "content": "You can dream... but aye, it's Microsoft.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Suspicious-Ad8201",
+    "post_id": "1dqltvv",
+    "post_score": "1",
+    "post_time": "Friday, June 28, 2024 at 6:06:13 PM GMT+3",
+    "flair_text": "General Question",
+    "post_title": "vista (KernelEx) support ",
+    "comments": []
+}
+]

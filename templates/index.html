@@ -31,7 +31,6 @@
                 <select id="file_type_input" name="file_type_input">
                     <option value="json">JSON</option>
                     <option value="yaml">YAML</option>
-                    <option value="xml">XML</option>
                 </select>
                 <button type="submit" id="start-scraping-button">Start Scraping</button>
             </form>
@@ -73,7 +72,7 @@
                     }
                     else
                     {
-                        if(data.max_posts !== "As many as available")
+                        if(data.max_posts !== "As many as available" && data.max_posts <= data.processed_posts)
                         {
                             const progressContainer = document.querySelector('.progress-container');
                             progressContainer.style.display = 'block';
@@ -85,10 +84,11 @@
                         progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
                     }
                     
-                    if (data.processing_done) {
+                    if (data.processing === false) {
                         clearInterval(interval);
                         progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
                         document.getElementById('download-button-container').style.display = 'block';
+                        document.querySelector('.progress-container').style.display = 'none';
                     }
                     
                     document.getElementById('start-scraping-button').disabled = data.processing;

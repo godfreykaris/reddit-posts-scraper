@@ -26,7 +26,7 @@ def parse_arguments():
     parser.add_argument("-c", "--categories", nargs='*', default=["hot", "new", "top"], help="Categories to scrape (default is 'hot', 'new', 'top')")
     parser.add_argument("-o", "--output", help="Output file path for the scraped posts (default is 'scraped_posts.json' in the current directory)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode to print processing details")
-    parser.add_argument("-f", "--format", choices=['json', 'yaml', 'xml'], default='json', help="Output format for the scraped posts (default is 'json')")
+    parser.add_argument("-f", "--format", choices=['json', 'yaml'], default='json', help="Output format for the scraped posts (default is 'json')")
 
     return parser.parse_args()
 
@@ -36,7 +36,7 @@ def initialize_shared_variables(output_path, format_type):
 
     Args:
     - output_path (str): Output file path for the scraped posts.
-    - format_type (str): Desired output format ('json', 'yaml', 'xml').
+    - format_type (str): Desired output format ('json', 'yaml').
     """
     # Reset global variables
     shared.threads = {}
@@ -53,9 +53,6 @@ def initialize_shared_variables(output_path, format_type):
         elif output_path.endswith('.yaml'):
             shared.output_file_path = output_path
             shared.format_type = 'yaml'
-        elif output_path.endswith('.xml'):
-            shared.output_file_path = output_path
-            shared.format_type = 'xml'
         else:
             shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
     else:
@@ -81,6 +78,12 @@ def create_threads(subreddit, limit, categories, verbose):
 
     if 'all' in categories:
         categories = ['hot', 'new', 'top']
+
+     # Ensure that we don't create too many webdrivers
+    if len(categories) > 1:
+        shared.maximum_workers = 2
+    elif shared.limit < 500 and len(categories) == 1:
+        shared.maximum_workers = 5
 
     for category in categories:
         if category not in ['hot', 'new', 'top']:
@@ -120,6 +123,9 @@ def start_scraping_route():
     file_name = data.get('file_name_input', '')
     file_type = data.get('file_type_input', '')
 
+    shared.processing_done = False
+    shared.processing = True
+    
     # Joining download_folder, file_name, and file_type into output_path
     output_path = os.path.join(DOWNLOAD_DIRECTORY, f"{file_name}.{file_type}")
 
@@ -138,26 +144,22 @@ def start_scraping_route():
 
     categories = [category]
 
-    # Ensure that we don't create too many webdrivers
-    if len(categories) > 1:
-        shared.maximum_workers = 2
-    elif shared.limit < 500 and len(categories) == 1:
-        shared.maximum_workers = 5
-
+   
     # Create threads for scraping
     create_threads(subreddit, max_posts, categories, verbose=True)
     wait_for_threads_to_complete()
-
-    shared.processing = False
     
     if shared.processed_posts_count > 0:
         PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
 
+   
     DriverUtils.quit_all_drivers()
      # Close any existing chrome instances
     DriverUtils.close_existing_chrome_instances()
+
+    shared.processing = False
 
     return jsonify({'message': 'Scraping Done.'}), 200
 
@@ -171,7 +173,7 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     - categories (list): List of categories to scrape ('hot', 'new', 'top', or 'all'; default is all i.e. ['hot', 'new', 'top']).
     - output_path (str): Output file path for the scraped posts.
     - verbose (bool): Enable verbose mode to print processing details.
-    - format_type (str): Desired output format ('json', 'yaml', 'xml'; default is 'json').
+    - format_type (str): Desired output format ('json', 'yaml'; default is 'json').
     """
     try:
         # Check internet connection
@@ -184,12 +186,6 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
 
     print("Working....")
     initialize_shared_variables(output_path, format_type)
-    
-    # Ensure that we don't create too many webdrivers
-    if len(categories) > 1:
-        shared.maximum_workers = 2
-    elif shared.limit < 500 and len(categories) == 1:
-        shared.maximum_workers = 5
 
     create_threads(subreddit, limit, categories, verbose)
     wait_for_threads_to_complete()
@@ -198,10 +194,13 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
         PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
-
+    
+    
     DriverUtils.quit_all_drivers()
      # Close any existing chrome instances
     DriverUtils.close_existing_chrome_instances()
+
+    shared.processing = False
 
     # Check if any posts were processed
     if shared.processed_posts_count == 0:

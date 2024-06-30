@@ -6,7 +6,6 @@ import threading
 from time import sleep
 
 from bs4 import BeautifulSoup
-import xml.etree.ElementTree as ET
 
 from modules.driver_utils import DriverUtils
 from modules.file_write_error import FileWriteError
@@ -30,21 +29,7 @@ class PostProcessor:
         lines = [line.strip() for line in value.splitlines()]
         clean_lines = [line for line in lines if line]
         return ' '.join(clean_lines)
-    
-    @staticmethod
-    def clean_xml(value):
-        
-        # Replace characters not allowed in XML with XML entities
-        value = value.replace('&', '&amp;')  # Replace '&' with '&amp;'
-        value = value.replace('<', '&lt;')   # Replace '<' with '&lt;'
-        value = value.replace('>', '&gt;')   # Replace '>' with '&gt;'
-        # Add more replacements as necessary for other special characters
-
-        # Optionally, remove any non-printable characters
-        value = ''.join(ch for ch in value if ch.isprintable())
-
-        return value.strip()  # Strip leading/trailing whitespace  
-       
+           
     @staticmethod
     def write_post_to_file(data):
         def get_next_file_path(original_path, base_path, ext):
@@ -96,30 +81,13 @@ class PostProcessor:
                 with open(file_path, mode, encoding='utf-8') as yaml_file:
                     yaml_file.write('---\n')
                     yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
-            elif shared.format_type == 'xml':
-                if os.path.exists(file_path):
-                    tree = ET.parse(file_path)
-                    root = tree.getroot()
-                    if root is None:
-                        root = ET.Element('posts')
-                else:
-                    root = ET.Element('posts')
-
-                post_element = ET.SubElement(root, 'post')
-                for key, value in data.items():
-                    clean_value = PostProcessor.clean_xml(value)
-                    ET.SubElement(post_element, key).text = clean_value
-
-                tree = ET.ElementTree(root)
-                with open(file_path, 'wb') as xml_file:
-                    tree.write(xml_file, encoding='utf-8')
-
+            
         except Exception as e:
             raise FileWriteError(f"{thread_color}Failed to write to file '{file_path}': {str(e)}{Colors.RESET}")
 
     @staticmethod
     def finalize_file():
-        if shared.format_type not in ['json', 'yaml', 'xml']:
+        if shared.format_type not in ['json', 'yaml']:
             raise ValueError(f"Invalid format type: {shared.format_type}")
 
         file_path = f"{shared.output_file_path}"
@@ -129,9 +97,7 @@ class PostProcessor:
                 json_file.write('\n]')
         elif shared.format_type == 'yaml':
             pass
-        elif shared.format_type == 'xml':
-            pass
-    
+            
     @staticmethod
     def divide_work(permalinks, drivers_number):
         # Calculate the size of each chunk
@@ -152,7 +118,7 @@ class PostProcessor:
 
     @staticmethod
     def validate_file_format():
-        if shared.format_type not in ['json', 'yaml', 'xml']:
+        if shared.format_type not in ['json', 'yaml']:
             raise ValueError(f"Invalid format type: {shared.format_type}")
    
     @staticmethod
@@ -198,8 +164,8 @@ class PostProcessor:
                count += 1
 
            except Exception as e:
-            #    print(f"{thread_color}Worker thread error: {e}{Colors.RESET}") -------> For Debugging
-            pass 
+               print(f"{thread_color}Worker thread error: {e}{Colors.RESET}") #-------> For Debugging
+            # pass 
            
     @staticmethod
     def process_posts(driver, worker_drivers):
@@ -207,7 +173,6 @@ class PostProcessor:
         PostProcessor.validate_file_format()
 
         previous_html = None
-        shared.processed_posts_count = 0
 
         max_trials = 4
         trials = 0
