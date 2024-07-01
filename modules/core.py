@@ -75,7 +75,7 @@ class RedditScraper:
                     if next_comments:
                         replies = self.extract_comments(comment, next_depth)
                         comment_data["replies"].extend(replies)
-
+                        
                     comments_data.append(comment_data)
 
                 except StaleElementReferenceException:

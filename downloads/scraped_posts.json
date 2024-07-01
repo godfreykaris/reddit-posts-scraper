@@ -1,56 +1,1058 @@
 [
 {
-    "post_author": "staslandia",
-    "post_id": "1dsmdme",
-    "post_score": "0",
-    "post_time": "Monday, July 1, 2024 at 9:42:09 AM GMT+3",
-    "flair_text": "Backup",
-    "post_title": "files disappeared ",
+    "post_author": "gammajayy",
+    "post_id": "wyv1ql",
+    "post_score": "5329",
+    "post_time": "Saturday, August 27, 2022 at 8:56:01 AM GMT+3",
+    "flair_text": "Free-Post Friday!",
+    "post_title": "I can dream",
     "comments": [
         {
-            "author": "AutoModerator",
-            "score": "1",
-            "content": "",
-            "replies": []
-        },
-        {
-            "author": "Sopel97",
-            "score": "3",
-            "content": "",
-            "replies": []
-        },
-        {
-            "author": "plunki",
-            "score": "1",
-            "content": "If you have the filenames, everything will find it: https://www.voidtools.com/ Immensely faster and better than windows search.\nFor future, when copying files, use a utility like teracopy that verifies that every copy was completed successfully. (Always copy, never move. You can delete after you are sure the copy worked.)\nHow do you know the specific file you are looking for though? Are there holes in lists of numbered files? Maybe you put it somewhere \"smart\" and then forgot? Hopefully everything finds it.",
+            "author": "NiceGiraffes",
+            "score": "494",
+            "content": "Sweet fresh Petabytes.",
             "replies": []
         }
     ]
 },
 {
-    "post_author": "Towbee",
-    "post_id": "1dro5mg",
-    "post_score": "6",
-    "post_time": "Sunday, June 30, 2024 at 2:35:41 AM GMT+3",
+    "post_author": "AdamLynch",
+    "post_id": "krx449",
+    "post_score": "34325",
+    "post_time": "Thursday, January 7, 2021 at 12:02:01 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "MEGATHREAD: Archiving the Capitol Hill Riots",
+    "comments": [
+        {
+            "author": "macx333",
+            "score": "1",
+            "content": "After careful consideration, we are leaving this post up.\nYesterday's events were truly insane on many levels, but we are not a political sub. Some may DH for political reasons, and some for sociological reasons. Whatever your reason, we ask everyone to keep it about datahoarding/archiving in here. If you hoarded data, the fbi may be interested in what you have: https://www.reddit.com/r/DataHoarder/comments/ksfel0/did_you_hoard_social_media_yesterday/\nGo take politics to r/politics, whatever left/right/center sub, or parler, whichever is your thing.\nIf people could stop reporting comments and posts that they simply disagree with, that would be very much appreciated.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "mactep66",
+    "post_id": "1dszkgd",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 9:01:46 PM GMT+3",
     "flair_text": "Question/Advice",
-    "post_title": "Am I better re-using these parts for a data storage/plex/other junk I never get around to doing server, or is it better to sell them and start from scratch? Desperately need advice",
+    "post_title": "Is there a discord server or something that can help troubleshooting LTO drives and LTFS?",
     "comments": [
         {
             "author": "AutoModerator",
             "score": "1",
             "content": "",
             "replies": []
-        },
+        }
+    ]
+},
+{
+    "post_author": "idontgiveafuckthough",
+    "post_id": "1dssqom",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 4:17:20 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "How to download all the saved media on reddit?",
+    "comments": [
         {
-            "author": "SomeoneHereIsMissing",
-            "score": "4",
-            "content": "The Fractal Design Define are my favorite. I have a Define R4 for my NAS/Plex, Define Mini for my small home server and a Antec 300 for my secondary/testing NAS. All keep my drives cool and the Define are quiet. Look for a Define R5, they can still be had for a decent price. The Antec P101 is also interesting.\nEdit: I reuse old stuff until it dies. 4 motherboards died in the past 6 months, so I'm going to get some new ones and bump some stuff down. My current computer is still a FX-6350.",
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
             "replies": []
-        },
+        }
+    ]
+},
+{
+    "post_author": "_G0D_M0DE_",
+    "post_id": "v8danc",
+    "post_score": "25619",
+    "post_time": "Thursday, June 9, 2022 at 12:54:50 PM GMT+3",
+    "flair_text": "News",
+    "post_title": "Justin Roiland, co-creator of Rick and Morty, discovers that Dropbox uses content scanners through the deletion of all his data stored on their servers",
+    "comments": [
         {
-            "author": "Kenira",
+            "author": "FZERO96",
+            "score": "1440",
+            "content": "This already happened to me back in 2016. I was saving my phone data and apps as .apk files there. Some .apk files were found to be violating their tos and lead to the deletion of my dropbox account.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "eyal8r",
+    "post_id": "1dt24v1",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:46:25 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Looking for Free Wi-Fi & Unlimited Data Connection for Backup to Cloud",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "lostmsu",
+    "post_id": "1dsyvwl",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 8:34:02 PM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "Forever archiving utilities for Windows",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Square-Ball",
+    "post_id": "1dpecax",
+    "post_score": "1625",
+    "post_time": "Thursday, June 27, 2024 at 3:41:04 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "Paramount kills several legacy websites - including Comedy Central, clips and full episodes of Colbert and Daily Show gone.",
+    "comments": [
+        {
+            "author": "LowerFinding9602",
+            "score": "492",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Snoot_Boopins",
+    "post_id": "k0bfij",
+    "post_score": "5203",
+    "post_time": "Tuesday, November 24, 2020 at 10:06:26 PM GMT+3",
+    "flair_text": "News",
+    "post_title": "This is your regular reminder that Comcast is still a dumpster fire: Comcast to impose home internet data cap of 1.2TB in more than a dozen US states next year",
+    "comments": [
+        {
+            "author": "Patient-Tech",
+            "score": "298",
+            "content": "Two things:\nI’ve had the 1tb cap on Comcast for years. Both in Chicago and the Bay Area. Yay no competition.\nwhat do you think the upside to renting their modem is to them vs letting you bring your own device? Think they assume you’ll ditch your router too and they can pipe you to their DNS and build the robustness of their ad and tracking network?",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "SciFiIsMyFirstLove",
+    "post_id": "1dssp0x",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 4:15:13 PM GMT+3",
+    "flair_text": "Hoarder-Setups",
+    "post_title": "Can an Avago 9361-8i use any of the following as a cache for mecanicals",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "[deleted]",
+    "post_id": "l40sza",
+    "post_score": "5089",
+    "post_time": "Sunday, January 24, 2021 at 5:55:06 PM GMT+3",
+    "flair_text": "",
+    "post_title": "\"If you visit CERN in Geneva, you can buy 1 Terabyte of Large Hadron Collider data from the souvenir shop\"... there goes my kid's college funds",
+    "comments": [
+        {
+            "author": "Malossi167",
+            "score": "1120",
+            "content": "This is a pretty amazing idea. Literally selling their garbage!",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "ian9921",
+    "post_id": "znkww3",
+    "post_score": "9418",
+    "post_time": "Friday, December 16, 2022 at 9:03:35 PM GMT+3",
+    "flair_text": "Free-Post Friday!",
+    "post_title": "yall might appreciate this",
+    "comments": [
+        {
+            "author": "1Autotech",
+            "score": "1207",
+            "content": "My movie collection is like Netflix but with stuff I want to watch.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "SciFiIsMyFirstLove",
+    "post_id": "1dsxdhy",
+    "post_score": "30",
+    "post_time": "Monday, July 1, 2024 at 7:31:47 PM GMT+3",
+    "flair_text": "Hoarder-Setups",
+    "post_title": "Hi My name is SciFiIsMyFirstLove and I am a data hoarder.",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Dougolicious",
+    "post_id": "1dsya15",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 8:08:38 PM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "Bit rot correction",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "123ranchdressing",
+    "post_id": "1dt24p9",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 10:46:14 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Trying to scrape images from a large Fandom wiki, either from Wayback Machine or another method",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Fazlul101",
+    "post_id": "mkogv0",
+    "post_score": "5031",
+    "post_time": "Monday, April 5, 2021 at 7:19:34 PM GMT+3",
+    "flair_text": "",
+    "post_title": "yahoo answers is shutting down",
+    "comments": [
+        {
+            "author": "Lord_Blackthorn",
+            "score": "1825",
+            "content": "I used to answer questions on yahoo answers... One day someone decided to report me over and over. It ended up not only banning me from yahoo answers, but also blocking my entire yahoo account. I had an email address with over ten years of emails saved. They refused to restore it or even give me a backup. I have refused to use a single yahoo product or service since then.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "AstronautEmpty9060",
+    "post_id": "1dsrttc",
+    "post_score": "34",
+    "post_time": "Monday, July 1, 2024 at 3:32:24 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Am I in for a world of hurt getting refurbished drives off amazon?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "evanMeaney",
+    "post_id": "ffjfj4",
+    "post_score": "9129",
+    "post_time": "Monday, March 9, 2020 at 12:24:36 AM GMT+3",
+    "flair_text": "Question?",
+    "post_title": "I just built a collapse-ready laptop. What are some must haves to put on it?",
+    "comments": [
+        {
+            "author": "DDzwiedziu",
+            "score": "659",
+            "content": "A hand crank, for the only power source available when locked up in your bunker :P",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "AstronautEmpty9060",
+    "post_id": "1dsrttc",
+    "post_score": "34",
+    "post_time": "Monday, July 1, 2024 at 3:32:24 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Am I in for a world of hurt getting refurbished drives off amazon?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "CrazyBax",
+    "post_id": "1dt1k0s",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:22:24 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "External hard drive noob here. Is my Seagate Expansion 14TB considered on and running if the power is plugged into electricity but the usb is not plugged in?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "NecessaryEvil-BMC",
+    "post_id": "1dstp5h",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 5:01:02 PM GMT+3",
+    "flair_text": "Scripts/Software",
+    "post_title": "Bulk compression software for thousands of AVI files?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "shrine",
+    "post_id": "nc27fv",
+    "post_score": "8419",
+    "post_time": "Friday, May 14, 2021 at 9:42:04 AM GMT+3",
+    "flair_text": "SEED TIL YOU BLEED!",
+    "post_title": "Rescue Mission for Sci-Hub and Open Science: We are the library.",
+    "comments": [
+        {
+            "author": "VonChair",
+            "score": "1",
+            "content": "Hey everyone,\nOver at The-Eye we've been working on this stuff and have been aware of it for a while now. We've been getting some people contacting us to let us know about this thread so hopefully they read this first. If you're ever wondering if we've seen something, please feel free to ping u/-CorentinB u/-Archivist or u/VonChair (me) here on Reddit so we can take a look.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "sersoniko",
+    "post_id": "vvdgqe",
+    "post_score": "4960",
+    "post_time": "Sunday, July 10, 2022 at 1:59:13 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "internet archive is being sued",
+    "comments": [
+        {
+            "author": "[deleted]",
+            "score": "",
+            "content": "Even the almighty Google (Alphabet?) had to back down, about 20 years ago, when it came to books (Project Ocean). They had setup a number of custom-made book scanners and were scanning anything and everything they could (mostly from University libraries) in hopes of having all/most printed literature fully searchable by anyone in the world. Of course, Google Books exists now, but it's nowhere near the original idea they were pursuing before they were sued. Supposedly, they still have ~25 million books scanned that they legally can't use.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Bern_Down_the_DNC",
+    "post_id": "1dspldr",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 1:22:36 PM GMT+3",
+    "flair_text": "Scripts/Software",
+    "post_title": "Trying to figure out an efficient way to sync data off an iphone 11 to Windows 10 PC, but the pictures are all in different folders named with random characters.",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Enkelie",
+    "post_id": "bccfl6",
+    "post_score": "4838",
+    "post_time": "Friday, April 12, 2019 at 2:27:29 PM GMT+3",
+    "flair_text": "NSFW!!",
+    "post_title": "Forklift accident",
+    "comments": [
+        {
+            "author": "Enkelie",
+            "score": "1168",
+            "content": "Fortunately I was working at electronics recycling company and it was going to be destroyed anyway. :)",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "DotRom",
+    "post_id": "1dslgbh",
+    "post_score": "48",
+    "post_time": "Monday, July 1, 2024 at 8:41:33 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "How to get over data lost",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "e_spider",
+    "post_id": "lq2zr7",
+    "post_score": "8334",
+    "post_time": "Tuesday, February 23, 2021 at 2:18:14 AM GMT+3",
+    "flair_text": "",
+    "post_title": "Data transfer to new Lustre storage overwhelms campus network",
+    "comments": [
+        {
+            "author": "IMI4tth3w",
+            "score": "606",
+            "content": "its... beautiful...\nOne can only aspire to transfer 700TB over the internet in 8 days.. It'll be months before i get my 80TB of data onto my google cloud drive... but that's more of a google limit than a hardware limit..",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "benjacob",
+    "post_id": "pd7hi0",
+    "post_score": "4666",
+    "post_time": "Saturday, August 28, 2021 at 1:34:25 PM GMT+3",
+    "flair_text": "News",
+    "post_title": "Michigan couple must pay son $30,441 for throwing out porn collection",
+    "comments": [
+        {
+            "author": "VulturE",
+            "score": "1",
+            "content": "Sadly, I'm locking this thread. Too many people not reading the article and understanding the details, then creating arguments and fake storylines about things that never happened. We've already nuked half of the comment thread for users recommending violence against the parents and/or criminals, a handful of Trumpers turning this into a left-wing issue they want to die on a hill to discuss, and just general jackassery.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Old_Garlic_4961",
+    "post_id": "1dsqyow",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 2:45:50 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Bulk pdf magazine file renaming help needed?",
+    "comments": []
+},
+{
+    "post_author": "MidnightLink",
+    "post_id": "ib80le",
+    "post_score": "7762",
+    "post_time": "Monday, August 17, 2020 at 8:12:56 AM GMT+3",
+    "flair_text": "",
+    "post_title": "Whoops",
+    "comments": [
+        {
+            "author": "extrobe",
+            "score": "562",
+            "content": "Could you share a little more on what you would use put.io for? Reading up, it sounds like it's halfway between a dropbox and a seedbox - but without the integration you can normally setup with seedbox with your existing services.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "aty0504",
+    "post_id": "1dt18f8",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:09:18 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Hdd 3.3v pin",
+    "comments": []
+},
+{
+    "post_author": "WhitefangdDS",
+    "post_id": "fylri4",
+    "post_score": "4625",
+    "post_time": "Friday, April 10, 2020 at 9:38:41 PM GMT+3",
+    "flair_text": "",
+    "post_title": "TIL the Library of Congress has a 2.129 petabyte (and growing) archive of internet culture",
+    "comments": [
+        {
+            "author": "BoldInterrobang",
+            "score": "707",
+            "content": "That seems low, TBH.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "beardbreed",
+    "post_id": "1dslmmr",
+    "post_score": "32",
+    "post_time": "Monday, July 1, 2024 at 8:53:17 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Am I missing something? ",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "[deleted]",
+    "post_id": "mluhn3",
+    "post_score": "7741",
+    "post_time": "Wednesday, April 7, 2021 at 7:47:04 AM GMT+3",
+    "flair_text": "",
+    "post_title": "A funny exchange",
+    "comments": [
+        {
+            "author": "anonymous_opinions",
+            "score": "727",
+            "content": "I'm proud to say my time among you fast fuckers has taught me a lot about being a fast fucker.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "mactep66",
+    "post_id": "1dszkgd",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 9:01:46 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Is there a discord server or something that can help troubleshooting LTO drives and LTFS?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "bravemenrun",
+    "post_id": "1dsqkho",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 2:23:01 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Should I be worried? Amazon shipped my HDD inside the manufacturer's box.",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "lostmsu",
+    "post_id": "1dsyvwl",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 8:34:02 PM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "Forever archiving utilities for Windows",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "BrikenEnglz",
+    "post_id": "o9cnj3",
+    "post_score": "7314",
+    "post_time": "Monday, June 28, 2021 at 7:10:27 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "One woman's quest to \"never delete anything\" allowed internet archivists to find long-lost Minecraft Alpha 1.1.1.",
+    "comments": [
+        {
+            "author": "OrangeChickenTacos",
+            "score": "1032",
+            "content": "lunasorcery (the person who had Alpha 1.1.1) wrote a follow-up of the whole experience.\nOne of the interesting parts I read was that lunasorcery downloaded Alpha 1.1.1 89 seconds before Alpha 1.1.2 was compiled (not released).",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "SciFiIsMyFirstLove",
+    "post_id": "1dssp0x",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 4:15:13 PM GMT+3",
+    "flair_text": "Hoarder-Setups",
+    "post_title": "Can an Avago 9361-8i use any of the following as a cache for mecanicals",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Lexaraj",
+    "post_id": "1dsvns6",
+    "post_score": "3",
+    "post_time": "Monday, July 1, 2024 at 6:22:17 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Can NAS drives be used as standard storage drives in a PC?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Unlanded",
+    "post_id": "lxugp5",
+    "post_score": "4588",
+    "post_time": "Thursday, March 4, 2021 at 11:32:02 PM GMT+3",
+    "flair_text": "News",
+    "post_title": "100Mbps uploads and downloads should be US broadband standard, senators say",
+    "comments": [
+        {
+            "author": "fr33lancr",
+            "score": "896",
+            "content": "And what's awesome is we the tax payers have all ready paid ATT to lay fiber to every home in the US. To bad they decided not to do it cuz they didn't want CLECs to be able to use it too and just stopped laying the glass but yet we still paid them the almost 500 billion dollars. That my reader is a true conspiracy. Dive down that rabbit hole and you'll surface one angry rabbit.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Elevated_Dongers",
+    "post_id": "1ds555a",
+    "post_score": "18",
+    "post_time": "Sunday, June 30, 2024 at 7:18:30 PM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "Backing up 500gb desktop folder without corrupting files",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Bern_Down_the_DNC",
+    "post_id": "1dspldr",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 1:22:36 PM GMT+3",
+    "flair_text": "Scripts/Software",
+    "post_title": "Trying to figure out an efficient way to sync data off an iphone 11 to Windows 10 PC, but the pictures are all in different folders named with random characters.",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Zealousideal-Spring3",
+    "post_id": "1dsuib9",
+    "post_score": "3",
+    "post_time": "Monday, July 1, 2024 at 5:35:35 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Any Advantage of Using BTRFS on a non-RAID disk?",
+    "comments": [
+        {
+            "author": "dr100",
             "score": "3",
-            "content": "Using a high end CPU in a mostly storage and media NAS will be a huge waste of power. Especially if you have no specific use case that needs performance, just \"maybe i'll want to do something else\", the reasonable thing is to just get some low or mid tier CPU at the most. Make sure you get an integrated GPU, iGPUs in even lower tier intel chips are amazing at transcoding which will be a huge help for media servers and it'll be very power efficient doing so.\nAs for drives, depends on if you plan to expand? Personally went with 2x18TB drives to begin with, specifically to expand, and it's up to 4x18TB now. Higher capacity drive means higher max capacity for a given number of slots, so good expandability, plus they're more power efficient per TB. a 10TB disk uses the same power as a 20TB. So 2x20TB with one parity disk is a totally reasonable setup for that reason. You should still keep separate backups for important data to be clear, because you always should, but yeah.",
+            "content": "The biggest advantage is of course checksums, others: not a set number of inodes (default on ext4 will take about 1.6% of the space for a huge number of files you'll never use), all the CoW/cp -reflink, snapshots goodness, btrbk and so on.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Dougolicious",
+    "post_id": "1dsya15",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 8:08:38 PM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "Bit rot correction",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "[deleted]",
+    "post_id": "gciv7n",
+    "post_score": "4468",
+    "post_time": "Sunday, May 3, 2020 at 5:24:22 AM GMT+3",
+    "flair_text": "",
+    "post_title": "Art imitates life",
+    "comments": [
+        {
+            "author": "LFMFAILS",
+            "score": "361",
+            "content": "Well now I need to get one of these in animal crossing",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "fancy_pantser",
+    "post_id": "9cfcnh",
+    "post_score": "6553",
+    "post_time": "Sunday, September 2, 2018 at 11:41:22 PM GMT+3",
+    "flair_text": "",
+    "post_title": "Amazon delivery driver with my new HD",
+    "comments": [
+        {
+            "author": "fancy_pantser",
+            "score": "3053",
+            "content": "He actually snapped the delivery confirmation pic while it was mid-air: https://i.imgur.com/fncVPd6.png",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "bigcowboymeatstick69",
+    "post_id": "1ds4vdj",
+    "post_score": "18",
+    "post_time": "Sunday, June 30, 2024 at 7:05:39 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Mp3tag-like app for non-mpeg videos?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "SciFiIsMyFirstLove",
+    "post_id": "1dsxdhy",
+    "post_score": "30",
+    "post_time": "Monday, July 1, 2024 at 7:31:47 PM GMT+3",
+    "flair_text": "Hoarder-Setups",
+    "post_title": "Hi My name is SciFiIsMyFirstLove and I am a data hoarder.",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Independent-Swim-838",
+    "post_id": "1dstyhi",
+    "post_score": "3",
+    "post_time": "Monday, July 1, 2024 at 5:12:08 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Looking for a offsite backup solution, 30TB+",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "eyal8r",
+    "post_id": "1dt24v1",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:46:25 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Looking for Free Wi-Fi & Unlimited Data Connection for Backup to Cloud",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "usernamechosen999",
+    "post_id": "mxkmhh",
+    "post_score": "6502",
+    "post_time": "Saturday, April 24, 2021 at 5:05:16 PM GMT+3",
+    "flair_text": "Why is this here?",
+    "post_title": "Apple sued for terminating account with $25,000 worth of apps and videos",
+    "comments": [
+        {
+            "author": "JamesWjRose",
+            "score": "1263",
+            "content": "Tis sort of thing is why I have my own media server. I get why people don't want to deal with the hassle, but I want to ensure that I have the media I want",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "justsomeuser23x",
+    "post_id": "1dsnoga",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 11:11:02 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "Why This New CD could change everything [ColdFusion]",
+    "comments": [
+        {
+            "author": "FranconianBiker",
+            "score": "14",
+            "content": "Yawn.... Nope.\nProjects like the HVD and the organic disc never made it out of the lab. This one won't either.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Lexaraj",
+    "post_id": "1dsvns6",
+    "post_score": "3",
+    "post_time": "Monday, July 1, 2024 at 6:22:17 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Can NAS drives be used as standard storage drives in a PC?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "YosoyPabloIscobar",
+    "post_id": "1bann6g",
+    "post_score": "4358",
+    "post_time": "Saturday, March 9, 2024 at 8:53:39 PM GMT+3",
+    "flair_text": "Scripts/Software",
+    "post_title": "Remember this?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "emmmmceeee",
+    "post_id": "io61qf",
+    "post_score": "4332",
+    "post_time": "Monday, September 7, 2020 at 2:49:51 PM GMT+3",
+    "flair_text": "",
+    "post_title": "Well now you know",
+    "comments": [
+        {
+            "author": "incruente",
+            "score": "311",
+            "content": "What size bags? Covers Manhattan and the UK how deep?",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "idontgiveafuckthough",
+    "post_id": "1dssqom",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 4:17:20 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "How to download all the saved media on reddit?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "the_best_moshe",
+    "post_id": "bborbx",
+    "post_score": "5811",
+    "post_time": "Wednesday, April 10, 2019 at 8:27:03 PM GMT+3",
+    "flair_text": "See Sticky!",
+    "post_title": "Some of the drives used to store the data to to compile the first picture ever of a black hole.",
+    "comments": [
+        {
+            "author": "PretentiousJackass",
+            "score": "541",
+            "content": "*nut*\nBlack holes are cool I guess, but imagine all the remuxes you could store on those bad boys, in RAID 1 no less",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "123ranchdressing",
+    "post_id": "1dt24p9",
+    "post_score": "1",
+    "post_time": "Monday, July 1, 2024 at 10:46:14 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Trying to scrape images from a large Fandom wiki, either from Wayback Machine or another method",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "fairyrocker91",
+    "post_id": "ksui2h",
+    "post_score": "5746",
+    "post_time": "Friday, January 8, 2021 at 6:53:02 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "Archivists Are Preserving Capitol Hill Riot Livestreams Before They’re Deleted",
+    "comments": [
+        {
+            "author": "macx333",
+            "score": "1",
+            "content": "Keep it about the datahoarding. We will be removing comments that are not on topic. This includes comments about \"did anyone archive X,\" which should be directed to the original archive thread instead.\nAnyone who posts a *new* comment that violates the rules after this one is made will get a temp ban so please stop.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "xxmcgriddlexx",
+    "post_id": "1dsmu2u",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:12:41 AM GMT+3",
+    "flair_text": "Guide/How-to",
+    "post_title": "External Hard Drive Issues",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "P_G_R_A",
+    "post_id": "xzyhwz",
+    "post_score": "4313",
+    "post_time": "Monday, October 10, 2022 at 1:40:43 AM GMT+3",
+    "flair_text": "Hoarder-Setups",
+    "post_title": "Ever wondered what 2 Peta Bytes looks like?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Jatm4",
+    "post_id": "1dsusfj",
+    "post_score": "2",
+    "post_time": "Monday, July 1, 2024 at 5:47:02 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Big price differences between docking stations?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "CrazyBax",
+    "post_id": "1dt1k0s",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:22:24 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "External hard drive noob here. Is my Seagate Expansion 14TB considered on and running if the power is plugged into electricity but the usb is not plugged in?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Fun-Mathematician35",
+    "post_id": "1ds1cpv",
+    "post_score": "25",
+    "post_time": "Sunday, June 30, 2024 at 4:20:35 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "ntfs formatted enterprise HDD from SATA to USB becomes raw data",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "anakinfredo",
+    "post_id": "jgtzum",
+    "post_score": "4210",
+    "post_time": "Friday, October 23, 2020 at 10:30:04 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "youtube-dl repo had been DMCA'd",
+    "comments": [
+        {
+            "author": "slowday_",
+            "score": "550",
+            "content": "Source downloadable from Pypi:\nhttps://pypi.org/project/youtube_dl/#files",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "NXGZ",
+    "post_id": "13c1c9h",
+    "post_score": "5492",
+    "post_time": "Monday, May 8, 2023 at 10:02:41 PM GMT+3",
+    "flair_text": "Screenshot",
+    "post_title": "Twitter to purge accounts that have had no activity at all for several years",
+    "comments": [
+        {
+            "author": "-Archivist",
+            "score": "1",
+            "content": "Update: It's fixed back to archiving users at around this rate....\nBest archival scraper that doesn't require auth is having some issues at the moment.\nhttps://github.com/JustAnotherArchivist/snscrape/issues/846#issuecomment-1536615960\nOthers that do require auth are also broken due to recent api changes, twitter is a huge mess. Just before the api imploded I managed to get 598,176,955 tweets out, from 21-03-2006 to 03-03-2009, 49GB compressed, 1.5TB decompressed. Using the tool twarc (official api) full jsonl format. You can grab that here, make copies!!!\nTwitter-historical-20060321-20090303.jsonl.zst\nYou can read without extracting, like so.....\nzstdcat --long=31 Twitter-historical-20060321-20090303.jsonl.zst |jq '.'\nI've got some dumps to finish off when snscrape is sorted again, twitter is fuckfuckeryfucked.com, thanks Elon.",
             "replies": []
         }
     ]
@@ -68,190 +1070,205 @@
             "score": "1",
             "content": "",
             "replies": []
-        },
-        {
-            "author": "secacc",
-            "score": "5",
-            "content": "",
-            "replies": []
-        },
-        {
-            "author": "maximumkush",
-            "score": "5",
-            "content": "There’s about 3.7 million videos created per day… ima go for a hard no",
-            "replies": []
-        },
-        {
-            "author": "_gelon",
-            "score": "2",
-            "content": "95%+ are probably bots anyway.",
-            "replies": []
         }
     ]
 },
 {
-    "post_author": "6425",
-    "post_id": "1dsctmu",
-    "post_score": "1",
-    "post_time": "Monday, July 1, 2024 at 1:02:00 AM GMT+3",
-    "flair_text": "Scripts/Software",
-    "post_title": "macOS software to encrypt an existing HD without formatting first?",
+    "post_author": "staslandia",
+    "post_id": "1dsmdme",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 9:42:09 AM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "files disappeared ",
     "comments": [
         {
             "author": "AutoModerator",
             "score": "1",
             "content": "",
             "replies": []
-        },
-        {
-            "author": "InsaneNinja",
-            "score": "2",
-            "content": "",
-            "replies": [
-                {
-                    "author": "6425",
-                    "score": "2",
-                    "content": "",
-                    "replies": []
-                }
-            ]
         }
     ]
 },
 {
-    "post_author": "TheFatLook100",
-    "post_id": "1dsef2z",
+    "post_author": "staslandia",
+    "post_id": "1dsmdme",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 9:42:09 AM GMT+3",
+    "flair_text": "Backup",
+    "post_title": "files disappeared ",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Kltpzyxmm",
+    "post_id": "1dslxz7",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 9:13:58 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Recertified 22TB SAS Drives on eBay",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Zealousideal-Spring3",
+    "post_id": "1dsuib9",
     "post_score": "3",
-    "post_time": "Monday, July 1, 2024 at 2:15:47 AM GMT+3",
+    "post_time": "Monday, July 1, 2024 at 5:35:35 PM GMT+3",
     "flair_text": "Question/Advice",
-    "post_title": "Does anyone know how to use the \"Internet Archive Book Images\" collection? ",
+    "post_title": "Any Advantage of Using BTRFS on a non-RAID disk?",
     "comments": [
-        {
-            "author": "AutoModerator",
-            "score": "1",
-            "content": "",
-            "replies": []
-        },
-        {
-            "author": "cajunjoel",
-            "score": "5",
-            "content": "",
-            "replies": [
-                {
-                    "author": "TheFatLook100",
-                    "score": "2",
-                    "content": "",
-                    "replies": []
-                }
-            ]
-        }
-    ]
-},
-{
-    "post_author": "Jatm4",
-    "post_id": "1dsusfj",
-    "post_score": "2",
-    "post_time": "Monday, July 1, 2024 at 5:47:02 PM GMT+3",
-    "flair_text": "Question/Advice",
-    "post_title": "Big price differences between docking stations?",
-    "comments": [
-        {
-            "author": "AutoModerator",
-            "score": "1",
-            "content": "",
-            "replies": []
-        },
         {
             "author": "dr100",
-            "score": "2",
-            "content": "Congrats, you've discovered capitalism (in a very good way)!",
+            "score": "3",
+            "content": "The biggest advantage is of course checksums, others: not a set number of inodes (default on ext4 will take about 1.6% of the space for a huge number of files you'll never use), all the CoW/cp -reflink, snapshots goodness, btrbk and so on.",
             "replies": []
-        },
-        {
-            "author": "dcabines",
-            "score": "1",
-            "content": "The more expensive model is made of metal, has a fan, USB-C, locks on the bays, a Kensington security slot, and feet to lift if off the desk.\nThe cheaper model is made of plastic, has no fan, uses older USB-B, no locks on the bays, no Kensington security slot, and no feet.\nSo the aluminum, fan, locks, USB-C, the Kensington security slot, and feet are adding $129 to the price tag. If you don't care about those then get the cheaper model. If any of them are \"must have\" features you wouldn't be considering the cheaper model at all so its price would be irrelevant. Personally no fan is a deal breaker.",
-            "replies": [
-                {
-                    "author": "Jatm4",
-                    "score": "1",
-                    "content": "The cheapest have fan and USB 3.2 too, the tittle say this",
-                    "replies": [
-                        {
-                            "author": "dcabines",
-                            "score": "1",
-                            "content": "It has USB 3.2 Gen 1 and the other has USB 3.2 Gen 2 which is twice as fast.\nIt does say fan in the title, but nowhere else on the page and I don't see any ventilation holes on it and there is no way it can blow air over the drives with them exposed like that. Their own product page doesn't mention a fan. It is probably a typo on the Amazon page.",
-                            "replies": [
-                                {
-                                    "author": "Jatm4",
-                                    "score": "1",
-                                    "content": "You're right, I hadn't noticed that. Not having a fan is also a deal breaker for me. I think I'll buy a one-slot docking station (https://a.co/d/0drb4cto) until I need the 4-slot one",
-                                    "replies": []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "author": "Jatm4",
-                    "score": "1",
-                    "content": "Both have different designs but have the same features, or I'm wrong?",
-                    "replies": []
-                }
-            ]
-        },
-        {
-            "author": "WikiBox",
-            "score": "1",
-            "content": "Look at the pictures. They are not even close to the same. \nIf you don't care about the difference, then just buy the cheapest. \nI have the 5 bay and the 10 bay, but with the brand ICY BOX. IB-3805-C31 and IB3810-C31.",
-            "replies": [
-                {
-                    "author": "Jatm4",
-                    "score": "1",
-                    "content": "The cheapest have fan and USB 3.2 too, the tittle say this",
-                    "replies": [
-                        {
-                            "author": "dcabines",
-                            "score": "1",
-                            "content": "It has USB 3.2 Gen 1 and the other has USB 3.2 Gen 2 which is twice as fast.\nIt does say fan in the title, but nowhere else on the page and I don't see any ventilation holes on it and there is no way it can blow air over the drives with them exposed like that. Their own product page doesn't mention a fan. It is probably a typo on the Amazon page.",
-                            "replies": [
-                                {
-                                    "author": "Jatm4",
-                                    "score": "1",
-                                    "content": "You're right, I hadn't noticed that. Not having a fan is also a deal breaker for me. I think I'll buy a one-slot docking station (https://a.co/d/0drb4cto) until I need the 4-slot one",
-                                    "replies": []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "author": "Jatm4",
-                    "score": "1",
-                    "content": "Both have different designs but have the same features, or I'm wrong?",
-                    "replies": []
-                }
-            ]
         }
     ]
 },
 {
-    "post_author": "xxmcgriddlexx",
-    "post_id": "1dsmu2u",
+    "post_author": "mikhailuchan",
+    "post_id": "1dsuih3",
     "post_score": "0",
-    "post_time": "Monday, July 1, 2024 at 10:12:41 AM GMT+3",
-    "flair_text": "Guide/How-to",
-    "post_title": "External Hard Drive Issues",
+    "post_time": "Monday, July 1, 2024 at 5:35:47 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "All YouTube channels",
     "comments": [
         {
             "author": "AutoModerator",
             "score": "1",
             "content": "",
             "replies": []
-        },
+        }
+    ]
+},
+{
+    "post_author": "beardbreed",
+    "post_id": "1dslmmr",
+    "post_score": "32",
+    "post_time": "Monday, July 1, 2024 at 8:53:17 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Am I missing something? ",
+    "comments": [
         {
-            "author": "wiideathmod",
-            "score": "2",
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Independent-Swim-838",
+    "post_id": "1dstyhi",
+    "post_score": "3",
+    "post_time": "Monday, July 1, 2024 at 5:12:08 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Looking for a offsite backup solution, 30TB+",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "aty0504",
+    "post_id": "1dt18f8",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 10:09:18 PM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Hdd 3.3v pin",
+    "comments": []
+},
+{
+    "post_author": "DotRom",
+    "post_id": "1dslgbh",
+    "post_score": "48",
+    "post_time": "Monday, July 1, 2024 at 8:41:33 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "How to get over data lost",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "NecessaryEvil-BMC",
+    "post_id": "1dstp5h",
+    "post_score": "0",
+    "post_time": "Monday, July 1, 2024 at 5:01:02 PM GMT+3",
+    "flair_text": "Scripts/Software",
+    "post_title": "Bulk compression software for thousands of AVI files?",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
+            "content": "",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "NXGZ",
+    "post_id": "13c1c9h",
+    "post_score": "5492",
+    "post_time": "Monday, May 8, 2023 at 10:02:41 PM GMT+3",
+    "flair_text": "Screenshot",
+    "post_title": "Twitter to purge accounts that have had no activity at all for several years",
+    "comments": [
+        {
+            "author": "-Archivist",
+            "score": "1",
+            "content": "Update: It's fixed back to archiving users at around this rate....\nBest archival scraper that doesn't require auth is having some issues at the moment.\nhttps://github.com/JustAnotherArchivist/snscrape/issues/846#issuecomment-1536615960\nOthers that do require auth are also broken due to recent api changes, twitter is a huge mess. Just before the api imploded I managed to get 598,176,955 tweets out, from 21-03-2006 to 03-03-2009, 49GB compressed, 1.5TB decompressed. Using the tool twarc (official api) full jsonl format. You can grab that here, make copies!!!\nTwitter-historical-20060321-20090303.jsonl.zst\nYou can read without extracting, like so.....\nzstdcat --long=31 Twitter-historical-20060321-20090303.jsonl.zst |jq '.'\nI've got some dumps to finish off when snscrape is sorted again, twitter is fuckfuckeryfucked.com, thanks Elon.",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "anakinfredo",
+    "post_id": "jgtzum",
+    "post_score": "4210",
+    "post_time": "Friday, October 23, 2020 at 10:30:04 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "youtube-dl repo had been DMCA'd",
+    "comments": [
+        {
+            "author": "slowday_",
+            "score": "550",
+            "content": "Source downloadable from Pypi:\nhttps://pypi.org/project/youtube_dl/#files",
+            "replies": []
+        }
+    ]
+},
+{
+    "post_author": "Fret_Less",
+    "post_id": "1dsddkh",
+    "post_score": "45",
+    "post_time": "Monday, July 1, 2024 at 1:27:25 AM GMT+3",
+    "flair_text": "Question/Advice",
+    "post_title": "Non-Bulk rename utility for windows",
+    "comments": [
+        {
+            "author": "AutoModerator",
+            "score": "1",
             "content": "",
             "replies": []
         }
