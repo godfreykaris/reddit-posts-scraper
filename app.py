@@ -1,5 +1,8 @@
 import os
 import sys
+import signal
+import logging
+
 import argparse
 import requests
 from flask import Flask, render_template, jsonify, request, send_from_directory
@@ -9,6 +12,10 @@ import modules.shared as shared
 from modules.posts_processing import PostProcessor
 
 app = Flask(__name__)
+
+
+# Configure logging to suppress specific messages
+logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
 # Define the directory where scraped posts will be stored
 DOWNLOAD_DIRECTORY = os.path.join(os.getcwd(), 'downloads')
@@ -118,7 +125,7 @@ def start_scraping_route():
     """
     data = request.json
     subreddit = data.get('subreddit', '')
-    max_posts = int(data.get('max_posts', float('inf')))
+    max_posts = int(data.get('max_posts')) or float('inf')
     category = data.get('category', '')
     file_name = data.get('file_name_input', '')
     file_type = data.get('file_type_input', '')
@@ -234,6 +241,20 @@ def download():
     """
     filename = os.path.basename(shared.output_file_path)
     return send_from_directory(os.path.dirname(shared.output_file_path), filename, as_attachment=True)
+
+
+def finalize_and_exit(signum, frame):
+    """
+    Signal handler for SIGINT to quit all drivers and finalize file before exiting.
+    """
+    shared.processing_done = True
+    if shared.processed_posts_count > 0:
+        PostProcessor.finalize_file()
+    DriverUtils.close_existing_chrome_instances()
+    sys.exit(0)
+
+# Register the signal handler
+signal.signal(signal.SIGINT, finalize_and_exit)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

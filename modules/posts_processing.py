@@ -149,7 +149,7 @@ class PostProcessor:
                post_data = scraper.scrape_post(worker_driver)
 
                with shared.lock:
-                   if post_data:
+                   if post_data and not shared.processing_done:
                         PostProcessor.write_post_to_file(post_data)
                         shared.processed_posts_count += 1
                         
@@ -164,8 +164,8 @@ class PostProcessor:
                count += 1
 
            except Exception as e:
-               print(f"{thread_color}Worker thread error: {e}{Colors.RESET}") #-------> For Debugging
-            # pass 
+            #    print(f"{thread_color}Worker thread error: {e}{Colors.RESET}") #-------> For Debugging
+            pass 
            
     @staticmethod
     def process_posts(driver, worker_drivers):

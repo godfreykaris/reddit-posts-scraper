@@ -15,7 +15,7 @@ class Config:
         chrome_options = Options()  # Initialize Chrome Options
         
         # Add various arguments to Chrome Options
-        chrome_options.add_argument("--headless=new")  # Set headless mode
+        # chrome_options.add_argument("--headless=new")  # Set headless mode
         chrome_options.add_argument("disable-infobars")  # Disable infobars
         chrome_options.add_argument("--disable-extensions")  # Disable extensions
         chrome_options.add_argument("--disable-dev-shm-usage")  # Disable dev-shm-usage
