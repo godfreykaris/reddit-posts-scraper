@@ -150,15 +150,31 @@ class RedditScraper:
                 pass
         
             media_urls = set()
+
+            # Retrieve media URLs (images, videos, iframes)
             try:
                 # Locate the media container
                 media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
-
+            
                 # Find all image elements within the media container
                 media_images = media_container.find_elements(By.CSS_SELECTOR, 'img')
-
-                # Extract the src attribute of each image
                 media_urls.update(img.get_attribute("src") for img in media_images)
+                
+                # Find all video elements within the media container
+                media_videos = media_container.find_elements(By.CSS_SELECTOR, 'video source')
+                media_urls.update(video.get_attribute("src") for video in media_videos)
+                
+                # Find all iframe elements within the media container
+                media_iframes = media_container.find_elements(By.CSS_SELECTOR, 'iframe')
+                media_urls.update(iframe.get_attribute("src") for iframe in media_iframes)
+            except Exception as e:
+                pass
+            
+            # Retrieve embedded links from post content
+            try:
+                # Find all anchor elements within the post content
+                content_links = content_element.find_elements(By.CSS_SELECTOR, 'a')
+                media_urls.update(link.get_attribute("href") for link in content_links)
             except Exception as e:
                 pass
 
