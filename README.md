@@ -57,6 +57,12 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+### Exiting the virtual environment
+Type the following command and press Enter.
+```bash
+deactivate
+```
+
 ## Install the required Python packages:
 
 To install the required dependencies, run the following command:
