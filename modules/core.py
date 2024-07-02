@@ -6,10 +6,34 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException
 
+import modules.shared as shared
 
 class RedditScraper:
     def __init__(self, driver):
         self.driver = driver
+    
+    def clean_content(self, value):
+        if value is None:
+            return ""
+
+        if shared.format_type == 'json':
+            lines = [line.strip() for line in value.splitlines()]
+            clean_lines = [line for line in lines if line]
+            return ' '.join(clean_lines)
+        elif shared.format_type == 'xml':
+            # Replace characters not allowed in XML with XML entities
+            value = value.replace('&', '&amp;')  # Replace '&' with '&amp;'
+            value = value.replace('<', '&lt;')   # Replace '<' with '&lt;'
+            value = value.replace('>', '&gt;')   # Replace '>' with '&gt;'
+            value = value.replace('"', '&quot;')  # Replace '"' with '&quot;'
+            value = value.replace("'", '&apos;')  # Replace "'" with '&apos;'
+
+            # Remove any non-printable characters
+            value = ''.join(ch for ch in value if ch.isprintable())
+
+            return value.strip()  # Strip leading/trailing whitespace
+        else:
+            return value.strip() 
 
     def expand_comment_thread(self):
         try:
@@ -61,7 +85,7 @@ class RedditScraper:
                     author = comment.get_attribute("author")
                     score = comment.get_attribute("score")
                     content = comment.find_element(By.CSS_SELECTOR, 'div[id$="-post-rtjson-content"]').text
-
+                    content = self.clean_content(content)
                     comment_data = {
                         "author": author,
                         "score": score,

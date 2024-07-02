@@ -28,33 +28,38 @@ class ThreadManager:
         """
         Scrape posts from a specific category of subreddit.
         """
-        print(f"Thread {threading.get_ident()}: Scraping {self.category} category....")
-        DriverUtils.initialize_driver(self.category)
+        try:
+            print(f"Thread {threading.get_ident()}: Scraping {self.category} category....")
+            DriverUtils.initialize_driver(self.category)
 
-        # Set up shared variables
-        shared.processed_posts_count = 0
-        shared.limit = self.limit if self.limit is not None else float('inf')
-        shared.scroll_position = 0
-        shared.verbose = self.verbose
-        shared.output_file_path = self.output_path
+            # Set up shared variables
+            shared.processed_posts_count = 0
+            shared.limit = self.limit if self.limit is not None else float('inf')
+            shared.scroll_position = 0
+            shared.verbose = self.verbose
+            shared.output_file_path = self.output_path
 
-        shared.scraper = SubredditScraper(shared.drivers[self.category])
-        Config.setup_output_file()
+            shared.scraper = SubredditScraper(shared.drivers[self.category])
+            Config.setup_output_file()
 
-        shared.scraper.update_scraper(shared.limit)
+            shared.scraper.update_scraper(shared.limit)
 
-        base_url = f"https://www.reddit.com/r/{self.subreddit}/"
-        if self.category == "hot":
-            shared.reddit_url = base_url + "hot/"
-        elif self.category == "new":
-            shared.reddit_url = base_url + "new/"
-        elif self.category == "top":
-            shared.reddit_url = base_url + "top/?t=all"
-        else:
-            print(f"Thread {threading.get_ident()}: Invalid category {self.category}. Skipping category.\n")
-            return
-        
-        shared.scraper.scrape_subreddit()
+            base_url = f"https://www.reddit.com/r/{self.subreddit}/"
+            if self.category == "hot":
+                shared.reddit_url = base_url + "hot/"
+            elif self.category == "new":
+                shared.reddit_url = base_url + "new/"
+            elif self.category == "top":
+                shared.reddit_url = base_url + "top/?t=all"
+            else:
+                print(f"Thread {threading.get_ident()}: Invalid category {self.category}. Skipping category.\n")
+                return
+
+            shared.scraper.scrape_subreddit()
+
+        except Exception as e:
+            #  print(f"Thread error: {e}") #-------> For Debugging
+            pass
 
     def start_thread(self):
         """

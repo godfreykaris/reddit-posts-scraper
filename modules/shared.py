@@ -20,7 +20,7 @@ limit = 0
 # Print progress on the console
 verbose = False
 
-# Output file format ['json', 'yaml']
+# Output file format ['json', 'yaml', 'xml']
 format_type = "json"
 
 # Reddit Posts URL

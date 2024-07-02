@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 
 # Configure logging to suppress specific messages
-# logging.getLogger('werkzeug').setLevel(logging.ERROR)
+logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
 # Define the directory where scraped posts will be stored
 DOWNLOAD_DIRECTORY = os.path.join(os.getcwd(), 'downloads')
@@ -33,7 +33,7 @@ def parse_arguments():
     parser.add_argument("-c", "--categories", nargs='*', default=["hot", "new", "top"], help="Categories to scrape (default is 'hot', 'new', 'top')")
     parser.add_argument("-o", "--output", help="Output file path for the scraped posts (default is 'scraped_posts.json' in the current directory)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode to print processing details")
-    parser.add_argument("-f", "--format", choices=['json', 'yaml'], default='json', help="Output format for the scraped posts (default is 'json')")
+    parser.add_argument("-f", "--format", choices=['json', 'yaml', 'xml'], default='json', help="Output format for the scraped posts (default is 'json')")
 
     return parser.parse_args()
 
@@ -60,6 +60,9 @@ def initialize_shared_variables(output_path, format_type):
         elif output_path.endswith('.yaml'):
             shared.output_file_path = output_path
             shared.format_type = 'yaml'
+        elif output_path.endswith('.xml'):
+            shared.output_file_path = output_path
+            shared.format_type = 'xml'
         else:
             shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
     else:

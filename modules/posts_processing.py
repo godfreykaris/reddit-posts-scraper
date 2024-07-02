@@ -7,6 +7,8 @@ from time import sleep
 
 from bs4 import BeautifulSoup
 
+import xml.etree.ElementTree as ET
+
 from modules.driver_utils import DriverUtils
 from modules.file_write_error import FileWriteError
 from modules.colors import Colors
@@ -25,17 +27,28 @@ class PostProcessor:
         return thread_id, shared.thread_colors[thread_id]
 
     @staticmethod
-    def clean_value(value):
-        lines = [line.strip() for line in value.splitlines()]
-        clean_lines = [line for line in lines if line]
-        return ' '.join(clean_lines)
+    def add_dict_to_xml(element, data):
+        for key, value in data.items():
+            if isinstance(value, dict):
+                child = ET.SubElement(element, key)
+                PostProcessor.add_dict_to_xml(child, value)
+            elif isinstance(value, list):
+                list_element = ET.SubElement(element, key)
+                for item in value:
+                    if isinstance(item, dict):
+                        item_element = ET.SubElement(list_element, 'item')
+                        PostProcessor.add_dict_to_xml(item_element, item)
+                    else:
+                        item_element = ET.SubElement(list_element, 'item')
+                        item_element.text = PostProcessor.clean_xml(str(item))
+            else:
+                child = ET.SubElement(element, key)
+                child.text = str(value)
+
            
     @staticmethod
     def write_post_to_file(data):
         def get_next_file_path(original_path, base_path, ext):
-            """
-            Generate the next file path by incrementing the number in the file name.
-            """
             base, current_ext = os.path.splitext(original_path)
             if current_ext:
                 base_path = base
@@ -48,19 +61,14 @@ class PostProcessor:
                 index += 1
 
         def get_file_size(file_path):
-            """
-            Return the size of the file in bytes.
-            """
             return os.path.getsize(file_path)
 
         file_path = shared.output_file_path
         _, thread_color = PostProcessor.get_thread_color()
 
         try:
-            # Determine the file extension
             ext = shared.format_type.lower()
 
-            # Check if the file exists and its size
             if os.path.exists(file_path) and get_file_size(file_path) > 5 * 1024 * 1024:  # 5MB in bytes
                 if shared.format_type == 'json':
                     with open(file_path, 'a', encoding='utf-8') as json_file:
@@ -81,13 +89,29 @@ class PostProcessor:
                 with open(file_path, mode, encoding='utf-8') as yaml_file:
                     yaml_file.write('---\n')
                     yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
-            
+
+            elif shared.format_type == 'xml':
+                if os.path.exists(file_path):
+                    tree = ET.parse(file_path)
+                    root = tree.getroot()
+                    if root is None:
+                        root = ET.Element('posts')
+                else:
+                    root = ET.Element('posts')
+
+                post_element = ET.SubElement(root, 'post')
+                PostProcessor.add_dict_to_xml(post_element, data)
+
+                tree = ET.ElementTree(root)
+                with open(file_path, 'wb') as xml_file:
+                    tree.write(xml_file, encoding='utf-8', xml_declaration=True)
         except Exception as e:
             raise FileWriteError(f"{thread_color}Failed to write to file '{file_path}': {str(e)}{Colors.RESET}")
 
+
     @staticmethod
     def finalize_file():
-        if shared.format_type not in ['json', 'yaml']:
+        if shared.format_type not in ['json', 'yaml', 'xml']:
             raise ValueError(f"Invalid format type: {shared.format_type}")
 
         file_path = f"{shared.output_file_path}"
@@ -97,7 +121,9 @@ class PostProcessor:
                 json_file.write('\n]')
         elif shared.format_type == 'yaml':
             pass
-            
+        elif shared.format_type == 'xml':
+            pass
+
     @staticmethod
     def divide_work(permalinks, drivers_number):
         # Calculate the size of each chunk
@@ -118,7 +144,7 @@ class PostProcessor:
 
     @staticmethod
     def validate_file_format():
-        if shared.format_type not in ['json', 'yaml']:
+        if shared.format_type not in ['json', 'yaml', 'xml']:
             raise ValueError(f"Invalid format type: {shared.format_type}")
    
     @staticmethod
