@@ -112,6 +112,9 @@ python app.py
 ```
 Access the application through your web browser at http://localhost:5000.
 
+## Quiting
+You can quit the app by pressing CTRL + C
+
 ## Project Structure
 ```
 reddit-scraper/
