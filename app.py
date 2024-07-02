@@ -250,7 +250,7 @@ def finalize_and_exit(signum, frame):
     """
     Signal handler for SIGINT to quit all drivers and finalize file before exiting.
     """
-    print("Quiting...")
+    print("Quitting...")
     shared.processing_done = True
     if shared.processed_posts_count > 0:
         PostProcessor.finalize_file()

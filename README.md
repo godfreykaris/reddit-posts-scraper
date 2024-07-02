@@ -112,7 +112,7 @@ python app.py
 ```
 Access the application through your web browser at http://localhost:5000.
 
-## Quiting
+## Quitting
 You can quit the app by pressing CTRL + C
 
 ## Project Structure
