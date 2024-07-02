@@ -33,3 +33,6 @@ original_filepath_path = ""
 # Used for communication with the frontend incase the user decides to use the flask app
 processing = False
 processing_done = False
+
+# Processed posts
+processed_posts = []

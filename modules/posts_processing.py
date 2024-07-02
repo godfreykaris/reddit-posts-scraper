@@ -239,7 +239,18 @@ class PostProcessor:
                     shreddit_post = container.find('shreddit-post')
                     permalink = shreddit_post.get('permalink', '')
 
+                    post_id = shreddit_post.get("id")
+
+                    if post_id in shared.processed_posts:
+                        # Ignore this post as it's already processed
+                        continue
+                
+                    # If the post_id is not in the processed_posts list, process the post
                     permalinks.append(permalink)
+                    
+                    # Add the post_id to the processed_posts list
+                    shared.processed_posts.append(post_id)
+
 
                     if shared.processed_posts_count >= shared.limit:
                         break

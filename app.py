@@ -257,14 +257,20 @@ def finalize_and_exit(signum, frame):
     DriverUtils.close_existing_chrome_instances()
     sys.exit(0)
 
-# Register the signal handler
-signal.signal(signal.SIGINT, finalize_and_exit)
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        args = parse_arguments()
-        start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+    # Register the signal handler
+    signal.signal(signal.SIGINT, finalize_and_exit)
 
+    if len(sys.argv) > 1:
+        try:
+            args = parse_arguments()
+            start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+
+        except Exception as e:
+            print(f"\nError occurred: {str(e)}")
+            # Optionally, you can log the exception traceback for debugging purposes
+            # traceback.print_exc()
         if shared.processed_posts_count == 0:
             print("\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again.")
         else:
@@ -272,4 +278,3 @@ if __name__ == "__main__":
     else:
         # If no command-line arguments, run the Flask app
         app.run(debug=True)
-
