@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 
 # Configure logging to suppress specific messages
-logging.getLogger('werkzeug').setLevel(logging.ERROR)
+# logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
 # Define the directory where scraped posts will be stored
 DOWNLOAD_DIRECTORY = os.path.join(os.getcwd(), 'downloads')

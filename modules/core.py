@@ -53,9 +53,8 @@ class RedditScraper:
         comments_data = []
 
         try:
-            comments = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_all_elements_located((By.CSS_SELECTOR, f'shreddit-comment[depth="{current_depth}"]'))
-            )
+            # Find comments within the current element at the specified depth
+            comments = comment_element.find_elements(By.CSS_SELECTOR, f'shreddit-comment[depth="{current_depth}"]')
 
             for comment in comments:
                 try:
@@ -117,12 +116,35 @@ class RedditScraper:
             except Exception as e:
                 # print(f"Time element not found or incomplete: {str(e)}") -------> For Debugging
                  pass
+            
+            post_content = ""
+            
+            try:
+                content_element = post_element.find_element(By.CSS_SELECTOR, 'div[id$="-post-rtjson-content"]')
+                post_content = content_element.text
+            except Exception as e:
+                pass
+        
+            media_urls = set()
+            try:
+                # Locate the media container
+                media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
 
-            return post_title, author, post_id, post_score, post_time, flair_text
+                # Find all image elements within the media container
+                media_images = media_container.find_elements(By.CSS_SELECTOR, 'img')
+
+                # Extract the src attribute of each image
+                media_urls.update(img.get_attribute("src") for img in media_images)
+            except Exception as e:
+                pass
+
+            return post_title, author, post_id, post_score, post_time, flair_text, post_content, list(media_urls)
         
         except Exception as e:
             # print(f"Error extracting post information: {str(e)}") -------> For Debugging
-            return None, None, None, None, None, None
+            return None, None, None, None, None, None, None, None
+
+
 
     def scrape_post(self,driver):
         
@@ -133,7 +155,7 @@ class RedditScraper:
 
             self.expand_comment_thread()
 
-            post_title, post_author, post_id, post_score, post_time, flair_text = self.extract_post_info()
+            post_title, post_author, post_id, post_score, post_time, flair_text, post_content, media_urls = self.extract_post_info()
 
             if post_title and post_author and post_id: # The three are mandatory
                 root_element = driver.find_element(By.CSS_SELECTOR, '[id^="comment-tree-content-anchor"]')
@@ -146,6 +168,8 @@ class RedditScraper:
                     "post_time": post_time,
                     "flair_text": flair_text,
                     "post_title": post_title,
+                    "media": media_urls,
+                    "post_content":post_content,
                     "comments": comments_data
                 }
 

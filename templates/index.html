@@ -57,54 +57,57 @@
 
     <script>
         function showProgress() {
-            
+            let errorShown = false;
             let interval = setInterval(() => {
                 fetch('/progress')
-                .then(response => response.json())
-                .then(data => {
-                    const progressText = document.querySelector('.progress-text');
-                    const progress = document.querySelector('.progress-bar');
+                    .then(response => response.json())
+                    .then(data => {
+                        const progressText = document.querySelector('.progress-text');
+                        const progress = document.querySelector('.progress-bar');
 
-                    if(data.processed_posts == 0)
-                    {
-                        progressText.textContent = "Setting Up";
-                        progress.style.width = '0%';
-                    }
-                    else
-                    {
-                        if(data.max_posts !== "As many as available" && data.max_posts <= data.processed_posts)
-                        {
-                            const progressContainer = document.querySelector('.progress-container');
-                            progressContainer.style.display = 'block';
+                        if (data.processed_posts == 0) {
+                            progressText.textContent = "Setting Up";
+                            progress.style.width = '0%';
+                        } else {
+                            if (data.max_posts !== "As many as available" && data.max_posts <= data.processed_posts) {
+                                const progressContainer = document.querySelector('.progress-container');
+                                progressContainer.style.display = 'block';
 
-                            const percentage = (data.processed_posts / data.max_posts) * 100;
-                            progress.style.width = percentage + '%';
+                                const percentage = (data.processed_posts / data.max_posts) * 100;
+                                progress.style.width = percentage + '%';
+                            }
+
+                            progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
                         }
-                        
-                        progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
-                    }
-                    
-                    if (data.processing === false) {
-                        clearInterval(interval);
-                        progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
-                        document.getElementById('download-button-container').style.display = 'block';
-                        document.querySelector('.progress-container').style.display = 'none';
-                    }
-                    
-                    document.getElementById('start-scraping-button').disabled = data.processing;
 
-                    
-                })
-                .catch(error => {
-                    console.error('Error fetching progress:', error);
-                    clearInterval(interval);
-                    alert('Error fetching progress. Please try again.');
-                });
+                        if (data.processing === false) {
+                            clearInterval(interval);
+                            progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
+                            if(data.processed_posts > 0)
+                            {
+                                document.getElementById('download-button-container').style.display = 'block';
+                            }
+                            document.querySelector('.progress-container').style.display = 'none';
+                        }
+
+                        document.getElementById('start-scraping-button').disabled = data.processing;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching progress:', error);
+                        clearInterval(interval);
+                        if (!errorShown) {
+                            alert('Error fetching progress. Please try again.');
+                            errorShown = true;
+                            document.getElementById('download-button-container').style.display = 'none';
+                            document.querySelector('.progress-container').style.display = 'none';
+                            document.getElementById('start-scraping-button').disabled = false;
+                        }
+                    });
             }, 2000);
         }
 
         function startScraping() {
-
+            
             document.getElementById('download-button-container').style.display = 'none';
             
             showProgress();
@@ -142,6 +145,10 @@
             .catch(error => {
                 console.error('Error during scraping:', error.message);
                 alert('Error during scraping: ' + error.message);
+                clearInterval(interval);
+                document.getElementById('download-button-container').style.display = 'none';
+                document.querySelector('.progress-container').style.display = 'none';
+                document.getElementById('start-scraping-button').disabled = false;
             });
         }
 
