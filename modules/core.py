@@ -89,15 +89,15 @@ class RedditScraper:
                     comment_data = {
                         "author": author,
                         "score": score,
-                        "content": content,
-                        "replies": []
+                        "content": content
                     }
 
                     next_depth = current_depth + 1
                     next_comments = comment.find_elements(By.CSS_SELECTOR, f'shreddit-comment[author][depth="{next_depth}"]')
                     if next_comments:
                         replies = self.extract_comments(comment, next_depth)
-                        comment_data["replies"].extend(replies)
+                        if replies:  # Only include replies if they are not empty
+                            comment_data["replies"] = replies
                         
                     comments_data.append(comment_data)
 
@@ -151,30 +151,33 @@ class RedditScraper:
         
             media_urls = set()
 
-            # Retrieve media URLs (images, videos, iframes)
-            try:
-                # Locate the media container
-                media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
-            
-                # Find all image elements within the media container
-                media_images = media_container.find_elements(By.CSS_SELECTOR, 'img')
+            def extract_media_urls(container, media_urls):
+                # Find all image elements within the container
+                media_images = container.find_elements(By.CSS_SELECTOR, 'img')
                 media_urls.update(img.get_attribute("src") for img in media_images)
-                
-                # Find all video elements within the media container
-                media_videos = media_container.find_elements(By.CSS_SELECTOR, 'video source')
+            
+                # Find all video elements within the container
+                media_videos = container.find_elements(By.CSS_SELECTOR, 'video source')
                 media_urls.update(video.get_attribute("src") for video in media_videos)
-                
-                # Find all iframe elements within the media container
-                media_iframes = media_container.find_elements(By.CSS_SELECTOR, 'iframe')
+            
+                # Find all iframe elements within the container
+                media_iframes = container.find_elements(By.CSS_SELECTOR, 'iframe')
                 media_urls.update(iframe.get_attribute("src") for iframe in media_iframes)
+            
+                # Find all anchor elements within the container
+                content_links = container.find_elements(By.CSS_SELECTOR, 'a')
+                media_urls.update(link.get_attribute("href") for link in content_links)
+            
+            # Retrieve media URLs (images, videos, iframes) from media container
+            try:
+                media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
+                extract_media_urls(media_container, media_urls)
             except Exception as e:
                 pass
             
-            # Retrieve embedded links from post content
+            # Retrieve media URLs (images, videos, iframes) from content element
             try:
-                # Find all anchor elements within the post content
-                content_links = content_element.find_elements(By.CSS_SELECTOR, 'a')
-                media_urls.update(link.get_attribute("href") for link in content_links)
+                extract_media_urls(content_element, media_urls)
             except Exception as e:
                 pass
 
