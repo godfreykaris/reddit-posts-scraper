@@ -6,7 +6,7 @@ A web scraping application designed to extract posts from a specified subreddit.
 
 - **Scrapes Multiple Categories**: Allows scraping from multiple categories such as 'hot', 'new', 'top', or all categories combined.
 - **Multi-threaded Scraping**: Utilizes threads for concurrent scraping when either multiple categories are selected or no specific category is specified, optimizing performance.
-- **Output Formats**: Supports output formats including JSON and YAML.
+- **Output Formats**: Supports output formats including JSON, YAML and XML.
 - **Dynamic Output File Naming**: Automatically names output files based on specified file path and optional format.
 - **Progress Monitoring**: Provides real-time progress updates during the scraping process.
 - **Error Handling**: Handles errors gracefully, skipping invalid categories and displaying relevant messages.
@@ -101,7 +101,7 @@ The following options are available to customize the scraping process:
   Output file path for the scraped posts (default is `scraped_posts.[format]` in the current directory).
 
 - **`-f, --format`**: (**Optional**)  
-  Output format for the scraped posts (`json`, `yaml`; default is `json`).
+  Output format for the scraped posts (`json`, `yaml`, `xml`; default is `json`).
 
 - **`-v, --verbose`**: (**Optional**)  
   Enable verbose mode to print detailed processing information.
@@ -117,9 +117,6 @@ Ensure the Flask application (app.py) is properly configured and dependencies ar
 python app.py
 ```
 Access the application through your web browser at http://localhost:5000.
-
-## Quitting
-You can quit the app by pressing CTRL + C
 
 ## Project Structure
 ```
