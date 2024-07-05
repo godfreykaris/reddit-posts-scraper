@@ -167,7 +167,15 @@ class RedditScraper:
                 # Find all anchor elements within the container
                 content_links = container.find_elements(By.CSS_SELECTOR, 'a')
                 media_urls.update(link.get_attribute("href") for link in content_links)
-            
+
+                # Find all shredder-embed elements within the container
+                embed_elements = container.find_elements(By.CSS_SELECTOR, 'shreddit-embed')
+                for embed in embed_elements:
+                    embed_html = embed.get_attribute("html")
+                    if 'src="' in embed_html:
+                        embed_url = embed_html.split('src="')[1].split('"')[0]
+                        media_urls.add(embed_url)
+                            
             # Retrieve media URLs (images, videos, iframes) from media container
             try:
                 media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
