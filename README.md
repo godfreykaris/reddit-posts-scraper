@@ -28,7 +28,7 @@ Before you begin, ensure you have met the following requirements:
 - You have `pip` installed.
 - You have Google Chrome installed.
 - You have downloaded the ChromeDriver that matches your Chrome version and placed it in a directory accessible to your PATH.
-- You may need to enable Python in your system settings. If you're facing the <span style="color: red;">"Manage App Execution Aliases"</span> issue, follow these steps:
+- You may need to enable Python in your system settings. If you're facing the "Manage App Execution Aliases" issue, follow these steps:
   - Go to your search bar and search for "Manage App Execution Aliases".
   - In the window that opens, turn off "App Installers" for Python.
 
