@@ -60,6 +60,14 @@ git clone https://github.com/godfreykaris/reddit-posts-scraper.git
 cd reddit-posts-scraper
 ```
 
+
+## 5.3 Fetching changes from the Repository
+To fetch changes from the repository, follow the guideline below.
+### 5.3.1 First timers
+```bash
+git init
+git remote add origin https://github.com/godfreykaris/reddit-posts-scraper.git
+```
 ## 5.3 Install Dependencies
 
 ### 5.3.1 Create and activate a virtual environment:
@@ -76,13 +84,13 @@ source venv/bin/activate
 python -m venv venv
 venv\Scripts\activate
 ```
-## 5.3.2 Update and upgrade pip which is the package installer for Python
+### 5.3.2 Update and upgrade pip which is the package installer for Python
 
 ```bash
 python -m pip install --upgrade pip
 ```
 
-## 5.3.3 Install the required Python packages:
+### 5.3.3 Install the required Python packages:
 
 To install the required dependencies, run the following command:
 
