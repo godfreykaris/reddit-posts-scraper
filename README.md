@@ -47,16 +47,22 @@ If you receive a "Python not found" error, you will need to install Python. Foll
 
 ## 5 Setup
 
-### 5.1 Clone the Repository
+### 5.1 Increase Git Buffer Size:
+Increase the buffer size to allow fetching of the ChromeDriver from the repository:
+```sh
+git config --global http.postBuffer 104857600
+```
+
+### 5.2 Clone the Repository
 
 ```sh
 git clone https://github.com/godfreykaris/reddit-posts-scraper.git
-cd reddit-scraper
+cd reddit-posts-scraper
 ```
 
-## 5.2 Install Dependencies
+## 5.3 Install Dependencies
 
-### 5.2.1 Create and activate a virtual environment:
+### 5.3.1 Create and activate a virtual environment:
 
 #### For Linux/Mac OS:
 
@@ -70,7 +76,13 @@ source venv/bin/activate
 python -m venv venv
 venv\Scripts\activate
 ```
-## 5.2.2 Install the required Python packages:
+## 5.3.2 Update and upgrade pip which is the package installer for Python
+
+```bash
+python -m pip install --upgrade pip
+```
+
+## 5.3.3 Install the required Python packages:
 
 To install the required dependencies, run the following command:
 
@@ -78,7 +90,7 @@ To install the required dependencies, run the following command:
 pip install -r requirements.txt
 ```
 
-### 5.2.3 Exiting the virtual environment
+### 5.3.4 Exiting the virtual environment
 Type the following command and press Enter.
 ```bash
 deactivate
