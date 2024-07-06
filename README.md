@@ -109,7 +109,7 @@ Type the following command and press Enter.
 deactivate
 ```
 
-### 5.5 Configuration
+# 6 Configuration
 Ensure you have the chromedriver executable in your PATH or specify its location in the `DriverUtils` class if it's located elsewhere.
 Adjust any configuration settings in `config.py` if necessary.
 
