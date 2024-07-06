@@ -73,9 +73,9 @@ git reset --hard origin/main
 A message like this means it has updated successfully: 
 HEAD is now at ....
 
-## 5.3 Install Dependencies
+## 5.4 Install Dependencies
 
-### 5.3.1 Create and activate a virtual environment:
+### 5.4.1 Create and activate a virtual environment:
 
 #### For Linux/Mac OS:
 
@@ -89,13 +89,13 @@ source venv/bin/activate
 python -m venv venv
 venv\Scripts\activate
 ```
-### 5.3.2 Update and upgrade pip which is the package installer for Python
+### 5.4.2 Update and upgrade pip which is the package installer for Python
 
 ```bash
 python -m pip install --upgrade pip
 ```
 
-### 5.3.3 Install the required Python packages:
+### 5.4.3 Install the required Python packages:
 
 To install the required dependencies, run the following command:
 
@@ -103,7 +103,7 @@ To install the required dependencies, run the following command:
 pip install -r requirements.txt
 ```
 
-### 5.3.4 Exiting the virtual environment
+### 5.4.4 Exiting the virtual environment
 Type the following command and press Enter.
 ```bash
 deactivate
