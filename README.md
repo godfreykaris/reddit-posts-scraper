@@ -63,11 +63,16 @@ cd reddit-posts-scraper
 
 ## 5.3 Fetching changes from the Repository
 To fetch changes from the repository, follow the guideline below.
-### 5.3.1 First timers
 ```bash
-git init
-git remote add origin https://github.com/godfreykaris/reddit-posts-scraper.git
+git pull origin main
 ```
+If you get any error because of any changes conflicting with the remote repository, you can solve the issue by running:
+```bash
+git reset --hard origin/main
+```
+A message like this means it has updated successfully: 
+HEAD is now at ....
+
 ## 5.3 Install Dependencies
 
 ### 5.3.1 Create and activate a virtual environment:
