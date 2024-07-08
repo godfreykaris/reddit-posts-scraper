@@ -164,6 +164,8 @@ class PostProcessor:
                else:
                  worker_driver.execute_script(f"window.open('https://www.reddit.com{permalink}', '_blank');")
 
+               DriverUtils.accept_quarantined(worker_driver)
+
                windows = worker_driver.window_handles
 
                if len(windows) > 2:

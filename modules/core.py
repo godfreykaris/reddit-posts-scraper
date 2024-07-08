@@ -200,18 +200,28 @@ class RedditScraper:
     def scrape_post(self,driver):
         
         try:
-            comments_container = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, '[id^="comment-tree-content-anchor"]'))
-            )
-
-            self.expand_comment_thread()
 
             post_title, post_author, post_id, post_score, post_time, flair_text, post_content, media_urls = self.extract_post_info()
 
-            if post_title and post_author and post_id: # The three are mandatory
-                root_element = driver.find_element(By.CSS_SELECTOR, '[id^="comment-tree-content-anchor"]')
-                comments_data = self.extract_comments(root_element, 0)
+            comments_data = None
+            
+            try:
+                comments_container = WebDriverWait(driver, 5).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, '[id^="comment-tree-content-anchor"]'))
+                )
+                self.expand_comment_thread()
 
+                if post_title and post_author and post_id: # The three are mandatory
+                    root_element = driver.find_element(By.CSS_SELECTOR, '[id^="comment-tree-content-anchor"]')
+                    comments_data = self.extract_comments(root_element, 0)
+            except Exception as e:
+                # print(f"Comments container not found.")  -------> For Debugging  
+                pass
+            
+            
+            
+            if post_title and post_author and post_id: # The three are mandatory
+                
                 data = {
                     "post_author": post_author,
                     "post_id": post_id,
@@ -220,9 +230,11 @@ class RedditScraper:
                     "flair_text": flair_text,
                     "post_title": post_title,
                     "media": media_urls,
-                    "post_content":post_content,
-                    "comments": comments_data
+                    "post_content":post_content
                 }
+
+                if comments_data:
+                    data["comments"] = comments_data
 
                 return data
 
@@ -231,6 +243,6 @@ class RedditScraper:
                 return None
 
         except Exception as e:
-            # print(f"Error: {str(e)}")  -------> For Debugging     
+            print(f"Error: -{str(e)}")  #-------> For Debugging     
             return None
 

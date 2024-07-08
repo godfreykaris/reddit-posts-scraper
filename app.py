@@ -33,7 +33,7 @@ def parse_arguments():
 
     return parser.parse_args()
 
-def initialize_shared_variables(output_path, format_type):
+def initialize_shared_variables(output_path, format_type, subreddit=None):
     shared.threads = {}
     shared.drivers = {}
     shared.processing_done = False
@@ -53,7 +53,7 @@ def initialize_shared_variables(output_path, format_type):
         else:
             shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
     else:
-        shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"scraped_posts.{format_type}")
+        shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"{subreddit}.{format_type}")
 
     shared.original_filepath_path = shared.output_file_path
 
@@ -110,7 +110,7 @@ def start_scraping_route():
 
     DriverUtils.close_existing_chrome_instances()
 
-    initialize_shared_variables(output_path, file_type)
+    initialize_shared_variables(output_path, file_type, subreddit)
 
     categories = [category]
 
@@ -138,7 +138,7 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     DriverUtils.close_existing_chrome_instances()
 
     print("Working....")
-    initialize_shared_variables(output_path, format_type)
+    initialize_shared_variables(output_path, format_type, subreddit)
 
     create_threads(subreddit, limit, categories, verbose)
     wait_for_threads_to_complete()
