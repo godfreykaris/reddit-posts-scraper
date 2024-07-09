@@ -143,6 +143,8 @@ The following options are available to customize the scraping process:
 
 - **`-v, --verbose`**: (**Optional**)  
   Enable verbose mode to print detailed processing information.
+- **`-p, --ping`**: (**Optional**)
+  Ping the subreddit to find out the number of available posts
 
 ## 7.2 Web Interface
 The application can also be run using Flask, providing a web interface to initiate and monitor the scraping process.

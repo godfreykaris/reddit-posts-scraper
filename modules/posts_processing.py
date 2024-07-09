@@ -239,42 +239,54 @@ class PostProcessor:
                     break
                 try:
                     shreddit_post = container.find('shreddit-post')
-                    permalink = shreddit_post.get('permalink', '')
+                   
+                    if not shared.ping_mode:
+                        post_id = shreddit_post.get("id")
+                        permalink = shreddit_post.get('permalink', '')
 
-                    post_id = shreddit_post.get("id")
-
-                    if post_id in shared.processed_posts:
-                        # Ignore this post as it's already processed
-                        continue
-                
-                    # If the post_id is not in the processed_posts list, process the post
-                    permalinks.append(permalink)
+                        if post_id in shared.processed_posts:
+                            # Ignore this post as it's already processed
+                            continue
                     
-                    # Add the post_id to the processed_posts list
-                    shared.processed_posts.append(post_id)
+                        # If the post_id is not in the processed_posts list, process the post
+                        permalinks.append(permalink)
+                        
+                        # Add the post_id to the processed_posts list
+                        shared.processed_posts.append(post_id)
 
 
-                    if shared.processed_posts_count >= shared.limit:
-                        break
+                        if shared.processed_posts_count >= shared.limit:
+                            break
+                    else:
+                        shared.processed_posts_count = shared.processed_posts_count + 1
+
+                        if shared.processed_posts_count % 10 == 0:
+                            print(f"{thread_color}Thread {thread_id}: Found posts: {shared.processed_posts_count}{Colors.RESET}")
+                        
                 except Exception as e:
                     # print(f"{thread_color}Thread {thread_id}: Error extracting permalink: {e}{Colors.RESET}") -------> For Debugging
                     pass
 
-            # Divide the job
-            divided_jobs = PostProcessor.divide_work(permalinks=permalinks, drivers_number=len(worker_drivers))
-            # Create and start worker threads
-            threads = []
-            for i, worker_driver in enumerate(worker_drivers):
-                thread = threading.Thread(target=PostProcessor.worker, args=(worker_driver, thread_color, thread_id, divided_jobs[i]))
-                thread.start()
-                threads.append(thread)
+            
+            if not shared.ping_mode:
+                # Divide the job
+                divided_jobs = PostProcessor.divide_work(permalinks=permalinks, drivers_number=len(worker_drivers))
+                # Create and start worker threads
+                threads = []
+                for i, worker_driver in enumerate(worker_drivers):
+                    thread = threading.Thread(target=PostProcessor.worker, args=(worker_driver, thread_color, thread_id, divided_jobs[i]))
+                    thread.start()
+                    threads.append(thread)
 
-            # Wait for all threads to complete
-            for thread in threads:
-                thread.join()
+                # Wait for all threads to complete
+                for thread in threads:
+                    thread.join()
 
         if shared.verbose:
-            print(f"{thread_color}Thread {thread_id}: Processed posts: {shared.processed_posts_count}{Colors.RESET}")
+            if not shared.ping_mode:
+                print(f"{thread_color}Thread {thread_id}: Processed posts: {shared.processed_posts_count}{Colors.RESET}")
+            else:
+                print(f"{thread_color}Thread {thread_id}: Found posts: {shared.processed_posts_count}{Colors.RESET}")
 
         if not shared.processing_done:
             shared.processing_done = True

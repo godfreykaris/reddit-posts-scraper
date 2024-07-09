@@ -33,7 +33,11 @@
                     <option value="yaml">YAML</option>
                     <option value="xml">XML</option>
                 </select>
-                <button type="submit" id="start-scraping-button">Start Scraping</button>
+                <select id="mode" name="mode">
+                    <option value="scrape">Scrape</option>
+                    <option value="ping">Ping</option>
+                </select>
+                <button type="submit" id="start-scraping-button">Start Scraping/Pinging</button>
             </form>
         </div>
     </section>
@@ -77,14 +81,21 @@
                                 const percentage = (data.processed_posts / data.max_posts) * 100;
                                 progress.style.width = percentage + '%';
                             }
-
-                            progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
+                            
+                            if (data.ping_mode == false)
+                                progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts processed`;
+                            else
+                                progressText.textContent = `${data.processed_posts} / ${data.max_posts} posts found`;
                         }
 
                         if (data.processing === false) {
                             clearInterval(interval);
-                            progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
-                            if(data.processed_posts > 0)
+                            
+                            if(data.ping_mode == false)
+                                progressText.textContent = `Processing done. ${data.processed_posts} posts processed.`;
+                            else
+                                progressText.textContent = `Ping done. ${data.processed_posts} posts found.`;
+                            if(data.processed_posts > 0 && data.ping_mode == false)
                             {
                                 document.getElementById('download-button-container').style.display = 'block';
                             }
@@ -118,13 +129,15 @@
             const category = document.getElementById('category').value;
             const fileNameInput = document.getElementById('file_name_input').value;
             const fileTypeInput = document.getElementById('file_type_input').value;
+            const runMode = document.getElementById('mode').value;
 
             const formData = {
                 subreddit: subreddit,
                 max_posts: maxPosts || 0,
                 category: category,
                 file_name_input: fileNameInput || 'scraped_posts',
-                file_type_input: fileTypeInput
+                file_type_input: fileTypeInput,
+                mode:runMode
             };
 
             fetch('/start_scraping_route', {

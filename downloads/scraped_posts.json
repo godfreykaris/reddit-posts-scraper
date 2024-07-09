@@ -1,0 +1,562 @@
+[
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dx3ae2",
+    "post_score": "5",
+    "post_time": "Sunday, July 7, 2024 at 3:00:08 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Sunday Daily Thread: What's everyone working on this week?",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "t0xic0der",
+            "score": "5",
+            "content": "I am working on Expedite (Ref. https://github.com/gridhead/expedite and http://pypi.org/project/expedite), a simple encrypted file transfer service that allows for people to share synchronously assets among each other without having to rely on third-party services or feeling the need of having publicly visible IP addresses. The project is still in its early phases - So any help to improve my craft is welcome! <3"
+        },
+        {
+            "author": "_ORL0K_",
+            "score": "3",
+            "content": "operator training simulation. starts originally in excel VBA, 3 years later - good performance in python with tkinter UI. Faceplate test on youtube"
+        },
+        {
+            "author": "__shrubbery__",
+            "score": "2",
+            "content": "I spent the last month working on v0.2 of qtile-bonsai - a tmux++ esque layout for the qtile window manager. It now has everything I need for my own usage, so I want to deem it complete software (barring bug filings and requests). As my last task for it, I'm trying to publish it to the AUR. Trying to figure out the nuances of using a modern package manager such as pdm and how to use it in the context of a PKGBUILD. My working plan is to download python-pdm as a make-dependency and use it as usual. Traditional arch-packaged python software seems to be using 'plainer' tools such as python-build and python-installer. Trying to figure out some nuances around global install and ensuring my package's own python dependencies are handled properly in the PKGBUILD env."
+        },
+        {
+            "author": "TequilaJosh",
+            "score": "2",
+            "content": "I’m currently working on an application that will let users add in craft items and projects they make with those items. It willthem go back and see when say they used so they may replicate past projects and track expenses and calculate costs"
+        },
+        {
+            "author": "Oddball777",
+            "score": "2",
+            "content": "Working on GraphingLib (www.graphinglib.org), an alternative to matplotlib where data analysis is included in plottable objects and where the API is generally more user friendly and and leads to cleaner code"
+        },
+        {
+            "author": "No_Celebration_9350",
+            "score": "2",
+            "content": "I am working on this program that can host servers on a terminal. The thing is what your hosting is a program, program inside a program. Its like remaking the web! I can't describe it well. this new programing language its running is called \"scrape file extension language\", \"SFEL\" for short. if your wondering what scrape is its the program I am making. Here's some sample code for SFEL: Fuction examples: set(a,10); output(string or var); console.newpage[a]{ } pass(); console.register(addr,role,value); console.share(addr); console.connect(addr,port); change.password(str); console.startpage(name); Var key examples: normal var: *a* console register value: *cr[var]* address: addr I know it might look wrong but I am trying."
+        },
+        {
+            "author": "Pineapple_Pizza_Nah",
+            "score": "2",
+            "content": "I am early doors into coding, recently just been testing out a few little tasks, recently I wrote some code to read a .txt file of my games with how long it takes to beat them and then output's the next game I should play based on the lowest time to beat. I had alot of help and got stuck alot but I had fun doing it so I hope to keep learning and work on more. I am tempted to recreate it in a more basic way to allow me to better understand the code."
+        },
+        {
+            "author": "subassy",
+            "score": "2",
+            "content": "I'm converting a PowerShell script I found into python. It's more just for practice. Or it started just as an exercise. Then I saw the python solution for 1brc and decided to work on some \"improvements\". What is a directory tree if not another kind of dataset? Right? I'm a very much python beginner. It's going very....slowly. The script is Tiny11. I haven't made it that far in to finishing my version yet. And it's too much of a mess for me to post a link."
+        },
+        {
+            "author": "OiledUpThug",
+            "score": "2",
+            "content": "https://pastebin.com/RZBjAFPR made a bad password interface. I'm sure it's obvious, but I am new to python"
+        }
+    ]
+},
+{
+    "post_author": "Spinning_Sky",
+    "post_id": "1dv18ew",
+    "post_score": "148",
+    "post_time": "Thursday, July 4, 2024 at 10:40:11 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "how much python is too much python?",
+    "media": [],
+    "post_content": "Context:\nIn my company I have a lot of freedom in how I use my time.\nWe're not a software company, but I care for all things IT among other things.\nWhenver I have free time I get to automate other tasks I have, and I do this pretty much only with python, cause it's convenient and familiar. (I worked with RPA in the past, but that rquires a whole environment of course)\nWe have entire workflows syhcning databases from different systems that I put together with python, maybe something else would have been more efficient.\nYesterday I had to make some stupid graphs, and after fighting with excel for about 15 minutes I said \"fuck it\" and picked up matplotlib, which at face values sounds like shooting a fly with a cannon\ndon't really know where I'm going with this, but it did prompt the question:\nhow much python is too much python?",
+    "comments": [
+        {
+            "author": "JennaSys",
+            "score": "177",
+            "content": "Python is great for what you are using it for. It's likely never to be too much in that space. The only advice I'd give is that if you are not already using something like GitHub as a code repository and for version control, start doing that now. It doesn't matter how small the code is. If it is important enough to create for your company to perform a task, it's important enough to commit it to a repo. Commit early and commit often. Also also make sure someone else at the company has access to the account besides just you.",
+            "replies": [
+                {
+                    "author": "PercussiveRussel",
+                    "score": "49",
+                    "content": "IMO any company who does anything IT, and I mean just having a guy automating tasks with python, should have their own version of a git platform. Don't really care what and how, if it's an organisation Github/Gitlab acount or a fully fledged ms Azure environment. It's similair to how companies should have their own email-adress instead of jane.company@gmail.com."
+                },
+                {
+                    "author": "Desperate-Dig2806",
+                    "score": "10",
+                    "content": "Yeah and don't sweat the commit messages. A \"Daily commit\" is better than no commit."
+                }
+            ]
+        },
+        {
+            "author": "jaylyerly",
+            "score": "30",
+            "content": "I’d worry less about too much Python and more about not enough documentation. If you disappeared tomorrow, could someone come in and understand what all your Python scripts do, how they are triggered and what to do when things break?"
+        },
+        {
+            "author": "_d0s_",
+            "score": "86",
+            "content": "for powerful graphs take a look at the Vega visualization grammar: https://vega.github.io/",
+            "replies": [
+                {
+                    "author": "ThreeChonkyCats",
+                    "score": "14",
+                    "content": "wow this is seriously good."
+                }
+            ]
+        },
+        {
+            "author": "james_pic",
+            "score": "40",
+            "content": "You can have a lot of Python before it's too much Python. The main situation where you might suspect you've gone too far is if you're using Python on systems that you've known from day 1 will have very high concurrency, tight performance requirements, and will be worked on by many different people over it's lifespan. All three of these factors are known weak spots for Python, and there are things you can do to try and get past it if you end up in this situation accidentally (your startup unexpectedly becomes the largest video streaming site on the planet, for example), but it's a situation where it's probably easier if you can avoid it.",
+            "replies": [
+                {
+                    "author": "allergic2Luxembourg",
+                    "score": "14",
+                    "content": "I agree with you on the concurrency and performance requirements. But why can't it work with many contributors?"
+                }
+            ]
+        },
+        {
+            "author": "jfp1992",
+            "score": "9",
+            "content": "Make sure you review your own code and make it as simple to redead and understand later on as possible"
+        },
+        {
+            "author": "0x9876543210",
+            "score": "7",
+            "content": "as long as you have tested the code and have peers looking at the code then there is nothing wrong with using python for everything, and there is nothing python cant do that other languages can do. The beauty is anyone can read the code and it isnt a black box binary that someone created years ago and nobody knows how it works... the important thing is you comment the code so people can understand the systems you are creating and can pass on that knowledge to anyone taking over your job in the future..."
+        }
+    ]
+},
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dyo8uq",
+    "post_score": "1",
+    "post_time": "Tuesday, July 9, 2024 at 3:00:09 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Tuesday Daily Thread: Advanced questions",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "ChurchillsLlama",
+            "score": "2",
+            "content": "I actually want to see the answers to the example questions 😬"
+        }
+    ]
+},
+{
+    "post_author": "pyeri",
+    "post_id": "1dw61vd",
+    "post_score": "0",
+    "post_time": "Friday, July 5, 2024 at 10:19:47 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "[Coming Soon] PypeScript",
+    "media": [
+        "https://x.com/gvanrossum/status/1809303102765314442"
+    ],
+    "post_content": "Guido van Rossum has just announced his upcoming language project called PypeScript. An interpreted language that supports both indents and braces for readability.\nRelevant link here\nCouldn't wait to play around with this new language!",
+    "comments": [
+        {
+            "author": "baudvine",
+            "score": "38",
+            "content": "Some time in April, perhaps.",
+            "replies": [
+                {
+                    "author": "baudvine",
+                    "score": "7",
+                    "content": "This is just kind of a nothingburger. Even if it isn't a joke, \"supports both indentation and braces\" is unrelated to anything that would, I quote, \"blow your mind\". We'll see in 2025."
+                },
+                {
+                    "author": "rghthndsd",
+                    "score": "2",
+                    "content": "I'd guess pretty early in the month, maybe even on the first."
+                }
+            ]
+        },
+        {
+            "author": "qckpckt",
+            "score": "11",
+            "content": "Oh no, I was planning on an early spring release for Typethon, a strongly typed language that compiles to python. I better delay it by exactly a year!"
+        },
+        {
+            "author": "Imaginary_Reach_1258",
+            "score": "1",
+            "content": "So… basically what Scala did? (For those who are unaware: https://www.baeldung.com/scala/optional-braces) Honesty, I always wanted multi-statement lambdas in Python…"
+        },
+        {
+            "author": "imbev",
+            "score": "2",
+            "content": "It would be interesting to see a language with C-style syntax that is compatible with Python AST"
+        },
+        {
+            "author": "ScoreFun6459",
+            "score": "2",
+            "content": "Honestly, if it gets him distracted enough to stop adding new syntax to Python, I am all for it.",
+            "replies": [
+                {
+                    "author": "Imaginary_Reach_1258",
+                    "score": "1",
+                    "content": "Unpopular opinion: Python is headed for a good direction."
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "ConstantChaos_28",
+    "post_id": "1dwew67",
+    "post_score": "20",
+    "post_time": "Saturday, July 6, 2024 at 5:13:16 AM GMT+3",
+    "flair_text": "Resource",
+    "post_title": "Free Machine Learning Fundamentals Course: Covers Regression, Pandas, SciKit-Learn, and More",
+    "media": [
+        "https://www.udemy.com/course/fundamentals-of-machine-learning-regression/"
+    ],
+    "post_content": "If you just want the link to it, here it is: https://www.udemy.com/course/fundamentals-of-machine-learning-regression/\nMe and my team @ ViSTEM created a Machine Learning fundamentals course, mainly focusing on regression techniques. This course is made for people who know a bit of python and also, experienced python developers who are thinking about adding ML to their resume. This course is 1 hour long and you can even earn a certificate from our organization. Just email us or message us through udemy with proof that you have completed our course, and we will reward you!!\nCourse Highlights:\nData Handling with Pandas\nScikit-learn Basics\nCore Algorithms:\nDecision Trees\nSupport Vector Machines (SVM)\nLinear Regression\nModel Evaluation: Metrics like R²",
+    "comments": [
+        {
+            "author": "Action_Maxim",
+            "score": "-21",
+            "content": "",
+            "replies": [
+                {
+                    "author": "TonySl01",
+                    "score": "3",
+                    "content": "What tools do you use?"
+                },
+                {
+                    "author": "ConstantChaos_28",
+                    "score": "3",
+                    "content": "Thank you for your feedback! While it's true that the data science landscape is rapidly evolving with new tools emerging, pandas remains a cornerstone for data manipulation and analysis in Python. You can look at the stackoverflow developer survey 2023 results: https://survey.stackoverflow.co/2023/#most-popular-technologies-language . Pandas is the third most used library in the \"Other frameworks and libraries\" section of the survey. StackOverFlow also reports that \"Those learning to code are using NumPy and Pandas more than .NET (5+)\"(.NET 5+ was the #1 framework in the section of that survey). Our course aims to provide a strong foundation for beginners, and pandas is a crucial part of that learning process. We appreciate your input and are always looking to improve and update our content!"
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dvkvjp",
+    "post_score": "2",
+    "post_time": "Friday, July 5, 2024 at 3:00:42 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Friday Daily Thread: r/Python Meta and Free-Talk Fridays",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "Ok-Frosting7364",
+            "score": "1",
+            "content": "For the first time ever I updated one of my Python packages's minor versions (from 0.1.2 to 0.2.0) (link for anyone interested). It made me curious... how often do you think most Python packages release updates? Maybe this is too broad a question but maybe there has been some sort of analysis done?"
+        },
+        {
+            "author": "Drowning_in_a_Mirage",
+            "score": "1",
+            "content": ""
+        },
+        {
+            "author": "Huge-Basket7492",
+            "score": "1",
+            "content": "pip Vs poetry . Pros and Cons"
+        }
+    ]
+},
+{
+    "post_author": "eagle258",
+    "post_id": "1dyb8gn",
+    "post_score": "372",
+    "post_time": "Monday, July 8, 2024 at 6:07:37 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Whenever: a modern datetime library for Python, written in Rust",
+    "media": [
+        "https://pypi.org/project/arrow/",
+        "https://whenever.readthedocs.io/",
+        "https://pypi.org/project/pendulum/",
+        "https://github.com/python/cpython/issues/91618",
+        "https://github.com/python/cpython/issues/116035",
+        "https://github.com/python/cpython/issues/112638",
+        "https://dev.arie.bovenberg.net/blog/python-datetime-pitfalls/#datetime-library-scorecard",
+        "https://github.com/ariebovenberg/whenever",
+        "https://github.com/sdispater/pendulum/issues/818",
+        "https://www.reddit.com/r/Python/comments/1ag6uxc/ten_python_datetime_pitfalls_and_what_libraries/"
+    ],
+    "post_content": "Following my earlier blogpost on the pitfalls of Python's datetime, I started exploring what a better datetime library could look like. After processing the initial feedback and finishing a Rust version, I'm now happy to share the result with the wider community.\nGitHub repo: https://github.com/ariebovenberg/whenever\ndocs: https://whenever.readthedocs.io\nWhat My Project Does\nWhenever provides an improved datetime API that helps you write correct and type-checked datetime code. It's also a lot faster than other third-party libraries (and usually the standard library as well).\nWhat's wrong with the standard library\nOver 20+ years, the standard library datetime has grown out of step with what you'd expect from a modern datetime library. Two points stand out:\n(1) It doesn't always account for Daylight Saving Time (DST). Here is a simple example:\nbedtime = datetime(2023, 3, 25, 22, tzinfo=ZoneInfo(\"Europe/Paris\"))\nfull_rest = bedtime + timedelta(hours=8)\n# It returns 6am, but should be 7am—because we skipped an hour due to DST\nNote this isn't a bug, but a design decision that DST is only considered when calculations involve two timezones. If you think this is surprising, you are not alone ( 1 2 3).\n(2) Typing can't distinguish between naive and aware datetimes. Your code probably only works with one or the other, but there's no way to enforce this in the type system.\n# It doesn't say if this should be naive or aware\ndef schedule_meeting(at: datetime) -> None: ...\nComparison\nThere are two other popular third-party libraries, but they don't (fully) address these issues. Here's how they compare to whenever and the standard library:\n  Whenever datetime Arrow Pendulum\nDST-safe yes ✅ no ❌ no ❌ partially ⚠️\nTyped aware/naive yes ✅ no ❌ no ❌ no ❌\nFast yes ✅ yes ✅ no ❌ no ❌\n(for benchmarks, see the docs linked at the top of the page)\nArrow is probably the most historically popular 3rd party datetime library. It attempts to provide a more \"friendly\" API than the standard library, but doesn't address the core issues: it keeps the same footguns, and its decision to reduce the number of types to just one (arrow.Arrow) means that it's even harder for typecheckers to catch mistakes.\nPendulum arrived on the scene in 2016, promising better DST-handling, as well as improved performance. However, it only fixes some DST-related pitfalls, and its performance has significantly degraded over time. Additionally, it hasn't been actively maintained since a breaking 3.0 release last year.\nTarget Audience\nWhenever is built to production standards. It's still in pre-1.0 beta though, so we're still open to feedback on the API and eager to weed out any bugs that pop up.",
+    "comments": [
+        {
+            "author": "JSP777",
+            "score": "217",
+            "content": "As an avid hater of datetime, you have my attention",
+            "replies": [
+                {
+                    "author": "Charlie_Yu",
+                    "score": "58",
+                    "content": "Is datetime bad at all? I’m coding in JavaScript recently and would kill to have something as good as Python datetime"
+                },
+                {
+                    "author": "Material-Mess-9886",
+                    "score": "20",
+                    "content": "from datetime import datetime. right that's cool."
+                }
+            ]
+        },
+        {
+            "author": "erez27",
+            "score": "37",
+            "content": "Looks cool! I got 2 humble opinions: In terms of extra features, fast and accurate date parsing would go a long way. Using from_py_datetime() is a bit awkward. Why not something like Instant.create(my_datetime), with type checks inside? Then you could also optionally support converting from arrow or pendulum, with the same api call.",
+            "replies": [
+                {
+                    "author": "eagle258",
+                    "score": "14",
+                    "content": "Thanks! Fast and accurate parsing is on the roadmap! Agree that the name could be better—I just haven't heard a good enough alternative yet. create seems like it'd be a more general factory function though. On another note: from_py_datetime should work with pendulum and arrow instances (although it isn't part of the test suite at the moment)."
+                }
+            ]
+        },
+        {
+            "author": "NelsonMinar",
+            "score": "55",
+            "content": "Thank you for such a thoughtful writeup. I was skeptical of your post title: Pendulum seems fine to me, why introduce the complexity of compiled code and Rust? But you've thought about that and given some good answers. Still skeptical about the need for compiled code, I'm not sure I've ever used a time library in a performance-sensitive way. But I'm sure people do! The other thing I care about is usability of the API, which is datetime's main problem. Pendulum's pretty good at that, I didn't review whenever enough to have an opinion. For anyone curious, it's about 1MB installed with pip.",
+            "replies": [
+                {
+                    "author": "eagle258",
+                    "score": "39",
+                    "content": "Thanks for you thoughtful response; note that you can always opt for the non-Rust version if you prefer a small footprint over performance. Just use the source distribution and set the `WHENEVER_NO_BUILD_RUST_EXT` environment variable. Regarding the binary size: I haven't looked at minimizing it yet, but it looks similar to other Rust extensions. edit: typos"
+                }
+            ]
+        },
+        {
+            "author": "BothSinger886",
+            "score": "29",
+            "content": "Please make your next project some type of spatial or location library and name it 'wherever'",
+            "replies": [
+                {
+                    "author": "Grasshopper04",
+                    "score": "13",
+                    "content": "And then Shakira can dance to it"
+                }
+            ]
+        },
+        {
+            "author": "chub79",
+            "score": "62",
+            "content": "Rust is the future of Python and I'm here for it :)"
+        }
+    ]
+},
+{
+    "post_author": "Flask-Tenants",
+    "post_id": "1dv6554",
+    "post_score": "1",
+    "post_time": "Thursday, July 4, 2024 at 3:48:39 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Flask-Tenants: Contributors and Testers Wanted ",
+    "media": [
+        "https://github.com/Flask-Tenants/demo_app",
+        "https://github.com/Flask-Tenants/flask-tenants"
+    ],
+    "post_content": "Hello all!\nWhat my project does\nFlask-Tenants is a subdomain-based event-driven multitenancy module that allows for custom tenant-scoped models, automatic schema switching, and more. The project is mostly functional with some small bugs here and there that are in the process of being patched. There are probably features that would be nice that I haven't thought of either.\nComparison\nWell, I wrote it because nothing else did it, so I don't really have anything to compare it to.\nTarget Audience\nPython web developers with an emphasis on users of Flask.\nSource Code\nYou can access the GitHub here: https://github.com/Flask-Tenants/flask-tenants\nGetting Started\nThere is a demo application to help you get started here: https://github.com/Flask-Tenants/demo_app\nIf you don't want to help with writing code, there are many other ways you can contribute as well: testing, ideas, and documentation all come to mind, but there is probably more.\nAll help is appreciated for what is sure to be a popular module in the near future :)."
+},
+{
+    "post_author": "wabalabadapdap",
+    "post_id": "1dvvxdg",
+    "post_score": "1",
+    "post_time": "Friday, July 5, 2024 at 2:39:16 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "[Question] Are universal Decorators and Metaclasses useful?",
+    "media": [
+        "https://pypi.org/project/once-and-for-all/",
+        "https://github.com/stoney95/once"
+    ],
+    "post_content": "I created a python package that allows you to apply decorators or meta-classes universally. I found the idea interesting and could imagine that this can be useful to ensure guidelines throughout the codebase. I am wondering if people here find it useful too - and what applications come to your mind.\nThe example demonstrates how you could enforce to log all exceptions without modifying every element of your codebase.\nimport once\n\nfrom coding_guidelines import log_exceptions # <- This is a decorator\nfrom some_custom_package import my_module\n\n\ndef main():\n    result = my_module.do_stuff_1()\n    my_module.do_stuff_2(result)\n\n\nif __name__ == \"__main__\":\n    (\n        once.and_for_all.Functions()\n        .apply_decorator(log_exceptions)\n    )\n    \n    main()\nYou can find the project on GitHub and PyPI."
+},
+{
+    "post_author": "MrAstroThomas",
+    "post_id": "1dv995o",
+    "post_score": "9",
+    "post_time": "Thursday, July 4, 2024 at 6:12:42 PM GMT+3",
+    "flair_text": "Tutorial",
+    "post_title": "Computing Saturn's \"rise time\"",
+    "media": [
+        "https://youtu.be/Wq010eUIlAg",
+        "https://github.com/ThomasAlbin/Astroniz-YT-Tutorials/tree/main/CompressedCosmos"
+    ],
+    "post_content": "Hey everyone,\nbeside my complex Space Science with Python videos, where I work on some space science / astronomy related projects, I'd like to show something new, called Compressed Cosmos.\nPeople told me that they would like to learn small space-related code snippets, ideally somewhere without too much installation struggle. So I started to create this small series, where I try to create code that answers cosmic questions in less than 100 lines of Python code.\nFeel free to tell me what you think, and what topics you'd like to see:\nYouTube: https://youtu.be/Wq010eUIlAg\nGitHub: https://github.com/ThomasAlbin/Astroniz-YT-Tutorials/tree/main/CompressedCosmos\nBest,\nThomas",
+    "comments": [
+        {
+            "author": "TheHentaiSama",
+            "score": "3",
+            "content": "Just found your stuff and i find it to be super interesting ! Thank you very much for sharing !",
+            "replies": [
+                {
+                    "author": "MrAstroThomas",
+                    "score": "2",
+                    "content": "Thanks! I'll create some more, maybe also more interesting topics in the next months :)"
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "NerdyWeightLifter",
+    "post_id": "1dypvkr",
+    "post_score": "12",
+    "post_time": "Tuesday, July 9, 2024 at 4:17:48 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "On Walrus Operators, List Comprehensions and Fibonacci sequences",
+    "media": [],
+    "post_content": "Edit: Fixed fibonacci2 to be a more valid comparison, and it won.\nI was playing around with Walrus operators, to figure out where I could/not use them. I thought that generation of Fibonacci sequences might be an interesting case study because it involved keeping 2 prior values from a calculation around, so I gave that a go.\nTake a look at the following code.\nfibonacci1() is a surprise, in that it worked at all, but you can apparently do Walrus assignments inside list comprehensions, and it works, but I haven't been able to find any way to avoid the extra tuple construction/destruction in the middle of that, so it's performance is pretty terrible.\nfibonacci2() is just a fairly vanilla implementation for comparison. Turns out to be fastest.\nfibonacci3() is quite fast. Note the use of the Walrus operator in the RHS of a double assignment, so I could concurrently do \"a, b = b, a+b\" and assign the a+b into the result.\nfibonacci4() was just for comparison as a generator approach. It performed OK, but I expect all the state management imposes too much overhead.\nIn all cases, pre-initializing the list helped performance a lot.\nThe Output:\nfibonacci1: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.11351149994879961\nfibonacci2: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.04886909993365407\nfibonacci3: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.058198099955916405\nfibonacci4: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.07740359986200929\nThe Code:\nfrom timeit import timeit\n\n\ndef fibonacci1(n, a=0, b=1):\n    return [a, b] + [(b := a + b, a := b - a)[0] for _ in range(2, n)]\n\n\ndef fibonacci2(n, a=0, b=1):\n    result = [a, b] + [0] * (n-2)\n    for x in range(2, n):\n        a, b = b, a+b\n        result[x] = b\n    return result\n\n\ndef fibonacci3(n, a=0, b=1):\n    result = [a, b] + [0] * (n-2)\n    for i in range(2, n):\n        a, result[i] = b, (b := a + b)\n    return result\n\n\ndef fibonacci_generator(n, a=0, b=1):\n    yield a\n    yield b\n    for _ in range(2, n):\n        a, b = b, a + b\n        yield b\n\n\ndef fibonacci4(n, a=0, b=1):\n    return [x for x in fibonacci_generator(n, a, b)]\n\n\nn, reps = 100, 10000\nprint(f\"fibonacci1: {fibonacci1(10)}, Time={timeit('fibonacci1(n)', globals=globals(), number=reps)}\")\nprint(f\"fibonacci2: {fibonacci2(10)}, Time={timeit('fibonacci2(n)', globals=globals(), number=reps)}\")\nprint(f\"fibonacci3: {fibonacci3(10)}, Time={timeit('fibonacci3(n)', globals=globals(), number=reps)}\")\nprint(f\"fibonacci4: {fibonacci4(10)}, Time={timeit('fibonacci4(n)', globals=globals(), number=reps)}\")",
+    "comments": [
+        {
+            "author": "bakery2k",
+            "score": "5",
+            "content": "Is fibonacci4 faster if you just do list(fibonacci_generator(n, a, b))?",
+            "replies": [
+                {
+                    "author": "NerdyWeightLifter",
+                    "score": "4",
+                    "content": "Just tried it. Significantly slower with list(). fibonacci4: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.07913379976525903 vs. fibonacci4: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.10571289993822575"
+                }
+            ]
+        },
+        {
+            "author": "jblasgo",
+            "score": "1",
+            "content": "Have you tried evaluating the fibonacci4 generator using next() Instead of storing the output in a list? You could print each número as son  as it is generated and dispone of it inmediatly. That way you might save a bit of time",
+            "replies": [
+                {
+                    "author": "NerdyWeightLifter",
+                    "score": "1",
+                    "content": "I could, but then it wouldn't be producing the same result as all of the others, so it would be an invalid comparison. Just for curiosity sake though, I tried this: def fibonacci5(n, a=0, b=1): for x in fibonacci_generator(n, a, b): pass return None with this result: fibonacci4: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34], Time=0.08034370001405478 fibonacci5: None, Time=0.06630109995603561 So the list construction only represented a tiny portion of the cost."
+                }
+            ]
+        },
+        {
+            "author": "iliasreddit",
+            "score": "1",
+            "content": "I always thought that pre-initializing a list is redundant overhead in python? And a on the fly list comprehension more efficient? What’s going on here? I guess it’s because of the additional redundancy of creating the tuple right?"
+        }
+    ]
+},
+{
+    "post_author": "TechTalksWeekly",
+    "post_id": "1dv7572",
+    "post_score": "12",
+    "post_time": "Thursday, July 4, 2024 at 4:37:52 PM GMT+3",
+    "flair_text": "News",
+    "post_title": " [Week 27] Newly uploaded Python talks from PyCon US 2024 and PyCon Sweden 2024",
+    "media": [
+        "https://youtube.com/watch?v=P1-KQZZarpc",
+        "https://youtube.com/watch?v=THv-m8niDho",
+        "https://youtube.com/watch?v=sD30nvc1ff0",
+        "https://youtube.com/watch?v=07QqFYILP4w",
+        "https://youtube.com/watch?v=ch9Q-hk-MOw",
+        "https://www.reddit.com/r/Python/comments/1dqnhfv/newly_uploaded_python_talks_from_pycon_sweden/",
+        "https://youtube.com/watch?v=1iu8c6QQCSQ",
+        "https://techtalksweekly.substack.com/",
+        "https://youtube.com/watch?v=v-Snbz3WmJU",
+        "https://youtube.com/watch?v=jYZBpoYjxLo",
+        "https://techtalksweekly.substack.com/p/tech-talks-weekly-21",
+        "https://youtube.com/watch?v=3lGkvKVTt5Y",
+        "https://youtube.com/watch?v=1ND6COslBKU",
+        "https://youtube.com/watch?v=0YrGM2y2-Zo",
+        "https://youtube.com/watch?v=YepFiwhK3d8",
+        "https://www.reddit.com/r/Python/",
+        "https://youtube.com/watch?v=0yRsbh1bgtk"
+    ],
+    "post_content": "Hello again r/Python!\nFollowing up on the post from last week, Python conference season is now in full swing and we have plenty of new uploads from PyCon US and PyCon Sweden, so I'm continuing the coverage.\n1. PyCon US 2024\n\"Tutorials - Sebastian Raschka: The Fundamentals of Modern Deep Learning with PyTorch\" ⸱ +600 views ⸱ 28 Jun 2024 ⸱ 02h 59m 31s\n\"Tutorials - Aya Elsayed, Rhythm Patel: No More Raw SQL: SQLAlchemy, ORMs & asyncio\" ⸱ +600 views ⸱ 28 Jun 2024 ⸱ 01h 58m 18s\n\"Keynote Speaker - Simon Willison\" ⸱ +400 views ⸱ 02 Jul 2024 ⸱ 00h 43m 32s\n\"Tutorials - Reuven M. Lerner: All about decorators\" ⸱ +300 views ⸱ 28 Jun 2024 ⸱ 02h 14m 32s\n\"Tutorials - Cheuk Ting Ho: PyO3 101 - Writing Python modules in Rust\" ⸱ +300 views ⸱ 28 Jun 2024 ⸱ 03h 19m 14s\n\"Tutorials - Renne Rocha: Gathering data from the web using Python\" ⸱ +300 views ⸱ 28 Jun 2024 ⸱ 02h 51m 13s\n\"Tutorials - Daksh Gupta: The world of High Performance Distributed & Async Task Queue(s) with Celery\" ⸱ +200 views ⸱ 28 Jun 2024 ⸱ 02h 44m 37s\n\"Tutorials - Yan Yanchii: Pointers in Python\" ⸱ +200 views ⸱ 28 Jun 2024 ⸱ 02h 25m 31s\n\"Tutorials - Gil, Jim, Naty, Phillip: Introduction to Ibis: blazing fast analytics with DuckDB...\" ⸱ +200 views ⸱ 28 Jun 2024 ⸱ 02h 15m 42s\n\"Keynote Speaker - Jay Miller\" ⸱ +200 views ⸱ 02 Jul 2024 ⸱ 00h 44m 47s\n2. PyCon Sweden 2024\n\"Python in Excel, a big step for finance by Daniel Roos\" ⸱ +200 views ⸱ 28 Jun 2024 ⸱ 00h 36m 02s\n\"Keynote: Modern Python through FastAPI and friends by Sebastián Ramírez\" ⸱ +100 views ⸱ 01 Jul 2024 ⸱ 00h 58m 01s\n\"Kivy: Cross-platform App development for Pythonistas by Mirko Galimberti\" ⸱ <100 views ⸱ 01 Jul 2024 ⸱ 00h 26m 52s\nI've built this list as a part of Tech Talks Weekly newsletter, where on a weekly basis, I'm sending a list of all the recently uploaded talks from the last 7 days. Here's a recent issue. Consider subscribing if this sounds useful.\nLet me know what do you think!"
+},
+{
+    "post_author": "benizzy1",
+    "post_id": "1dyeqj2",
+    "post_score": "11",
+    "post_time": "Monday, July 8, 2024 at 8:30:01 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Streaming Chatbot with Burr, FastAPI, and React",
+    "media": [
+        "https://www.reddit.com/r/python/",
+        "https://blog.dagworks.io/p/streaming-chatbot-with-burr-fastapi",
+        "https://github.com/dagworks-inc/burr",
+        "https://fastapi.tiangolo.com/",
+        "https://github.com/DAGWorks-Inc/burr/tree/main/examples/streaming-fastapi"
+    ],
+    "post_content": "Hey r/python,\nI've been seeing a lot of people having issues managing server-side events for streaming, especially with user-facing AI applications.\nWhat My Project Does\nI wrote a full-stack guide about how to do this using a few different python frameworks. We represent the logic of the chatbot with Burr (a simple state machine framework, I am one of the creators), and serve it with FastAPI. While it has some frontend/typescript tooling, the majority of the post is about how to build a simple but extensive chatbot server. Even if you're AI-skeptical/cynical (like me) there's some useful stuff here on managing server-side-events/streaming responses back. Turns out its all pretty simple.\nI really like the way the code shaped out, so I wanted to share it!\nBlog post: https://blog.dagworks.io/p/streaming-chatbot-with-burr-fastapi\nExample code: https://github.com/DAGWorks-Inc/burr/tree/main/examples/streaming-fastapi\nTarget Audience\nThis is meant for BE/full-stack developers. Aimed to be production ready (we've observed this pattern in use in prod by a few different OS users).\nComparison\nBurr is similar to tools like langgraph. FastAPI is one of many web-serving frameworks (but my personal favorite). I wrote this guide so the components are loosely coupled -- wanted to make sure users could still get value if they weren't using all the same tooling. FWIW you can easily run this on streamlit as well for a full-python implementation.",
+    "comments": [
+        {
+            "author": "deadweights",
+            "score": "1",
+            "content": "I’m way out of my depth but this is well-written and the UX benefit of streaming is a big win. I’m not a Python dev (yet) but just might become one.",
+            "replies": [
+                {
+                    "author": "benizzy1",
+                    "score": "1",
+                    "content": "Thanks! Appreciate the kind words. Agreed on UX benefit of streaming. There's something not-quite-quantifiable about why working with streaming is really fun, both from a UX and dev perspective. Also it's a great way to dive headfirst into generators (when you start on the python dev journey it's a *really* fun topic)."
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Supernovae77",
+    "post_id": "1dyhhcd",
+    "post_score": "3",
+    "post_time": "Monday, July 8, 2024 at 10:19:57 PM GMT+3",
+    "flair_text": "Resource",
+    "post_title": "Semantic Router (SemRoute)",
+    "media": [
+        "https://pypi.org/project/semroute/",
+        "https://github.com/HansalShah007/semroute"
+    ],
+    "post_content": "Introducing SemRoute: a versatile semantic router designed to enhance your query routing process using vector embeddings. Say goodbye to the need for training classifiers or relying on large language models. SemRoute lets you configure your routing with flexible options for embedding models, thresholding types, and scoring methods. It's easy to use, fast, and adaptable to various use cases. Check out our project on GitHub and streamline your semantic routing today!\nHere's the PyPI package.",
+    "comments": [
+        {
+            "author": "bimtuckboo",
+            "score": "2",
+            "content": "This is great, nice work! I think this is the perfect tool for solving a problem a lot of businesses building with ai are encountering at the moment. I love the api. My only question (without having read too deep yet) is can it work using local/arbitrary embedding models?"
+        },
+        {
+            "author": "ehivan24",
+            "score": "2",
+            "content": "r/madewithpython"
+        },
+        {
+            "author": "thatdamnedrhymer",
+            "score": "1",
+            "content": "Some initial context here would have been helpful. I came here expecting something related to server request routing. 😂 Also, shouldn’t it be “embedder”?"
+        },
+        {
+            "author": "lerobinbot",
+            "score": "1",
+            "content": "nice"
+        }
+    ]
+},
+{
+    "post_author": "ThePawners",
+    "post_id": "1dvrl6s",
+    "post_score": "0",
+    "post_time": "Friday, July 5, 2024 at 9:43:27 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Emotion classification & Analysis",
+    "media": [
+        "https://emotionclassification.pythonanywhere.com/",
+        "https://github.com/nordszamora/Emotion-Expression"
+    ],
+    "post_content": "What my project does:\nA machine learning project where user can express there emotion and classify at the following (Sad, Joy, Love, Anger, Fear, Surprice). We use a CNB model for text classification with the accuracy of 88%.\nTarget Audience: Anyone\nYou can try it here:\nhttps://emotionclassification.pythonanywhere.com\nNote:\nThe prediction may encounter a unexpected expression result.\nSource code:\nGithub",
+    "comments": [
+        {
+            "author": "top_notch_20",
+            "score": "1",
+            "content": "Good job, long way to go ✊"
+        }
+    ]
+},
+{
+    "post_author": "wabalabadapdap",
+    "post_id": "1dvvxdg",
+    "post_score": "1",
+    "post_time": "Friday, July 5, 2024 at 2:39:16 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "[Question] Are universal Decorators and Metaclasses useful?",
+    "media": [
+        "https://pypi.org/project/once-and-for-all/",
+        "https://github.com/stoney95/once"
+    ],
+    "post_content": "I created a python package that allows you to apply decorators or meta-classes universally. I found the idea interesting and could imagine that this can be useful to ensure guidelines throughout the codebase. I am wondering if people here find it useful too - and what applications come to your mind.\nThe example demonstrates how you could enforce to log all exceptions without modifying every element of your codebase.\nimport once\n\nfrom coding_guidelines import log_exceptions # <- This is a decorator\nfrom some_custom_package import my_module\n\n\ndef main():\n    result = my_module.do_stuff_1()\n    my_module.do_stuff_2(result)\n\n\nif __name__ == \"__main__\":\n    (\n        once.and_for_all.Functions()\n        .apply_decorator(log_exceptions)\n    )\n    \n    main()\nYou can find the project on GitHub and PyPI."
+}
+]
+]

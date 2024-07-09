@@ -20,6 +20,10 @@ limit = 0
 # Print progress on the console
 verbose = False
 
+# Ping mode for finding the number of posts in a subreddit without scraping
+ping_mode = False
+available_posts = 0
+
 # Output file format ['json', 'yaml', 'xml']
 format_type = "json"
 

@@ -30,35 +30,39 @@ def parse_arguments():
     parser.add_argument("-o", "--output", help="Output file path for the scraped posts (default is 'scraped_posts.json' in the current directory)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode to print processing details")
     parser.add_argument("-f", "--format", choices=['json', 'yaml', 'xml'], default='json', help="Output format for the scraped posts (default is 'json')")
+    parser.add_argument("-p", "--ping", action="store_true", help="Ping the subreddit to check the number of posts it contains instead of scraping")
 
     return parser.parse_args()
 
-def initialize_shared_variables(output_path, format_type, subreddit=None):
+def initialize_shared_variables(output_path, format_type, subreddit=None, ping_mode=False):
     shared.threads = {}
     shared.drivers = {}
     shared.processing_done = False
     shared.processing = True
     shared.processed_posts_count = 0
 
-    if output_path:
-        if output_path.endswith('.json'):
-            shared.output_file_path = output_path
-            shared.format_type = 'json'
-        elif output_path.endswith('.yaml'):
-            shared.output_file_path = output_path
-            shared.format_type = 'yaml'
-        elif output_path.endswith('.xml'):
-            shared.output_file_path = output_path
-            shared.format_type = 'xml'
+    shared.ping_mode = ping_mode
+    
+    if not shared.ping_mode:
+        if output_path:
+            if output_path.endswith('.json'):
+                shared.output_file_path = output_path
+                shared.format_type = 'json'
+            elif output_path.endswith('.yaml'):
+                shared.output_file_path = output_path
+                shared.format_type = 'yaml'
+            elif output_path.endswith('.xml'):
+                shared.output_file_path = output_path
+                shared.format_type = 'xml'
+            else:
+                shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
         else:
-            shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
-    else:
-        shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"{subreddit}.{format_type}")
+            shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"{subreddit}.{format_type}")
 
-    shared.original_filepath_path = shared.output_file_path
+        shared.original_filepath_path = shared.output_file_path
 
-    ThreadManager.remove_existing_output_file(shared.output_file_path)
-    ThreadManager.recreate_directory(shared.output_file_path)
+        ThreadManager.remove_existing_output_file(shared.output_file_path)
+        ThreadManager.recreate_directory(shared.output_file_path)
 
 def create_threads(subreddit, limit, categories, verbose):
     if 'all' in categories:
@@ -96,9 +100,17 @@ def start_scraping_route():
     category = data.get('category', '')
     file_name = data.get('file_name_input', '')
     file_type = data.get('file_type_input', '')
+    
+    mode = data.get('mode', False)
+
+    if mode == "ping":
+        ping_mode = True
+    else:
+        ping_mode = False
 
     shared.processing_done = False
     shared.processing = True
+
     
     output_path = os.path.join(DOWNLOAD_DIRECTORY, f"{file_name}.{file_type}")
 
@@ -110,14 +122,14 @@ def start_scraping_route():
 
     DriverUtils.close_existing_chrome_instances()
 
-    initialize_shared_variables(output_path, file_type, subreddit)
+    initialize_shared_variables(output_path, file_type, subreddit, ping_mode)
 
     categories = [category]
 
     create_threads(subreddit, max_posts, categories, verbose=True)
     wait_for_threads_to_complete()
     
-    if shared.processed_posts_count > 0:
+    if shared.processed_posts_count > 0 and not shared.ping_mode:
         PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
@@ -129,7 +141,7 @@ def start_scraping_route():
 
     return jsonify({'message': 'Scraping Done.'}), 200
 
-def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=True, format_type='json'):
+def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], output_path=None, verbose=True, format_type='json', ping_mode=False):
     try:
         requests.get('https://www.google.com', timeout=5)
     except (requests.ConnectionError, requests.Timeout):
@@ -138,12 +150,13 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     DriverUtils.close_existing_chrome_instances()
 
     print("Working....")
-    initialize_shared_variables(output_path, format_type, subreddit)
+    initialize_shared_variables(output_path, format_type, subreddit, ping_mode)
 
+    print("Ping: ", shared.ping_mode)
     create_threads(subreddit, limit, categories, verbose)
     wait_for_threads_to_complete()
 
-    if shared.processed_posts_count > 0:
+    if shared.processed_posts_count > 0 and not shared.ping_mode:
         PostProcessor.finalize_file()
     if not shared.processing_done:
         shared.processing_done = True
@@ -156,7 +169,10 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     if shared.processed_posts_count == 0:
         return "\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again."
     else:
-        return f"\n✅ Output file: {shared.output_file_path}"
+        if not shared.ping_mode:
+            return f"\n✅ Output file: {shared.output_file_path}"
+        else:
+            return f"\n✅ Available posts: {shared.processed_posts_count}"
     
 @app.route('/progress')
 def progress():
@@ -171,7 +187,8 @@ def progress():
         'processed_posts': processed_posts,
         'max_posts': max_posts,
         'processing_done': processing_done,
-        'processing': shared.processing
+        'processing': shared.processing,
+        'ping_mode': shared.ping_mode
     })
 
 @app.route('/download')
@@ -183,7 +200,7 @@ def finalize_and_exit(signum, frame):
     print("Quitting...")
     exit_flag.set()
     shared.processing_done = True
-    if shared.processed_posts_count > 0:
+    if shared.processed_posts_count > 0 and not shared.ping_mode:
         PostProcessor.finalize_file()
     DriverUtils.close_existing_chrome_instances()
     sys.exit(0)
@@ -194,12 +211,16 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         try:
             args = parse_arguments()
-            start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format)
+            start_scraping(args.subreddit, limit=args.limit, categories=args.categories, output_path=args.output, verbose=args.verbose, format_type=args.format, ping_mode=args.ping)
         except Exception as e:
            sys.exit(0)
-        if shared.processed_posts_count == 0:
+        if shared.processed_posts_count == 0  and not shared.ping_mode:
             print("\n⚠️  No posts loaded. Please confirm the subreddit name and check the internet connection and try again.")
         else:
-            print(f"\n✅ Output file(s): {shared.original_filepath_path}. Other generated files are in the same location.")
+            if not shared.ping_mode:
+                print(f"\n✅ Output file(s): {shared.original_filepath_path}. Other generated files are in the same location.")
+            else:
+                print(f"\n✅ Available posts: {shared.processed_posts_count}")
+            
     else:
         app.run(debug=True)
