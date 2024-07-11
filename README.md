@@ -159,7 +159,7 @@ python app.py
 Access the application through your web browser at http://localhost:5000.
 
 ## 8. Quitting
-To exit the program you can use Ctr + C.
+To exit the program you can use Ctrl + C.
 
 ## 9. Project Structure
 ```
