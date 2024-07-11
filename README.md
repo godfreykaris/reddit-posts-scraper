@@ -119,7 +119,7 @@ Adjust any configuration settings in `config.py` if necessary.
 To start scraping posts from Reddit, use the following command:
 
 ```bash
-python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v
+python app.py -s <subreddit> -c <category> -l <limit> -o <output_path> -f <format> -v -p
 ```
 
 ### 7.1.1 Available Options
@@ -158,7 +158,10 @@ python app.py
 ```
 Access the application through your web browser at http://localhost:5000.
 
-## 8. Project Structure
+## 8. Quitting
+To exit the program you can use Ctr + C.
+
+## 9. Project Structure
 ```
 reddit-scraper/
 ├── app.py
@@ -182,17 +185,17 @@ reddit-scraper/
 ├── README.md
 ```
 
-## 9. Contributing
+## 10. Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## 10. License
+## 11. License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 11. Acknowledgments
+## 12. Acknowledgments
 - BeautifulSoup
 - Selenium
 - Flask
-## 12. Additional Notes
+## 13. Additional Notes
 
 1. **chromedriver:**
 

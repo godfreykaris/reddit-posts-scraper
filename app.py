@@ -152,7 +152,6 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     print("Working....")
     initialize_shared_variables(output_path, format_type, subreddit, ping_mode)
 
-    print("Ping: ", shared.ping_mode)
     create_threads(subreddit, limit, categories, verbose)
     wait_for_threads_to_complete()
 
