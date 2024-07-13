@@ -66,7 +66,7 @@ To fetch changes from the repository, follow the guideline below.
 ```bash
 git pull origin main
 ```
-If it was a success, then you will see the message: 'Already up to date.'
+If there are no changes, then you will see the message: 'Already up to date.'
 
 If you do not get that message, you can solve the issue by running:
 ```bash
