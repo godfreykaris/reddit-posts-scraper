@@ -66,7 +66,9 @@ To fetch changes from the repository, follow the guideline below.
 ```bash
 git pull origin main
 ```
-If you get any error because of any changes conflicting with the remote repository, you can solve the issue by running:
+If it was a success, then you will see the message: 'Already up to date.'
+
+If you do not get that message, you can solve the issue by running:
 ```bash
 git reset --hard origin/main
 ```
