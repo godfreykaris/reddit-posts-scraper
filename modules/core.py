@@ -229,6 +229,7 @@ class RedditScraper:
                     "post_time": post_time,
                     "flair_text": flair_text,
                     "post_title": post_title,
+                    "post_url": driver.current_url,
                     "media": media_urls,
                     "post_content":post_content
                 }

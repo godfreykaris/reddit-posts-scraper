@@ -1,0 +1,1214 @@
+[
+{
+    "post_author": "MrAstroThomas",
+    "post_id": "1e2hhvg",
+    "post_score": "16",
+    "post_time": "Saturday, July 13, 2024 at 9:39:58 PM GMT+3",
+    "flair_text": "Tutorial",
+    "post_title": "The Blaze Star - soon a visible Nova in the night sky ",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e2hhvg/the_blaze_star_soon_a_visible_nova_in_the_night/?rdt=57486",
+    "media": [
+        "https://preview.redd.it/the-blaze-star-soon-a-visible-nova-in-the-night-sky-v0-gjastbg8zbcd1.png?width=713&format=png&auto=webp&s=f2d252ed803a0bb405abc8afa5a8dde0eeb86482",
+        "https://youtu.be/ocklQipgPEY",
+        "https://github.com/ThomasAlbin/Astroniz-YT-Tutorials/blob/main/CompressedCosmos/CompressedCosmos_The_Blaze_Star.ipynb"
+    ],
+    "post_content": "Have you heard about T Coronae Borealis (TCrB)? No? Well no surprise since this binary star is very, very faint and not visible to the naked eye... YET.\nEvery 60 years the white dwarf of this binary star system accumulates enough hydrogen from its red giant companion to spark nuclear fusion on its surface. A Nova occurs, releasing large amount of energy. Sice this Nova is \"kinda close by\" the brightness increased to \"naked eye visibility\".\nBut where is the TCrB? Well of course one can use Stellarium, but using Python and some self coding is a great way to understand how these coordinates are computed and displayed.\nThus I created a small Python script + tutorial to create the following red-eye friendly sky map; where the white \"+\" is the position of the star.",
+    "comments": [
+        {
+            "author": "nbviewerbot",
+            "score": "3",
+            "content": "I see you've posted a GitHub link to a Jupyter Notebook! GitHub doesn't render large Jupyter Notebooks, so just in case, here is an nbviewer link to the notebook: https://nbviewer.jupyter.org/url/github.com/ThomasAlbin/Astroniz-YT-Tutorials/blob/main/CompressedCosmos/CompressedCosmos_The_Blaze_Star.ipynb Want to run the code yourself? Here is a binder link to start your own Jupyter server and try it out! https://mybinder.org/v2/gh/ThomasAlbin/Astroniz-YT-Tutorials/main?filepath=CompressedCosmos%2FCompressedCosmos_The_Blaze_Star.ipynb I am a bot. Feedback | GitHub | Author"
+        },
+        {
+            "author": "marsupiq",
+            "score": "2",
+            "content": "Thank you for sharing this, truly exciting!",
+            "replies": [
+                {
+                    "author": "MrAstroThomas",
+                    "score": "1",
+                    "content": "Thanks!"
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Typical-Scene-5794",
+    "post_id": "1e015cp",
+    "post_score": "5",
+    "post_time": "Wednesday, July 10, 2024 at 8:10:22 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "MultiModal Slide Search with GPT-4o & Pathway (a Python framework) for Extraction & Hybrid Indexing",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e015cp/multimodal_slide_search_with_gpt4o_pathway_a/?rdt=44835",
+    "media": [
+        "https://www.reddit.com/r/Python/",
+        "https://github.com/pathwaycom/llm-app/tree/main/examples/pipelines/slides_ai_search#architecture",
+        "https://github.com/pathwaycom/llm-app/tree/main/examples/pipelines/slides_ai_search"
+    ],
+    "post_content": "Hi r/Python,\nI'm sharing a showcase on how to build a multimodal search service using GPT-4o, featuring extraction of metadata and hybrid indexing with Pathway's advanced capabilities for accurately retrieving relevant information from PowerPoint and PDF presentations.\nOverview: This demonstrates how to build highly accurate search (or can be extended to RAG pipelines) powered by hybrid indexes, keeping ETL simple, and automatically updating indexes in real-time as changes happen in your repository.\nLinks:\nRepo: GitHub Repo\nArchitecture: Architecture Documentation\nThe application is designed to run efficiently as a containerized solution using Docker. More details about the pipeline are below:\nWhat My Project Does: The application reads, parses, and indexes slide files (PPTX and PDF) stored locally, on Google Drive, or Microsoft SharePoint. It uses Pathway's SlideParser for detailed metadata extraction and Pathway's vector store for storing parsed content that is best suited for real-time incremental indexing. The project ensures accurate and up-to-date information retrieval, enhancing productivity by streamlining the search process across presentations.\nTarget Audience: This project is meant for developers and LLM engineers looking to build Multimodal search applications to manage extensive slide libraries efficiently. This pipeline is built for production use-cases primarily.",
+    "comments": [
+        {
+            "author": "MWatson",
+            "score": "3",
+            "content": "I only spent five minutes looking at your code, but it looks like a cool project. off topic question: have you used an open source Python library like Python-ppx instead of the web service you are using? I like to try projects like your but having to get an api key is a minor roadblock. I thought there are possibilities to make this a single user tool that runs locally with using a library to get data and metadata from PowerPoint files, and using a local LLM running in a framework like Ollama. I did something similar on my local machine, except for a lot of PDF files. One suggestion: with a context defining JSON schema, it is fairly strait forward to ask a LLM for entities and relations between entities in text, and that would vary over nicely to working with a PowerPoint files.",
+            "replies": [
+                {
+                    "author": "Typical-Scene-5794",
+                    "score": "2",
+                    "content": ""
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "RevolutionaryPen4661",
+    "post_id": "1dzxusz",
+    "post_score": "0",
+    "post_time": "Wednesday, July 10, 2024 at 5:57:33 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Which packages or libraries that you always wanted to be existed?",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzxusz/which_packages_or_libraries_that_you_always/?rdt=58349",
+    "media": [
+        "http://crates.io/"
+    ],
+    "post_content": "Please state your package idea on the basis of:\nTechnically, it is possible to build.\nNon-AI related.\nThe idea shouldn't be a copied one. Copied ones will be downvoted.\nIf your package exists in crates.io and wanted a wrapper for it. e.g. I've written flpc (rust regex crate wrapper for Python3)\nThe package ideas are currently non-existent",
+    "comments": [
+        {
+            "author": "yrubooingmeimryte",
+            "score": "19",
+            "content": "Is this your way of trying to find project ideas without saying so?"
+        },
+        {
+            "author": "Gongui",
+            "score": "6",
+            "content": "Excuses generator, so I don't have to go to a two hour meeting to hear someone's monologue."
+        },
+        {
+            "author": "DuckDatum",
+            "score": "2",
+            "content": "A python based file-level project manager. Basically a git style of JIRA. It would be able to keep track of all projects on a machine somehow, at least ones managed through it. It should be able to be version controlled with git. It should have a way of storing and searching for issues, backlog, features, roadmap, etc. Not to mention it should have a Markdown renderer and a bunch of utilities for managing files on a file system and reviewing the file structure. I’d also want it to be slightly opinionated by default, so to promote good project structure standards- but an optional yet elegant override to customize project structure however needed."
+        }
+    ]
+},
+{
+    "post_author": "Diligent_Award_5759",
+    "post_id": "1e3jye6",
+    "post_score": "6",
+    "post_time": "Monday, July 15, 2024 at 5:36:02 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "I made GestureFlow to improve my productivity!\n",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e3jye6/i_made_gestureflow_to_improve_my_productivity/?rdt=48584",
+    "media": [
+        "https://github.com/Tylerbryy/GestureFlow"
+    ],
+    "post_content": "What My Project Does\nGestureFlow is an innovative application that enhances the traditional right-click functionality on computers by introducing a customizable radial menu. Here's what it does:\nRadial Menu Activation: When you hold the right mouse button for a short duration (200ms), a circular menu appears around your cursor.\nQuick Action Selection: Move your mouse in the direction of the desired action and release the button to execute it. No need for precise clicking on small menu items.\nCustomizable Actions: The menu includes common actions like Copy, Paste, Undo, Redo, and more. These can be easily customized or expanded in the code.\nVisual Feedback: The menu provides clear visual feedback with hover effects and color changes, making it intuitive to use.\nCross-Platform Compatibility: GestureFlow works on both Windows and macOS, automatically adjusting its keyboard shortcuts for each platform.\nEfficient Workflow: By combining multiple actions (e.g., \"Select All + Copy\"), it reduces the number of steps needed for common tasks.\nTarget Audience\nGestureFlow is designed for:\nPower Users: Individuals who value efficiency and customization in their daily computer use."
+},
+{
+    "post_author": "haddock420",
+    "post_id": "1e11nom",
+    "post_score": "19",
+    "post_time": "Friday, July 12, 2024 at 1:30:47 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "I've created a celebrity trivia game in Flask that uses information from their Wiki page as clues",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e11nom/ive_created_a_celebrity_trivia_game_in_flask_that/?rdt=56168",
+    "media": [
+        "https://jimmyrustles.pythonanywhere.com/celebrity_trivia",
+        "https://github.com/sgriffin53/celebritytrivia_app"
+    ],
+    "post_content": "I wrote this game a couple of years ago, and I've just ported it to a Flask app on my website.\nSite: https://jimmyrustles.pythonanywhere.com/celebrity_trivia\nGithub: https://github.com/sgriffin53/celebritytrivia_app\nWhat My Project Does\nIt gives you clues from the celebrity's Wikipedia page, and you have to guess the celebrity.\nHere's an example game:\n____ ____ ____ (born June 22, 1973) is an American television host, radio personality, producer, and television personality.\n\nClue 1: ____ had a small role on Dave Chappelle's show Chappelle's Show..\n\nClue 2: The ____ Download with ____ ____, syndicated (2013– ).\n\nClue 3: At the end of the summer of 1997, MTV hired ____ as a permanent VJ, a position which required ____ to relocate to New York.\n\nClue 4: In March 2000, Tara Reid met ____ on the set of Total Request Live, and they began dating.\n\nClue 5: When social media correspondent Christina Milian departed the show in 2013, ____ became the sole host.",
+    "comments": [
+        {
+            "author": "Even-Lingonberry1308",
+            "score": "5",
+            "content": "Super cool idea, congrats!"
+        },
+        {
+            "author": "SrFodonis",
+            "score": "3",
+            "content": "Genuine question from someone who has never used pythonanywhere and is somewhat inexperienced with Flask, any reason not to use Jinja2's templates for the front end part?"
+        },
+        {
+            "author": "redalastor",
+            "score": "3",
+            "content": "That’s a pretty cool idea. I like it. I almost none of those people but I think that the idea is brilliant. Some ideas to improve your code: I would suggest changing this line if guess.lower() == celebname.lower(): with if guess.strip().lower() == celebname.lower(): because it’s super annoying to get your input marked wrong due to an accidental space at the end that you can’t even see. Most sites don’t bother making this easy quality of life fix. I’d also suggest not using i and j as loop indices because they look too much like each other and at some point you will get a very annoying bug you will troubleshoot for hours because you used the wrong letter by accident, we’ve all been there. Ideally, use a meaningful name for your index, but if you don’t have any a and b or x and y are much easier to distinguish visually. As for data files, it’s better not to invent your own format if you can avoid it. Python natively supports JSON and since 3.11 it also supports the much more readable TOML."
+        },
+        {
+            "author": "perfect-parquet",
+            "score": "2",
+            "content": "If you ever think about incorporating a database, you could store the celeb name and the censored wikipedia content in the database. That way you don't have to generate it at runtime"
+        }
+    ]
+},
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dzhlys",
+    "post_score": "1",
+    "post_time": "Wednesday, July 10, 2024 at 3:00:08 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Wednesday Daily Thread: Beginner questions",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzhlys/wednesday_daily_thread_beginner_questions/",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "ArseholeryEnthusiast",
+            "score": "1",
+            "content": "Hey there, currently going through learn python the hard way and it's working for me(haven't given up yet anyway) I've one issue that i can't make sense of though. when i do the below code the end=' ' doesn't seem to work and puts the input on a new line anyways. See below. print(\"How old are you?\", end=' ') age = input() print(\"How tall are you?\", end=' ') height = input() print(\"How much do you weigh?\", end=' ')",
+            "replies": [
+                {
+                    "author": "Brownj41386",
+                    "score": "2",
+                    "content": ""
+                }
+            ]
+        },
+        {
+            "author": "PsychologicalYak2441",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "nigwalk",
+                    "score": "1",
+                    "content": ""
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Mynasru",
+    "post_id": "1dy2fvy",
+    "post_score": "15",
+    "post_time": "Monday, July 8, 2024 at 9:59:31 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Concept showcase: Auto-generated python bindings for a command line tool",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dy2fvy/concept_showcase_autogenerated_python_bindings/",
+    "media": [
+        "https://github.com/wooey/clinto",
+        "https://github.com/epsy/clize",
+        "https://github.com/faebryk/kicadcliwrapper/blob/main/PARSER.md",
+        "https://github.com/faebryk/kicadcliwrapper"
+    ],
+    "post_content": "What my project does\nkicadcliwrapper is less intented to be a standalone project and more of a concept showcase. The idea is to auto-generate python bindings for a command line tool by traversing the help tree recursively of all subcommands. The result is a python wrapper that can be used to interact with the command line tool in a more pythonic way. By generating dataclasses for the commands and argumets, users can leverage the power of type hints and IDE autocompletion.\nTarget Audience\nThis project/concept is intended for developers who want to create a python wrapper for a command line tool. It is especially useful for tools that have a lot of subcommands and arguments. The project itself is useful for people interacting with the open-source electronics design automation software KiCad.\nComparison\nclinto; Other way around. Generates generic JSON description of python CLIs\nclize: Also other way around. Generates CLI from python functions.\nResources:\nCheck this explanation/examples of the multi-level parsers: PARSER.md"
+},
+{
+    "post_author": "Tishka-17",
+    "post_id": "1e02ay9",
+    "post_score": "44",
+    "post_time": "Wednesday, July 10, 2024 at 8:57:23 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Dishka - cute DI-framework with scopes and control",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e02ay9/dishka_cute_diframework_with_scopes_and_control/",
+    "media": [
+        "https://dishka.readthedocs.io/en/stable/alternatives.html",
+        "https://dishka.readthedocs.io/en/stable/di_intro.html",
+        "https://dishka.readthedocs.io/en/stable/requirements/technical.html",
+        "https://dishka.readthedocs.io/",
+        "https://pypi.org/project/dishka/",
+        "https://github.com/reagento/dishka/"
+    ],
+    "post_content": "In the name DI in Python I want to tell about my project dishka.\nIf you are not familiar with the term Dependency Injection, I can suggest reading my article here. In short: objects should receive their dependencies as constructor arguments but not requests themselves. DI-framework is a thing that helps you to create a hierarchy of such complex objects.\nDishka is a DI-framework (IoC-container) and I wanted to make it really useful and easy to use. I can say, it is like Fastapi-Depends but without fastapi and with more control and features.\nWhat Project Does: it helps you to manage a hierarchy of objects, initialize and finalize them following DI-approach\nTarget Audience: Any developer, who does more for project structure\nLicense: Apache-2.0\nComparison:\nI know that there is a bunch of other projects, so I spent some time for analysis and wrote down some requirements. Here are some key ideas:\nDependencies have dependencies, some of them should be reused. It could sound obvious, but in some frameworks it is hard to share database connection between DAOs used together.\nDependencies can have finalization. As framework hides the hierarchy of created objects, you shouldn't trace it back to clean them up. Opening and closing resource in the same place could be a good idea to follow. Many DI-frameworks ignore this thing.\nDependencies have different lifecycle. Some objects live while your application works, others are created on HTTP-request. 2 of such scopes is minimum, but there could be more complex cases like adding new scope for long living websocket connection (so there will be app->connection->message). A lot of frameworks ignore scope management at all, some have exactly 2 scopes.\nThis is the essential core, but more ideas needed to make it good. So, type hints is a good start to distinguish dependencies, auto-detection of dependencies is really a good thing, but doing it too much can bring more problems. Add here dependency graph validations and more...\nSo, here is Dishka. I believe that it is more flexible and more controllable than others. More details about existing alternatives can be found in documentation\nLet's see it in code. I will dive in not-so-simple example as it is more interesting. Trivial cases are really trivial, but the power of DI-framework is required in more complex ones.\nImagine, you have two classes: Service (kind of business logic) and DAO (kind of data access):\nclass Service:\n    def __init__(self, dao: DAO):\n        pass\n\nclass DAOImpl:\n    def __init__(self, connection: Connection):\n        pass\nTo create them in dishka you must register classes with their scopes. Here we suppose that they are short-living and recreated on each HTTP-request:\nfrom dishka import Provider, Scope\n\nservice_provider = Provider(scope=Scope.REQUEST)\nservice_provider.provide(Service)\nservice_provider.provide(DAOImpl, provides=DAO)",
+    "comments": [
+        {
+            "author": "Lancetnik12",
+            "score": "7",
+            "content": ""
+        },
+        {
+            "author": "crawl_dht",
+            "score": "3",
+            "content": "",
+            "replies": [
+                {
+                    "author": "Tishka-17",
+                    "score": "3",
+                    "content": ""
+                },
+                {
+                    "author": "ForeignSource0",
+                    "score": "2",
+                    "content": ""
+                }
+            ]
+        },
+        {
+            "author": "yuppiepuppie",
+            "score": "5",
+            "content": "Serious question, what is the benefit to using this type of programming? And yes I have read your article and countless others like it. But alas, I’m here with my. Easy to read, test, and adapt Python projects that don’t use DI. Like, I have had to maintain projects that use dependency injection, and they end up convoluted hack jobs. One reason I suspect is because unlike a language like Java, Python was not built for this type of programming paradigm. Most Java devs I work with who come into our Python shop are usually taken aback by not using DI and instead using objects straight up. I have since pushed back hard on DI in project from juniors who want to bring their comp sci degrees into Django projects because it’d be cool…",
+            "replies": [
+                {
+                    "author": "Schmittfried",
+                    "score": "2",
+                    "content": "Easy to read, test, and adapt Python projects that don’t use DI. Quite sure you’re using DI, just without a framework/library. I agree that manual DI is often more suitable because it doesn’t introduce any magic. Then again, I‘ve seen huge projects where setting up all the objects and wiring them together was quite a hassle, which lead to pseudo-DI-like magic anyway."
+                },
+                {
+                    "author": "pydry",
+                    "score": "2",
+                    "content": "DI makes it easier to write fast unit tests for complex logic. It gets treated as a panacea for testing and code structure woes though, which it is categorically is not. It has one very specific benefit which is very context dependent and it comes at a very high cost (in terms of restructuring your code). With really good, hermetic integration tests even this benefit is curtailed. I've had a similar experience to you where somebody tried to jam DI in to a project that was quite database heavy and without much complex logic and it was an epic waste of time. They didn't learn though - for them DI was an article of faith, not an investment. For a lot of people that is the case. Those people are united by the inability to distinguish between \"testability\" / \"testable\" and \"unit testability\" / \"unit testable\". All code is testable. Dependency injection just makes some of your code more unit testable, which isn't necessarily beneficial. DI frameworks (which just do DI) to me make no sense at all. It doesn't save you from writing any code. It doesn't buy you anything, really. It just straitjackets your code. If I want to do DI (which I do, a fair bit, after a cost/benefit analysis), I either use a framework that provides me a lot of value on top of it doing dependency injection or I just do it myself because it requires very little code and is much more transparent than using a library. For example, FastAPI does dependency injection and I'm pretty happy with that because it provides a LOT of benefits outside of that."
+                },
+                {
+                    "author": "Tishka-17",
+                    "score": "2",
+                    "content": "Are we talking about DI or DI-frameworks? They are different but sometimes people mix them. For DI - there is no difference between java and python. While both languages allow passing arguments to a function or object constructor - they are built to use DI. The idea of DI and DIP (again they are different but DIP requires DI) is to make code more flexible and with usage of abstractions - more explicit in contracts. This is at least useful for tests and refactoring. It is easier and safier to follow contract and inject mock instead of monkeypatching. For DI-frameworks (IoC-containers) - java and python have not a big difference nowdays. DI framework is not a part of a language. You might think about Spring, but it is not the only implementation of DI-framework in Java and not the best one (I tried to take into account concerns about it when developing Dishka). In mobile development there is used a bunch of 3rd party DI-frameworks with different features and they are not anyhow the part of a language. In python we can do the same - build a tool to help you managing the object dependencies. So, the main question: what is the benefit? Flexibility from DI, comprehensible contracts from DIP, easier management of stuff from DI-framework"
+                }
+            ]
+        },
+        {
+            "author": "BurningSquid",
+            "score": "2",
+            "content": "Have checked out your project multiple times, feels like there is a lot of wisdom here and I have a few potential use cases for it. Appreciate it and look forward to diving in!"
+        },
+        {
+            "author": "simon-brunning",
+            "score": "1",
+            "content": "You should get this project added to https://github.com/sfermigier/awesome-dependency-injection-in-python"
+        }
+    ]
+},
+{
+    "post_author": "Name_einfuegen_",
+    "post_id": "1e29hy8",
+    "post_score": "106",
+    "post_time": "Saturday, July 13, 2024 at 3:41:18 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Why do people want to obduscate python code?",
+    "post_url": "https://www.reddit.com/r/Python/comments/1e29hy8/why_do_people_want_to_obduscate_python_code/",
+    "media": [],
+    "post_content": "Over the last few months I have observed quite a few people asking how they can obfuscate python code.\nNow, I understand why they'd want this. If you want to distribute your code for a payment, it would allow your users to not just copy it for free. But all the solutions for obfuscation where either \"don't do it, make it a webapp\" or reversible and slowed down the code.\nBut why would you even want to obfuscate python code and still run it using python? Wouldn't it be better to use smth like Cython or Nukita to convert your code to C and then create a binary? AFAIK that would still make your code unreachable while also making it faster. Or are there any major drawbacks with that? One I could think of is that last time I used Cython numpy wasn't working properly. I havent used Nukita or other tools extensively enough to comment on them though.",
+    "comments": [
+        {
+            "author": "wintermute93",
+            "score": "370",
+            "content": "You're probably overthinking it. I'd bet most of the people asking Reddit how to obfuscate their Python code (and/or compile it to an executable) are beginners who made their first script that does marginally something useful at their job and are worried that sharing it with coworkers means someone is going to \"steal\" it. Which isn't how this works, of course, but you really can't fault them for not knowing that.",
+            "replies": [
+                {
+                    "author": "ClayQuarterCake",
+                    "score": "102",
+                    "content": "Yup. Then you get a quarter step beyond pure novice and realize almost everyone knows more about python than you, and they can probably help you make improvements. They won’t want to help you because your code looks like doggy doo."
+                },
+                {
+                    "author": "rzet",
+                    "score": "15",
+                    "content": "I have so many folks at work loving their secret scripts..."
+                },
+                {
+                    "author": "Jaguar_AI",
+                    "score": "10",
+                    "content": "devs like that are cancer to work with, in a collaborative environment"
+                }
+            ]
+        },
+        {
+            "author": "SweetOnionTea",
+            "score": "80",
+            "content": "I haven't heard of that before. Usually people will just use Pyinstaller or something to make a binary. But even then one can run a decompilation on it and kinda get obfuscated code. Security through obscurity is not security. Especially if someone is adamant on stealing code. Obfuscating code is just a waste of time for someone eager to steal it. If you really don't want people stealing your code, put in a license and get a lawyer.",
+            "replies": [
+                {
+                    "author": "thisismyfavoritename",
+                    "score": "48",
+                    "content": "pyinstaller provides no obfuscation at all. It bundles a Python interpreter and Python byte code"
+                }
+            ]
+        },
+        {
+            "author": "divine-architect",
+            "score": "9",
+            "content": "Skiddies writing discord token grabbers if anything"
+        },
+        {
+            "author": "syklemil",
+            "score": "7",
+            "content": "Now, I understand why they'd want this. If you want to distribute your code for a payment, it would allow your users to not just copy it for free. I mean, you can just copy binaries too. Software piracy is hardly a new idea. There are various ways to work around it, and various ways to make money off FOSS. Obfuscation and compilation can be reversed, though with various amounts of information lost that takes some work to get into a sensible source code again. To compare it with bike locks, they're on the level of those shoelace locks that are basically a \"could you please not?\" to barely-honest passersby. And to further compare anti-piracy techniques with bike locks, absolutely none of them will actually stop someone with an interest in breaking the protection. So generally the worthwhile options are to offer something that people are willing to pay for, at least so many that the amount of pirate users are insignificant, and just release it under GPL or some other FOSS license and not worry if people share the code. These options are not mutually exclusive. There are also some cases where you'd really want the source to be at least available for scrutiny, as security by obscurity is usually a sign of bad software."
+        },
+        {
+            "author": "mastrshayk",
+            "score": "24",
+            "content": "It depends on the application. My work created an app that originated as a desktop tkinter/CLI application. We used cython to obfuscate the code and pyinstaller to package it up. It wasn't bulletproof but good enough. Nuikta does the same or very similar thing as pyinstaller. Pyinstaller or Nuikta can be reversed or cracked. I think even cython can as well but not sure. All these steps were to just make it harder and attempt to keep honest people honest. We ended up releasing a python package of the application but used sourcedefender to hide the source code. Not a perfect solution but one that works well enough for us. At the end of the day, I think if you really want to keep your code protected, don't write it in python and use some compiled language like Java/C/Rust etc.",
+            "replies": [
+                {
+                    "author": "_dmsk",
+                    "score": "11",
+                    "content": "I guess I have similar situation at my work. We were a startup and project includes some python-written staff that is installed and running on premise on the customer side. There was a fear that customers can take the source to implement own solution (customers are from large business, so they most probably have more resources and good lawyers as well). As people mentioned, Cython and Nuitka have own requirements. Though we knew obfuscation does not give real proper security, the decision was to use it anyway to add additional complications and to do so that some obvious actions aimed at getting the code are necessary, and people couldn't say something like \"we don't know anything, maybe some our interns just took something during tests\". Yeah, I know that it would be probably better to not use python then, but the team was young and most of them didn't have a lot of experience with other langs, and development speed (quite important for startups I assume) with python was much faster than with other alternatives. (was also not my decision)"
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "ebbono__",
+    "post_id": "1dzq8qk",
+    "post_score": "54",
+    "post_time": "Wednesday, July 10, 2024 at 11:02:20 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Photoshop API - Read and Write PSD files with Python and C++\n",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzq8qk/photoshop_api_read_and_write_psd_files_with/",
+    "media": [
+        "https://github.com/mdboom/pytoshop",
+        "https://photoshopapi.readthedocs.io/en/latest/index.html",
+        "https://web.archive.org/web/20231122064257/https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/",
+        "https://github.com/EmilDohne/PhotoshopAPI#quickstart",
+        "https://github.com/EmilDohne/PhotoshopAPI",
+        "https://photoshopapi.readthedocs.io/",
+        "https://github.com/psd-tools/psd-tools%3E",
+        "https://github.com/MolecularMatters/psd_sdk%3E"
+    ],
+    "post_content": "Hey,\nEmil Dohne is creating a modern and performant C++20 read/write parser of Photoshop Files (*.psd and *.psb) with fully fledged Python bindings hosted on PyPi, completely on its own.\nI just wanted to help him out trying to make his work known, so that more people can utilize this incredibily useful repo and in order to find some very smart and kind people that wanted to help him out on the development! At the moment Emil is occupied by another project that he will end by the end of July and he will then be back 100% on this project.\nI reckon that the hierarchy of new features needed/really wanted are the following:\nSupport for Smart Object Layers - replacing images inside of the smart object\nSupport for Adjustment Layers\nSupport for Vector Masks\nSupport for Text Layers\nCMYK, Indexed, Duotone and Greyscale Color Modes\nThank you to whoever even takes the time to read this, let alone whoever shares this project and even more to incredibly smart people that will help Emil out.\nHere's some more info about this project: https://github.com/EmilDohne/PhotoshopAPI\nWhat my Project does\nPhotoshopAPI is a C++20 Library with Python bindings for reading and writing of Photoshop Files (*.psd and *.psb) based on previous works from psd_sdk, pytoshop and psd-tools. As well as the official Photoshop File Format Specification, where applicable. The library is continuously tested for correctness in its core functionality. If you do find a bug please submit an issue to the github page.\nThe motivation to create another library despite all the other works present is that there isn't a library which has layer editing as a first class citizen while also supporting all bit-depths known to Photoshop (8-bits, 16-bits, 32-bits). This Library aims to create an abstraction between the raw binary file format and the structure that the user interfaces against to provide a more intuitive approach to the editing of Photoshop Files.\nCOMPARISON\nPhotoshop itself is unfortunately often slow to read/write files and the built-in tools for automatically/programmatically modifying files suffer this same issue. On top of this, due to the extensive history of the Photoshop File Format, Photoshop files written out by Photoshop itself are often unnecessarily bloated to add backwards compatibility or cross-software compatibility.\nThe PhotoshopAPI tries to address these issue by allowing the user to read/write/modify Photoshop Files without ever having to enter Photoshop itself which additionally means, no license is required. It is roughly 5-10x faster in reads and 20x faster in writes than photoshop while producing files that are consistently 20-50% lower in size (see the benchmarks section on readthedocs for details). The cost of parsing is paid up front either on read or on write so modifying the layer structure itself is almost instantaneous (except for adding new layers).\nFeatures\nSupported:\nRead and write of *.psd and *.psb files\nCreating and modifying simple and complex nested layer structures\nPixel Masks\nModifying layer attributes (name, blend mode etc.)\nSetting the Display ICC Profile\nSetting the DPI of the document",
+    "comments": [
+        {
+            "author": "KaizenKintsugi",
+            "score": "3",
+            "content": ""
+        },
+        {
+            "author": "Fun-Let1134",
+            "score": "1",
+            "content": ""
+        },
+        {
+            "author": "CaptureJuan",
+            "score": "0",
+            "content": "Amazing work. Will be watching this one."
+        },
+        {
+            "author": "EffectUpstairs9867",
+            "score": "0",
+            "content": "Incredible job! Will definitely share this with a few to find someone that may help you guys"
+        }
+    ]
+},
+{
+    "post_author": "haddock420",
+    "post_id": "1dzij6s",
+    "post_score": "136",
+    "post_time": "Wednesday, July 10, 2024 at 3:43:22 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "I wrote a quit smoking tracker website in Flask",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzij6s/i_wrote_a_quit_smoking_tracker_website_in_flask/",
+    "media": [
+        "https://i.imgur.com/8ayu0yu.png",
+        "https://jimmyrustles.pythonanywhere.com/quitsmoking",
+        "https://github.com/sgriffin53/quitsmoking_app"
+    ],
+    "post_content": "What My Project Does\nThis is a quit smoking tracker website intended for people quitting smoking to be able to track their progress and see health and money milestones to motivate them to stay quit.\nTarget Audience (e.g., Is it meant for production, just a toy project, etc.\nIt's just a toy project that I wrote in a night, but I'm hoping it can be useful for smokers to stay motivated to quit.\nComparison (A brief comparison explaining how it differs from existing alternatives.)\nThe main difference between this and other stop smoking apps is that this is a website. I haven't been able to find any websites that were similar to the stop smoking apps you can get for your phone, which is partly what motivated me to write this.\nSite: https://jimmyrustles.pythonanywhere.com/quitsmoking\nSource: https://github.com/sgriffin53/quitsmoking_app\nThis is a screenshot of what the site would look like for someone who's been quit for 6 months: https://i.imgur.com/8ayu0yu.png\nYou enter your name, quit date, and how much you spend on smoking per day, and it creates a page that you can come back to.\nAs you can see, you unlock health benefits and \"things you can buy\" with your saved money the longer you stay quit.\nThe things you can buy is based on a list of 11 items ranging from a movie ticket ($10) to a university degree ($108000).\nThere are 19 health benefits ranging from 8 hours to 10 years.",
+    "comments": [
+        {
+            "author": "LingonberryPast7771",
+            "score": "17",
+            "content": "Nice project! Do you have any reason for not using jinja templates for the html?",
+            "replies": [
+                {
+                    "author": "haddock420",
+                    "score": "4",
+                    "content": "Thanks! I didn't use templates because I've never used them before. I know they existed, but since this is such a small site, I figured it was okay to just write the html to a variable and return it."
+                }
+            ]
+        },
+        {
+            "author": "shibz",
+            "score": "12",
+            "content": "But I just perfected my brisket technique. I can't quit smoking now!"
+        },
+        {
+            "author": "Idio_Teque",
+            "score": "3",
+            "content": "This is a neat app, and not much code required either. I should look more into flask and make my own little app"
+        },
+        {
+            "author": "Greasy_Dev",
+            "score": "3",
+            "content": "Have you been addicted to nicotine before?",
+            "replies": [
+                {
+                    "author": "haddock420",
+                    "score": "5",
+                    "content": "For the past 20 years and still going."
+                }
+            ]
+        },
+        {
+            "author": "Narrow_Ad_8997",
+            "score": "3",
+            "content": "Cool app!! I just signed up to pythonanywhere and I'm feeling inspired to make something now :)"
+        },
+        {
+            "author": "Tom_STY93",
+            "score": "2",
+            "content": "that's a really good application! ppl should use tech for more things like this"
+        },
+        {
+            "author": "Adi_2210",
+            "score": "2",
+            "content": "Looks cool, maybe learn css"
+        },
+        {
+            "author": "No-Contribution8248",
+            "score": "2",
+            "content": "Nice! Next step, convert flask to FastAPI and use react for frontend"
+        }
+    ]
+},
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dzhlys",
+    "post_score": "1",
+    "post_time": "Wednesday, July 10, 2024 at 3:00:08 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Wednesday Daily Thread: Beginner questions",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzhlys/wednesday_daily_thread_beginner_questions/",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "ArseholeryEnthusiast",
+            "score": "1",
+            "content": "Hey there, currently going through learn python the hard way and it's working for me(haven't given up yet anyway) I've one issue that i can't make sense of though. when i do the below code the end=' ' doesn't seem to work and puts the input on a new line anyways. See below. print(\"How old are you?\", end=' ') age = input() print(\"How tall are you?\", end=' ') height = input() print(\"How much do you weigh?\", end=' ')",
+            "replies": [
+                {
+                    "author": "Brownj41386",
+                    "score": "2",
+                    "content": ""
+                }
+            ]
+        },
+        {
+            "author": "PsychologicalYak2441",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "nigwalk",
+                    "score": "1",
+                    "content": ""
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "haddock420",
+    "post_id": "1dzij6s",
+    "post_score": "136",
+    "post_time": "Wednesday, July 10, 2024 at 3:43:22 AM GMT+3",
+    "flair_text": "",
+    "post_title": "I wrote a quit smoking tracker website in Flask",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dzij6s/i_wrote_a_quit_smoking_tracker_website_in_flask/",
+    "media": [
+        "https://i.imgur.com/8ayu0yu.png",
+        "https://jimmyrustles.pythonanywhere.com/quitsmoking",
+        "https://github.com/sgriffin53/quitsmoking_app"
+    ],
+    "post_content": "Comparison (A brief comparison explaining how it differs from existing alternatives.)\nThe main difference between this and other stop smoking apps is that this is a website. I haven't been able to find any websites that were similar to the stop smoking apps you can get for your phone, which is partly what motivated me to write this.\nSite: https://jimmyrustles.pythonanywhere.com/quitsmoking\nSource: https://github.com/sgriffin53/quitsmoking_app\nThis is a screenshot of what the site would look like for someone who's been quit for 6 months: https://i.imgur.com/8ayu0yu.png\nYou enter your name, quit date, and how much you spend on smoking per day, and it creates a page that you can come back to.\nAs you can see, you unlock health benefits and \"things you can buy\" with your saved money the longer you stay quit.\nThe things you can buy is based on a list of 11 items ranging from a movie ticket ($10) to a university degree ($108000).\nThere are 19 health benefits ranging from 8 hours to 10 years.",
+    "comments": [
+        {
+            "author": "LingonberryPast7771",
+            "score": "17",
+            "content": "Nice project! Do you have any reason for not using jinja templates for the html?",
+            "replies": [
+                {
+                    "author": "haddock420",
+                    "score": "4",
+                    "content": "Thanks! I didn't use templates because I've never used them before. I know they existed, but since this is such a small site, I figured it was okay to just write the html to a variable and return it.",
+                    "replies": [
+                        {
+                            "author": "redalastor",
+                            "score": "33",
+                            "content": "Strings are immutable in Python, when you repeatedly concatenate like in that website, you create a brand new string on every operation and throw the old one away which is wasteful. There are built in ways to solve this in Python without even going the template route and you are going to use them a lot. They are multiline strings and fstring. This : outtext = '' outtext += '<html><body>' outtext += '<center><h1>' + cookie_name + '\\'s Quit Smoking Tracker</h1>' outtext += '<p style=\\'font-family:verdana; font-size:26px;\\'>' outtext += 'Quit Date: ' + str(day) + \"/\" + str(month) + \"/\" + str(year) + \" \" + str(hour) + \":\" + str(mins) + \":\" + \"00\" + \"<br>\" outtext += 'Time Quit: <b>' + quittime_display + '</b><br>' outtext += 'Money Saved: $' + str(total_saved) + '' outtext += '</p><p style=\"font-family:verdana; font-size: 26px\"> With your savings, you could buy:<br><p style=\"font-size:22px\">' Can turn into this:",
+                            "replies": [
+                                {
+                                    "author": "haddock420",
+                                    "score": "7",
+                                    "content": ""
+                                }
+                            ]
+                        },
+                        {
+                            "author": "LingonberryPast7771",
+                            "score": "3",
+                            "content": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "shibz",
+            "score": "12",
+            "content": ""
+        },
+        {
+            "author": "Idio_Teque",
+            "score": "3",
+            "content": "This is a neat app, and not much code required either. I should look more into flask and make my own little app"
+        },
+        {
+            "author": "Greasy_Dev",
+            "score": "3",
+            "content": "Have you been addicted to nicotine before?",
+            "replies": [
+                {
+                    "author": "haddock420",
+                    "score": "5",
+                    "content": "For the past 20 years and still going."
+                }
+            ]
+        },
+        {
+            "author": "Narrow_Ad_8997",
+            "score": "3",
+            "content": "Cool app!! I just signed up to pythonanywhere and I'm feeling inspired to make something now :)"
+        },
+        {
+            "author": "Tom_STY93",
+            "score": "2",
+            "content": "that's a really good application! ppl should use tech for more things like this"
+        },
+        {
+            "author": "Adi_2210",
+            "score": "2",
+            "content": "Looks cool, maybe learn css"
+        },
+        {
+            "author": "No-Contribution8248",
+            "score": "2",
+            "content": "Nice! Next step, convert flask to FastAPI and use react for frontend"
+        }
+    ]
+},
+{
+    "post_author": "debba_",
+    "post_id": "1dwwaoe",
+    "post_score": "9",
+    "post_time": "Saturday, July 6, 2024 at 9:34:35 PM GMT+3",
+    "flair_text": "Resource",
+    "post_title": "Turn Your GitHub Contributions into a Tetris GIF! 🎮",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dwwaoe/turn_your_github_contributions_into_a_tetris_gif/",
+    "media": [
+        "https://raw.githubusercontent.com/debba/gh-contributions-tetris-gif-maker/main/sample/tetris_debba_2023.gif",
+        "https://github.com/debba/gh-contributions-tetris-gif-maker"
+    ],
+    "post_content": "Hi everyone,\nI’m excited to share my latest project with you: GitHub Contributions Tetris GIF Maker.\nThis tool converts your GitHub contributions graph into a fun Tetris GIF. If you love GitHub and retro games, this project is just for you!\nLink: GitHub URL\nWhy Did I Create This?\nThe idea came from wanting to visualize my GitHub contributions in a creative way. I wanted something more interactive and fun than the usual graph, and Tetris seemed like the perfect choice. It’s not only a tribute to one of the most iconic games ever, but it’s also a unique way to showcase your dedication and consistency in open source contributions.\nHow Does It Work?\nThe project is written in Python and uses various libraries to transform contribution data into a Tetris animation. Here’s an overview of the main steps:\nData Collection: it uses an external service for fetching your GitHub contributions.\nData Processing: Converts daily contributions into Tetris pieces.\nGIF Generation: Creates the Tetris animation that evolves as you add new contributions.\nHow to Use It\nTo get started, clone the repository and install the necessary dependencies:\ngit clone https://github.com/debba/gh-contributions-tetris-gif-maker.git\ncd gh-contributions-tetris-gif-maker\npip install -r requirements.txt\nThen, run the program with your GitHub username:\npython main.py --username YourGitHubUsername --year 2024\nExample Result\nHere is an example GIF generated from my profile:\nhttps://raw.githubusercontent.com/debba/gh-contributions-tetris-gif-maker/main/sample/tetris_debba_2023.gif\nContributions and Feedback\nI’m always looking for improvements and new ideas! If you have suggestions or want to contribute, feel free to make a pull request or open an issue on the repository.\nNote: This is an ongoing release that may still have bugs to resolve.\nConclusion\nI hope you enjoy this project as much as I enjoyed creating it. It’s a small tribute to Tetris and a fun way to visualize your hard work on GitHub. Check out the repository and let me know what you think!\nThanks for reading and happy coding! 🚀",
+    "comments": [
+        {
+            "author": "Grayknife",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "debba_",
+                    "score": "1",
+                    "content": ""
+                }
+            ]
+        },
+        {
+            "author": "Grayknife",
+            "score": "1",
+            "content": "",
+            "replies": [
+                {
+                    "author": "debba_",
+                    "score": "1",
+                    "content": ""
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "Oddball777",
+    "post_id": "1dx4h1b",
+    "post_score": "26",
+    "post_time": "Sunday, July 7, 2024 at 4:01:29 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Introducing GraphingLib: A New Python Library for Object-Oriented Visualization",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dx4h1b/introducing_graphinglib_a_new_python_library_for/",
+    "media": [
+        "https://www.reddit.com/r/Python/",
+        "https://github.com/GraphingLib/GraphingLib/",
+        "https://www.graphinglib.org/",
+        "https://github.com/GraphingLib/GraphingLibStyleEditor/"
+    ],
+    "post_content": "TLDR\nGraphingLib is a Matplotlib wrapper that integrates data analysis in an object oriented api, with the ability to create custom figure styles.\nQuick links:\nExtensive Documentation\nGraphingLib’s GitHub\nGraphingLib Style Editor's Github\nHey r/Python community,\nI’m excited to share a project my friends and I have been working on: GraphingLib, an open-source data visualization library wrapped around matplotlib and designed to make creating and designing figures as easy as possible.\nWhat Makes GraphingLib Different?\nOur target audience is the scientific community, though GraphingLib is versatile enough for other purposes as well. Our goto model user was someone making measurements in a lab and wanting to get a working visualization script on the spot as quickly as possible, without having to do much more afterwards to make it publication ready.\nKey features:\nObject-Oriented Design: GraphingLib uses an object-oriented approach to plotting. Each element on the graph is an object with properties you can set and modify at any time, which makes the code cleaner and more intuitive.\nIntegrated Data Analysis: GraphingLib isn’t just about plotting. It lets you perform curve fits, differentiation, integration, intersections, and more directly on Curve and Scatter objects, often in a single line of code. You can also calculate statistical properties of histograms and use set operations on polygons. These features leverage the power of NumPy, SciPy, and Shapely.\nUser-Defined Figure Styles: You can apply prepackaged or custom styles with ease. There’s a GUI Style Editor (installed separately) to help you create, modify, and save styles, which can be applied with a simple keyword. You can even set your custom style as the default for all your figures, no keywords necessary.\nOur Documentation\nDocumentation here\nWe’ve put a lot of effort into documenting GraphingLib extensively. Check out the “Quickstart” section to learn how to install and import the library. The \"Handbook\" has detailed guides on using different features, the \"Reference\" section provides comprehensive details on objects and their methods, and the “Gallery” has tons of examples of GraphingLib in action.\nHow You Can Help\nWe want your feedback! GraphingLib is still in development, and we’d love your help to make it better. There are very few people using it right now so there’s definitely plenty of things we haven’t thought of, and that’s why we need you.\nTest It Out: Use GraphingLib in your projects and share your thoughts. Your feedback is really valuable.\nReport Bugs: If you find any issues, please report them. It helps a lot!\nContribute Code: If you’re up for it, we’d love to see your pull requests. Check out our contribution guide for more details.\nShare Ideas: Got a feature request or an idea to enhance the library? We’d love to hear it.\nWhat GraphingLib Is Not\nIn an attempt to anticipate some of your comments, here are a few things that GraphingLib was deliberately not meant to be:\nLightweight: GraphingLib's dependencies include Matplotlib, NumPy, SciPy, and Shapely. Though most scientists are going to have these installed already anyway.\nRevolutionary: GraphingLib repackages features of various existing libraries into a more user-friendly format. It’s not meant to improve on efficiency or invent new features. We don’t pretend to know better than the developers of scipy and matplotlib.\nComprehensive: There's always going to be a tradeoff between simplicity and versatility. New features are added regularly though, and we’ve designed the architecture to make it easy to add new functionalities.\nA Heads-Up\nGraphingLib is still evolving, so you might run into some bugs or missing features. Thanks for your patience and support as we continue to improve the library. We’re looking forward to hearing your feedback!\nCheers,\nThe GraphingLib community",
+    "comments": [
+        {
+            "author": "BDube_Lensman",
+            "score": "2",
+            "content": "You wrote that your library is not not trying to \"know better\" than matplotlib, but reskinning its API is sort of exactly that. What makes this better than seaborn? From your examples, it looks sort of like a cousin of a \"grammar of graphics\" (aka ggplot) style interface. The basic premise of making artists and then adding them to axes/figures is already something that matplotlib has built in. I sort of think it would be better to teach that than create a new library with Yet Another plotting interface in python",
+            "replies": [
+                {
+                    "author": "Oddball777",
+                    "score": "1",
+                    "content": "Thanks for the feedback! In my opinion, what really differentiates GL is its ability to perform operations directly on the objects, without having to constantly go back and forth between raw data and plottable object. For example, in GL, a Curve object is something you can plot, differentiate, evaluate at an x or y value, multiply by a constant, find intersections with a second Curve, add to another curve, etc. The plotting mechanics and the data manipulation mechanics are brought together in such a way that the plottable objects are now actually objects you can do math and physics with. This makes the code incredibly intuitive and visual. Create an object from data, perform operations on the object, plot the object. Create a Shape object, apply a transformation to it, plot it. When I said we don’t think we know better than matplotlib/scipy, what I meant was that the reason we’re using scipy functions and matplotlib figures underneath our API is because we know they work really well. It would be pointless to try to code our discrete integration method when people have been working on scipy for years. It would be pointless to code our own plot renderer when matplotlib just works. But I know I’m not the only one who dislikes matplotlib’s API. Maybe that counts as thinking we know better, in terms of API intuitiveness. That’s why Seaborn (though it has absolutely gorgeous plots) didn’t satisfy that for me, because you’re still interacting with maptlotlib’s API."
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "beomagi",
+    "post_id": "1dw4z0c",
+    "post_score": "22",
+    "post_time": "Friday, July 5, 2024 at 9:33:45 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Made a tool for retrieving the path of strings in complex JSON structures",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dw4z0c/made_a_tool_for_retrieving_the_path_of_strings_in/",
+    "media": [
+        "https://github.com/beomagi/jsearch"
+    ],
+    "post_content": "code: https://github.com/beomagi/jsearch\nWhat My Project Does:\nSome of the JSON structures I deal with are quite deeply nested, making it a little annoying to figure out the path to data points I need.\nThis is a search I wrote that finds the string (in keys or values), with options to ignore case, ignore values, and highlight.\nUsage:\n./jsearch.py -f <json_file> -s <search_string> [-i] [-h] [-k]\n./jsearch.py -j <json_text> -s <search_string> [-i] [-h] [-k]\n-i ignore case\n-h highlight search string\n-k keys only\ne.g.\nbeomagi@BeoBalthazar ~/gits/jsearch  (main) 2024-07-05 14:13:45\n└─ $ ∙ ./jsearch.py -f github_events_20240705.json -s contents | head -2\n[15].payload.pull_request.head.repo.contents_url\n[15].payload.pull_request.head.repo.contents_url=https://api.github.com/repos/junminhong/www.moztw.org/contents/{+path}\nTarget Audience:\nAnyone dealing with ugly complex JSON structures and trying to figure out key paths.\nComparison :\njq can be used to find substrings of keys and return the full path, but it feels ugly. May work for values too, but i wasn't able to figure that out.\ne.g.:\nbeomagi@BeoBalthazar ~/gits/jsearch  (main) 2024-07-05 14:29:43\n└─ $ ∙ ./jsearch.py -f reddit_r_linux.json -s \"vote\" -h | head -5\n.data.children[0].data.upvote_ratio\n.data.children[1].data.upvote_ratio\n.data.children[2].data.upvote_ratio\n.data.children[3].data.upvote_ratio\n.data.children[4].data.upvote_ratio\nvs\nbeomagi@BeoBalthazar ~/gits/jsearch  (main) 2024-07-05 14:30:25\n└─ $ ∙ cat reddit_r_linux.json | jq -c \"paths\" | grep vote | head -5\n[\"data\",\"children\",0,\"data\",\"upvote_ratio\"]\n[\"data\",\"children\",1,\"data\",\"upvote_ratio\"]\n[\"data\",\"children\",2,\"data\",\"upvote_ratio\"]\n[\"data\",\"children\",3,\"data\",\"upvote_ratio\"]\n[\"data\",\"children\",4,\"data\",\"upvote_ratio\"]",
+    "comments": [
+        {
+            "author": "Tiny-Wolverine6658",
+            "score": "6",
+            "content": "Nice hows the performance of this? I played around with JSON search in python using a `json-path` library and the performance is horrendous. I guess for one off JSON documents it doesn't matter, but if you want to iterate through tons of JSON logs...",
+            "replies": [
+                {
+                    "author": "beomagi",
+                    "score": "2",
+                    "content": "Thanks, on my laptop - which I limited to 2GHz for heat/battery - parsing an 18MB Json dump of a config... A search getting 31 hits took 0.808s A search getting 44092 hits took 1.182s Timing it from shell with \"time\", so there's start up time too. I tried with pypy3, and performance was indeed horrendous 😁 1.99s and 8.10s respectively!"
+                }
+            ]
+        },
+        {
+            "author": "commandlineluser",
+            "score": "2",
+            "content": "Fun stuff! If it is useful to you, it is also possible to reformat the paths with jq: jq -r -c ' (\".\" + (paths | map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\"))) | select(contains($SEARCH)) ' --arg SEARCH pull_request.merged_by.html github_events_20240705.json # .[15].payload.pull_request.merged_by.html_url To search values, one way is to use recursive descent .. and filter out the nulls You can pass the expression to path() in order to get the path: jq -r -c ' path( .. | if type == \"string\" and contains($SEARCH) then . else null end | select(.) ) | \".\" + (map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\")) ' --arg SEARCH swa-runner-app github_events_20240705.json # .[0].actor.login # .[0].actor.display_login # .[0].actor.url # .[0].payload.commits.[0].author.email # .[0].payload.commits.[0].author.name",
+            "replies": [
+                {
+                    "author": "beomagi",
+                    "score": "1",
+                    "content": "Wanted to benchmark it, but seems to be some syntax errors? $ ∙ jq -r -c ' > > (\".\" + (paths | map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\"))) > > | select(contains($SEARCH)) > > ' --arg SEARCH pull_request.merged_by.html github_events_20240705.json jq: error: syntax error, unexpected end (Unix shell quoting issues?) at <top-level>, line 3: (\".\" + (paths | map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\"))) jq: error: Possibly unterminated 'if' statement at <top-level>, line 3: (\".\" + (paths | map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\"))) jq: error: syntax error, unexpected ')', expecting $end (Unix shell quoting issues?) at <top-level>, line 3: (\".\" + (paths | map(if type == \"number\" then \"[\" + tostring + \"]\" end) | join(\".\"))) jq: 3 compile errors"
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "AutoModerator",
+    "post_id": "1dxuucj",
+    "post_score": "0",
+    "post_time": "Monday, July 8, 2024 at 3:00:08 AM GMT+3",
+    "flair_text": "Daily Thread",
+    "post_title": "Monday Daily Thread: Project ideas!",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dxuucj/monday_daily_thread_project_ideas/",
+    "media": [],
+    "post_content": "Daily Thread",
+    "comments": [
+        {
+            "author": "EternityForest",
+            "score": "2",
+            "content": "Project Ideas: 88x31 Badge Generator Difficulty: Beginner Tech Stack: Any GUI toolkit This would be a simple app that would take a bunch of folders with things like backgrounds, frames, icons, masks for the overall shape, etc, and give you a nice GUI to stack them together along with some text. You could also embed the configuration of layers in the output PNG to make it editable."
+        }
+    ]
+},
+{
+    "post_author": "noirsociety",
+    "post_id": "1dxcdiy",
+    "post_score": "254",
+    "post_time": "Sunday, July 7, 2024 at 12:12:32 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Flask, Django, or FastAPI?",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dxcdiy/flask_django_or_fastapi/",
+    "media": [],
+    "post_content": "From your experiences as a developer, which of these 3 frameworks would you guys recommend learning for the backend? What are some of the pro and con of each framework that you've notice? If you were to start over again, which framework will you choose to learn first?",
+    "comments": [
+        {
+            "author": "Python-ModTeam",
+            "score": "1",
+            "content": "Hi there, from the r/Python mods. This post has been removed due to its frequent recurrence. Please refer to our daily thread or search for older discussions on the same topic. If you have any questions, please reach us via mod mail. Thanks, and happy Pythoneering! r/Python moderation team"
+        },
+        {
+            "author": "durden67",
+            "score": "293",
+            "content": "Choose FastAPI if you need high performance, modern Python features, and easy automatic documentation. Choose Django if you want a comprehensive framework with lots of built-in features, a strong emphasis on security, and a large community. Choose Flask if you prefer simplicity and flexibility, and are comfortable setting up additional features as needed."
+        },
+        {
+            "author": "vantasmer",
+            "score": "94",
+            "content": "They all have specific use cases. Although they overlap in some ways it’s good to learn, or at least be familiar, with all of them. Flask is usually where I go first because I can stand up a simple mock in just a few minutes but it’s production ready if I need it to be. fastAPI if I know I’ll need async capabilities. Django and litestar if I’m going to be dependent on a database or expect the project to be more complicated .",
+            "replies": [
+                {
+                    "author": "marsupiq",
+                    "score": "49",
+                    "content": "The thing with async is: If you find mid-project that you need async and your entire design is synchronous, you’re going to have a nightmare. In my experience, there are always some tiny parts of your projects where async makes sense. And generally, FastAPI is just cleaner IMHO, so I don’t really see a reason why I would use Flask for a new project (= my personal opinion)."
+                }
+            ]
+        },
+        {
+            "author": "damesca",
+            "score": "107",
+            "content": "Django or fastapi. Django has the most jobs and gives the most bang for your buck. Batteries included is underrated for anything but the most minimal projects.",
+            "replies": [
+                {
+                    "author": "rumnscurvy",
+                    "score": "46",
+                    "content": "Yep. Having batteries included means when the scope of your project inevitably grows and you need to add functionalities, you'll have everything at the ready."
+                },
+                {
+                    "author": "Samhain13",
+                    "score": "13",
+                    "content": "\"For perfectionists with deadlines,\" as they say."
+                },
+                {
+                    "author": "thisFishSmellsAboutD",
+                    "score": "39",
+                    "content": "Batteries included because nobody ain't got time to re-invent all the wheels."
+                }
+            ]
+        },
+        {
+            "author": "corbasai",
+            "score": "27",
+            "content": "We use FastAPI for a small REST controller of our SPA. Two month of development, 600 days of uptime. Ok, about 10+ intranet users+ about 100 udp endpoints for controlled devices. FastAPI is ok when you need async background tasks"
+        },
+        {
+            "author": "Putrid-Operation973",
+            "score": "28",
+            "content": "I use Django, and if I were to start all over again, I would probably choose Django again because it provides a thorough understanding of web development with a lot of built-in features, a large and strong community, and excellent documentation. After mastering Django, I would learn Flask and FastAPI. In the end, it boils down to your needs and personal preference."
+        }
+    ]
+},
+{
+    "post_author": "Revolutionary-Lake45",
+    "post_id": "1dwkz20",
+    "post_score": "47",
+    "post_time": "Saturday, July 6, 2024 at 11:29:18 AM GMT+3",
+    "flair_text": "News",
+    "post_title": "Shed Skin restricted-Python-to-C++-compiler 0.9.9",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dwkz20/shed_skin_restrictedpythontoccompiler_099/",
+    "media": [],
+    "post_content": "I have just released version 0.9.9 of Shed Skin, a restricted-Python-to-C++ compiler. It comes with a whole host of small improvements, and also a nice new (constructive solid geometry) example, which becomes about 15 times faster on my system (not 15%.. 15 times!).\nIf you think this is a cool project, please consider helping out. There is always enough work (low-hanging fruit even) on both the Python and C++ side.",
+    "comments": [
+        {
+            "author": "aroberge",
+            "score": "13",
+            "content": "Congratulations. I do not have any use (yet) for Shed Skin but I remember trying it out when it was in very early development (0.0.X or 0.1.X) and was impressed simply by the fact that it worked as well as it did. I also remember a famous pythonista who, at the time, dismissed the whole idea as impossible. This would have discouraged me to work on such a project ... and it is nice to learn that this did not discourage you and that you've made so much progress. Kudos to you and your collaborators."
+        },
+        {
+            "author": "New-Watercress1717",
+            "score": "5",
+            "content": "Glad to see this project get revived. Docs are not clear, does shed-skin use PEP 484 hints, or infers them in other ways?",
+            "replies": [
+                {
+                    "author": "Revolutionary-Lake45",
+                    "score": "1",
+                    "content": "it infers them."
+                }
+            ]
+        },
+        {
+            "author": "sohang-3112",
+            "score": "4",
+            "content": "How does this project compare to Cython?",
+            "replies": [
+                {
+                    "author": "Revolutionary-Lake45",
+                    "score": "1",
+                    "content": "Shed Skin does not require type annotations, and figures them out by itself."
+                }
+            ]
+        },
+        {
+            "author": "coriolinus",
+            "score": "3",
+            "content": "Wow, I remember trying this out (but not using it for anything real) in like 2006. Didn't realize it was still in development!",
+            "replies": [
+                {
+                    "author": "Revolutionary-Lake45",
+                    "score": "1",
+                    "content": "it was stuck for a while on the Python 3 transition.. :)"
+                }
+            ]
+        },
+        {
+            "author": "BossOfTheGame",
+            "score": "2",
+            "content": "It's good to hear that this project is still going. One of my repos might be amenable to it. I already have a Pure python and cython implementation of the algorithms. It would be interesting to see how shedskin compares. https://github.com/Erotemic/networkx_algo_common_subtree"
+        },
+        {
+            "author": "Revolutionary-Lake45",
+            "score": "3",
+            "content": "For more information about the release: https://github.com/shedskin/shedskin/releases/tag/v0.9.9 http://blogfarts.blogspot.com/2024/06/shed-skin-restricted-python-to-c.html"
+        }
+    ]
+},
+{
+    "post_author": "Specialist-Arachnid6",
+    "post_id": "1dwy0bg",
+    "post_score": "23",
+    "post_time": "Saturday, July 6, 2024 at 10:51:51 PM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "I made a Python library to plot chemical trends | Plotium",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dwy0bg/i_made_a_python_library_to_plot_chemical_trends/",
+    "media": [
+        "https://github.com/rohankishore/Plotium"
+    ],
+    "post_content": "What does my Project do?\nPlotium is a python library used to plot chemical trends like Atomic radii, Electronegativity, etc of specific parts of the periodic table, like types of elements, group or a specific block.\nRight now, Plotium can plot trends of:\nElectronegativity\nDensity\nAtomic Radii\nMelting Point\nBoiling Point\nDivided into:\nBlock Wise (S,P,D,F)\nTypes (Actinoids, Lanthanoids, etc)\nGroups (1 - 18)\nTarget Audience\nStudents/people who love chemistry. This library will also be useful for teaching students several exceptions and trends.\nComparison\nI haven't seen any trend plotter other than one hotmap plotter. But what I'm aiming is graphing these trends.\nGitHub\nGitHub Link: https://github.com/rohankishore/Plotium",
+    "comments": [
+        {
+            "author": "denehoffman",
+            "score": "7",
+            "content": "I like it, nice work! My only critique is that you have capitalized the project and submodule names, so the imports look a bit awkward, but other than that I’m sure this would be useful for teachers maybe",
+            "replies": [
+                {
+                    "author": "Specialist-Arachnid6",
+                    "score": "3",
+                    "content": "Yeah I'll fix it. And yes, it'll be massively helpful in teaching. It helps students like me who likes to learn visually"
+                }
+            ]
+        },
+        {
+            "author": "data15cool",
+            "score": "3",
+            "content": "Very cool I like the idea and I’m sure it’s very useful to chemistry students! Since you’re welcoming some feedback here are some suggestions. There’s a lot of repetition, you could define all the elements and their properties in a single file, for example a csv file with columns for name, properties, groups etc Then, probably using pandas, read the csv and filter by whatever you require. And just have a single function that plots the results.",
+            "replies": [
+                {
+                    "author": "Specialist-Arachnid6",
+                    "score": "1",
+                    "content": "Yeah I'll take a look into it. Or maybe use a .db file and create tables for each type/group?"
+                }
+            ]
+        },
+        {
+            "author": "Top_Paramedic_2059",
+            "score": "1",
+            "content": "Pls share link to learn Python full stack"
+        },
+        {
+            "author": "Specialist-Arachnid6",
+            "score": "0",
+            "content": "I made this to make my learning more \"fun\". I remember things much better when visualised. I'm pretty sure there will be a lot of bad coding techniques which I may've used. Your suggestions and critical feedbacks are all welcome :)"
+        }
+    ]
+},
+{
+    "post_author": "MrAstroThomas",
+    "post_id": "1dxddhg",
+    "post_score": "10",
+    "post_time": "Sunday, July 7, 2024 at 1:21:56 PM GMT+3",
+    "flair_text": "Tutorial",
+    "post_title": "Computing Saturn's tilting rings",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dxddhg/computing_saturns_tilting_rings/",
+    "media": [
+        "https://preview.redd.it/computing-saturns-tilting-rings-v0-bn0t066un2bd1.png?width=1424&format=png&auto=webp&s=cfef4f7109d076b52a57b105aa0e4892931b68dd",
+        "https://preview.redd.it/computing-saturns-tilting-rings-v0-gnu6dnrao2bd1.png?width=1008&format=png&auto=webp&s=1ad61227e6e0a2245f6e34a87f1d5c7eb3974b98",
+        "https://github.com/ThomasAlbin/Astroniz-YT-Tutorials/blob/main/CompressedCosmos/CompressedCosmos_Saturns_Ring.ipynb",
+        "https://youtu.be/Lr5Swe49ApM"
+    ],
+    "post_content": "Hey everyone,\nhave you seen Saturn trough a telescope? If not: you should! You can easily see the great rings with the naked eye. But ... currently we see it \"edge on\", leading to a less stunning image, as shown below for the current year and 2028\nSaturn's tilt computed with Stellarium\nNow in my \"Compressed Cosmos\" coding tutorial video, where I try to create Python snippets in less than 100 lines of code, I created a small script to compute this tilt angle evolution over time. Currently it is almost 0°, but the angle increases. The following plot shows this angle vs. the time, resulting from my created script (a negative angle indicates the view \"from below\"):\nNow if you'd like to understand how I did it, check out my current Notebook on my GitHub repo. I made also a short video about it on YouTube.\nHope you can learn something from it :). I'll continue to create space related coding videos that cover different topics.\nBest,\nThomas",
+    "comments": [
+        {
+            "author": "nbviewerbot",
+            "score": "1",
+            "content": "I see you've posted a GitHub link to a Jupyter Notebook! GitHub doesn't render large Jupyter Notebooks, so just in case, here is an nbviewer link to the notebook: https://nbviewer.jupyter.org/url/github.com/ThomasAlbin/Astroniz-YT-Tutorials/blob/main/CompressedCosmos/CompressedCosmos_Saturns_Ring.ipynb Want to run the code yourself? Here is a binder link to start your own Jupyter server and try it out! https://mybinder.org/v2/gh/ThomasAlbin/Astroniz-YT-Tutorials/main?filepath=CompressedCosmos%2FCompressedCosmos_Saturns_Ring.ipynb I am a bot. Feedback | GitHub | Author"
+        }
+    ]
+},
+{
+    "post_author": "dingdongninja",
+    "post_id": "1dvs2d6",
+    "post_score": "53",
+    "post_time": "Friday, July 5, 2024 at 10:15:30 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Reactive Notebook for Python - An Alternative to Jupyter Notebook",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dvs2d6/reactive_notebook_for_python_an_alternative_to/",
+    "media": [
+        "https://github.com/marimo-team/marimo#expensive-notebooks",
+        "https://github.com/marimo-team/marimo"
+    ],
+    "post_content": "What the Project Does :\nMarimo is an open-source reactive notebook for Python: reproducible, git-friendly, executable, shareable as apps.\nRun a cell or interact with a UI element, and Marimo automatically runs dependent cells (or marks them as stale), keeping code and outputs consistent. Marimo notebooks are stored as pure Python, executable as scripts, and deployable as apps.\nTarget Audience :\nThe project is primarily aimed at data scientists, researchers, and educators. They can make featureful, interactive, and beautiful notebooks that let users filter, slice, and drill-down to their heart's content. Marimo can also enable them to build maintainable internal tools using just Python, without the hassle of custom frontends, infra, endpoints, and deployments.\nComparison :\nvs JupyterLite - a WASM powered Jupyter running in the browser. However, it is not reactive like Marimo.\nvs IPyflow - a reactive notebook for Python implemented as a Jupyter kernel. However, it is not WASM compatible.\nvs Jupyter - marimo is a reinvention of the Python notebook as a reproducible, interactive, and shareable Python program that can be executed as scripts or deployed as interactive web apps - without the need of extensions or additional infrastructure\nGitHub repository: https://github.com/marimo-team/marimo",
+    "comments": [
+        {
+            "author": "New-Watercress1717",
+            "score": "26",
+            "content": "While this looks cool; I don't think it was built with an understanding of how notebooks are used. This tool can not be used with anything that takes high compute or wait times; like database calls, heavy io, high compute data frame activities, using notebooks as interfaces for distributed computing like spark/dask. I can't imagine myself using this tool outside of demos.",
+            "replies": [
+                {
+                    "author": "RoboticElfJedi",
+                    "score": "6",
+                    "content": "I can see using it. I think the way it works enforces some good habits that ensure everything is nice and reproducible. And I leave jupyter kernels live for weeks so don't see why this couldn't be the same. I did the tutorial and you can turn the automatic execution off. For very computationally intensive stuff it seems like caching the results would make sense, no doubt there is an easy way to do this. Edit: Indeed, they recommend using `@functools.cache` and writing idempotent cells."
+                },
+                {
+                    "author": "akshayka",
+                    "score": "1",
+                    "content": "Hey! I'm the developer of marimo. Autorun can be disabled with a single click; your notebook still needs to be a DAG, so you still have guarantees about state. But you don't have to worry about database transactions, spark jobs, or training pipelines being accidentally triggered."
+                }
+            ]
+        },
+        {
+            "author": "wwwTommy",
+            "score": "4",
+            "content": "Have been using Marimo for some weeks now. After some first frustrating days (“but I was able to do it in jupyter”) i was like “yes, good stuff. Thanks for enforcing better code”. For context: I’m not using the build in marimo elements (slider) and stuff, but creating data engineering / analytics piplelines on remote servers (not enough ram with my local pc)."
+        },
+        {
+            "author": "RoboticElfJedi",
+            "score": "4",
+            "content": "This is very interesting. As a data scientist I use jupyter a lot. It's great and I hate it. The editor is horrid and despite myself I usually end up in a mess."
+        },
+        {
+            "author": "denehoffman",
+            "score": "7",
+            "content": "I like it, this seems to be a solution to many of the things I have absolutely hated about jupyter!"
+        },
+        {
+            "author": "Severe_Inflation5326",
+            "score": "1",
+            "content": "I have to say this is impressive! Played around a bit last night, and it's cool how much of the internals is available inside the notebook. E.g. you can do stuff like: ctx = mo._runtime.context.get_context() variables = set().union(*(c.defs for c in ctx.graph.cells.values())) def explorer(a): return mo.lazy(lambda : explore(a)) def explore(a): if isinstance(a, dict): return {n: explorer(v) for n, v in a.items()} elif isinstance(a, list): return [explorer(v) for v in a] elif a is None or isinstance(a, (int, float, bool, str, bytes)): return a else: return {n: explorer(getattr(a, n)) for n in dir(a)} #mo.tree(explore({name: ctx.globals[name] for name in variables})) #explore(ctx.globals[\"a\"]) {name: type(ctx.globals[name]) for name in variables} However, I have a few questions, esp. regarding this: a) Is there a way to make the tree widget be collapsed by default? It expands all the way down (even with lazy())? b) Is there a way to make new \"cells\" programmatically, that don't show up in the notebook, but that are reexecuted the normal reactive way?"
+        },
+        {
+            "author": "General-Carrot-4624",
+            "score": "1",
+            "content": "How is it compared to Datalore"
+        },
+        {
+            "author": "plx85",
+            "score": "0",
+            "content": "I need to look into this. Love Jupyter but never found a good way to commit the output. Does anyone have a great solution that only requires Jupiter and .gitignore?"
+        }
+    ]
+},
+{
+    "post_author": "mraza007",
+    "post_id": "1dwvicn",
+    "post_score": "6",
+    "post_time": "Saturday, July 6, 2024 at 8:59:09 PM GMT+3",
+    "flair_text": "Tutorial",
+    "post_title": "Building simple pastebin service in Python",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dwvicn/building_simple_pastebin_service_in_python/",
+    "media": [
+        "https://muhammadraza.me/2024/Simple-Pastebin-In-Python/"
+    ],
+    "post_content": "Hello Everyone,\nI always wanted to learn how pastebin worked behind the scenes. So i decided to build my own and write about it\nHere’s the link to the post",
+    "comments": [
+        {
+            "author": "Agitated-Soft7434",
+            "score": "1",
+            "content": "Oooo love it! Definitely gonna check out your other posts (on your website) :D"
+        }
+    ]
+},
+{
+    "post_author": "wabalabadapdap",
+    "post_id": "1dwzkv9",
+    "post_score": "16",
+    "post_time": "Sunday, July 7, 2024 at 12:03:35 AM GMT+3",
+    "flair_text": "Showcase",
+    "post_title": "Can universal decorators be useful?",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dwzkv9/can_universal_decorators_be_useful/",
+    "media": [
+        "https://github.com/stoney95/once",
+        "https://pypi.org/project/once-and-for-all/"
+    ],
+    "post_content": "What my Project Does\nI created a python package: once. It allows you to apply decorators or meta-classes universally. I found the idea interesting and could imagine that this can be useful to ensure guidelines throughout the codebase. I am wondering if people here find it useful too - and what applications come to your mind.\nThe example demonstrates how you could enforce to log all exceptions without modifying every element of your codebase.\n# \nimport once\n\nfrom coding_guidelines import log_exceptions # <- This is a decorator\nfrom some_custom_package import my_module\n\n\ndef main():\n    result = my_module.do_stuff_1()\n    my_module.do_stuff_2(result)\n\n\nif __name__ == \"__main__\":\n    (\n        once.and_for_all.Functions()\n        .apply_decorator(log_exceptions)\n    )\n    \n    main()main.py\nYou can find the project on GitHub and PyPI.\nTarget Audience\nThe project is currently a toy project. Depending on the reactions and interest I would be interested to turn it into a production ready package.\nComparison\nAs far as I know, there is no package that this can be compared to. The package could be seen similar to middleware functionality in frameworks like, FastAPI, Django. As this project hasn't a clear scope yet it is hard to compare it in detail to middleware functionality. In general it is independent of a framework.",
+    "comments": [
+        {
+            "author": "chipx86",
+            "score": "12",
+            "content": "Congrats on the project! I dug into the code a bit to see how this works (on limited Internet — out in the mountains, so forgive me if I’ve misread some part of it). Looks like it runs through all loaded modules and tries to replace them with decorated copies. This works in many cases, but of course doesn’t work for imports taking place outside the global scope. We had to solve a similar problem. Our codebase’s unit tests need to augment/replace functionality, for the purpose of mocking results from functions or determine if/how/when functions were called. And it had to do this even if the function wasn’t directly accessible via a reference to a module or containing object. In our case, this is for Function Spies in unit tests. The approach is non-trivial, and I don’t recommend trying to duplicate the logic, but it does comprehensively address this challenge. Basically, we take the target function, generate new but compatible function bytecode (which can perform any custom logic and optionally call the original), and assign it as the new function bytecode. This works no matter whether the function is directly imported into modules, held onto solely within other functions or mapping dictionaries, or called via C-compiled modules. While it’s built for unit tests, it can be used in any context, and has wide Python (CPython and PyPy) support. 2.7-3.12, with 3.13 coming soon. If it’s useful to you, check it out: kgb. If you’re curious about the approach, you can read this code comment about the general approach. Happy to answer any questions too 🙂",
+            "replies": [
+                {
+                    "author": "wabalabadapdap",
+                    "score": "2",
+                    "content": "u/chipx86 thanks for pointing out kgb. The storytelling of project alone makes it worth checking it out 👍 Even though you are somewhere in the mountains you got the approach right. In the current state all imports from the standard library and the third-party dependencies are filtered out. So, it only modifies the code of the current repository. Could you explain what scenarios you think of where the current approach might be problematic?",
+                    "replies": [
+                        {
+                            "author": "chipx86",
+                            "score": "2",
+                            "content": "For your use cases, your approach might be completely sufficient. But it does depend. Let’s walk through an example. Say you’re working with a module that, say, wraps operations by a command name (maybe for an external API or something). You call a function with a request name and arguments, you get a result back. Internally, our fictional dispatcher is implemented as a bunch of “private” callback functions (importable and global, but not meant to be used), and a dictionary mapping request names to the appropriate callback function. def _handle_info(**kwargs): ... def _handle_format_filesystem(**kwargs): ... _handlers = { ‘info’: _handle_info, ‘format’: _handle_format_filesystem, } def request(action, **kwargs): return _handlers[action](**kwargs) (Very basic demo code) If you import the module and try to patch in _handle_info with a decorated copy, it won’t work. The original, undecorated function is still in the map, and that’s what’ll be used when calling request(). Even if you extended the searching logic to walk through data structures, it’s always possible there’s a copy that’s inaccessible to you (say, imported in a nested function, assigned to a keyword argument, in another object’s internal state after construction, etc.). May seem contrived, but this sort of thing does happen in real-world use cases. Lazy importing for performance reasons, wrapper classes with dependency injection, registration patterns, etc. That’s why kgb goes with the approach of patching the function bytecode. No matter when a function is imported or where a reference is stored, it’ll end up using the patched bytecode when accessed, ensuring all calls behave in a consistent and controllable way.",
+                            "replies": [
+                                {
+                                    "author": "wabalabadapdap",
+                                    "score": "2",
+                                    "content": "I see, I have not thought of this case. Even tough I apply the handlers dictionary pattern quite often myself :D Thanks for pointing this out! And as said above I will check out how kgb could help me to solve this problem"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "Schmittfried",
+            "score": "4",
+            "content": "Interesting idea, this could potentially be made into an AOP lib (aspect oriented programming), so I see why you compare it to middlewares. Applying it to all functions however seems like the least useful application of it, except for maybe instrumentation.",
+            "replies": [
+                {
+                    "author": "wabalabadapdap",
+                    "score": "1",
+                    "content": "u/Schmittfried instrumentation is what I had in mind when creating the project. What do you have in mind that would make the project more useful? The lib currently allows you to limit the modification of functions / classes to a given module. In addition you can specify a name or pattern for functions / classes that should not be modified. An example is available in the configuration section of the README."
+                }
+            ]
+        },
+        {
+            "author": "Cybasura",
+            "score": "4",
+            "content": "Oof I really want to like this idea, but I can imagine - much like the issue with an \"import universal\" where you import all ala \"import *\" - debugging is gonna be implodingly impossible",
+            "replies": [
+                {
+                    "author": "wabalabadapdap",
+                    "score": "1",
+                    "content": "u/Cybasura thanks for pointing out the \"import *\" scenario. To handle it I have two possible solutions in mind: Ignore it and show a warning that refers to PEP8 It should be possible to identify the module from which you import all. Then you can start to modify all functions / classes in that module In regards of debugging: Yeah, I see that this can become more complex. On the other hand, you write the decorators by yourself so and the flow of execution is also given by the order of the decorators. One downside is that it's not clear which decorators are applied from function / class code itself. This reduces readability In general (influenced by u/Schmittfried's reply) the library should be used in an aspect-oriented way. Or at least you should not add business logic via decorators"
+                }
+            ]
+        },
+        {
+            "author": "NFeruch",
+            "score": "3",
+            "content": "This seems really cool and has a lot of potential, although I’m definitely not your ideal userbase",
+            "replies": [
+                {
+                    "author": "wabalabadapdap",
+                    "score": "1",
+                    "content": "u/NFeruch what would make you my ideal userbase? 😉"
+                }
+            ]
+        },
+        {
+            "author": "classy_barbarian",
+            "score": "1",
+            "content": "So this is interesting but I'm wondering how exactly it applies the decorator under the hood. What are you using to actually attach the decorator? Do you have any control over which functions, classes, or methods it gets attached to?"
+        },
+        {
+            "author": "s3r3ng",
+            "score": "1",
+            "content": "I don't have access to the code now but a co-worker some years ago did this. He wanted to log all function calls as to the parameters passed to debug some gnarly server side python."
+        }
+    ]
+},
+{
+    "post_author": "Path_Amazing",
+    "post_id": "1dz2q4u",
+    "post_score": "0",
+    "post_time": "Tuesday, July 9, 2024 at 4:41:48 PM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Forgot to buy my Pycon 2024 tickets.... Pls its my first time and i wanna attend real bad. ",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dz2q4u/forgot_to_buy_my_pycon_2024_tickets_pls_its_my/",
+    "media": [],
+    "post_content": "Basically got busy during the summer with some work and forgot to buy Pycon2024 India tickets :'(\nNot even sure if the tickets are transferable but if they are then pls I will happily buy 2-3 tickets off of someones hand, i have never attended the event and i have heard that they are legendary. Workshop tickets are still selling so i will definitely buy that one. But if there is someone out there with some Combo tickets then it would just make my day! But even a regular ticket will go a long way!\nThank you!",
+    "comments": [
+        {
+            "author": "ekbravo",
+            "score": "54",
+            "content": "Are you sure you’re talking about Pycon 2024 and not Taylor Swift concert?"
+        },
+        {
+            "author": "Meshi26",
+            "score": "20",
+            "content": "Isn't Pycon 2024 over? Pretty sure there was uploads of some of the talks to the Youtube channel",
+            "replies": [
+                {
+                    "author": "Path_Amazing",
+                    "score": "-21",
+                    "content": "",
+                    "replies": [
+                        {
+                            "author": "Action_Maxim",
+                            "score": "12",
+                            "content": "My mother always said, \"this is your fault\" Just thought this could help you"
+                        },
+                        {
+                            "author": "pro_questions",
+                            "score": "3",
+                            "content": "IDK why this is being downvoted — the body of the post specifies the Indian PyCon and it is in September: https://in.pycon.org/2024/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "author": "capttwinky",
+            "score": "10",
+            "content": "Are you talking about a Pycon outside of the USA? Pycon US is complete, but we'll be back in Pittsburgh next year, and it isn't too soon to start saving for a ticket. If you're talking about one of the upcoming non-USA Pycons, tell us which one! List of National Pycons available at https://pycon.org/",
+            "replies": [
+                {
+                    "author": "ihavebeesinmyknees",
+                    "score": "2",
+                    "content": "It says Pycon India in the post"
+                },
+                {
+                    "author": "Path_Amazing",
+                    "score": "1",
+                    "content": "Read the description. I clearly mentioned Pycon 2024 India there bro."
+                },
+                {
+                    "author": "busdriverbuddha2",
+                    "score": "-1",
+                    "content": "LOL obviously the Brazilian edition is not called \"pycon\""
+                }
+            ]
+        }
+    ]
+},
+{
+    "post_author": "FishRaider",
+    "post_id": "1dx885o",
+    "post_score": "26",
+    "post_time": "Sunday, July 7, 2024 at 7:33:07 AM GMT+3",
+    "flair_text": "Discussion",
+    "post_title": "Lazy Reverse Method in O(1) Time",
+    "post_url": "https://www.reddit.com/r/Python/comments/1dx885o/lazy_reverse_method_in_o1_time/",
+    "media": [],
+    "post_content": "Why not make the list.reverse method in Python perform a lazy reverse? Instead of changing the underlying structure, it would adjust array operations so that [i] becomes [-i-1] and all iterations go backwards. This way, the list would appear reversed without actually modifying its structure.\nThe list would maintain this lazy reverse state for operations like insert, remove, index, iteration, and array access/editing. If an operation like + or .append is called, only then would the list be physically reversed.\nIn most programs, lists aren't typically appended to after being reversed. Implementing this could save time, making reversing an O(1) operation.\nNote: Lazy reverse could be off by default, where you have to specify a parameter to be true to turn it on, or it could be a separate method.",
+    "comments": [
+        {
+            "author": "feitao",
+            "score": "75",
+            "content": "There is reversed(list_object)."
+        },
+        {
+            "author": "commy2",
+            "score": "27",
+            "content": "This is what the builtin reversed() does already, which makes your question similar to asking why len() is a function, not a method. If you're concerned about the complexity of appending to the front of a list, there is always collections.deque. See also itertools.chain: import collections, itertools list_by_necessity = [1, 2, 3] front_items = collections.deque() my_iterable = itertools.chain(front_items, list_by_necessity) front_items.appendleft(-1) front_items.extendleft([-2, -3]) assert list(my_iterable) == [-3, -2, -1, 1, 2, 3]",
+            "replies": [
+                {
+                    "author": "wunderspud7575",
+                    "score": "10",
+                    "content": "your question similar to asking why len() is a function, not a method Actually, I have often wondered what determines whether something is a function and not left for implementation as a method."
+                }
+            ]
+        },
+        {
+            "author": "VivienneNovag",
+            "score": "10",
+            "content": "Thinking about computational time/space complexity is nice and all, but how well does this interact with, for example, predictive loading of cache lines in modern CPUs? What am I doing with the list afterwards, if I'm iterating through every single item then I have done, essentially, the same amount of operations in both cases, the only thing that has changed is when. If I actually need this functionality I can write it in under a minute myself. What if I need to hand the list through an FFI? Now I need to implement this behaviour on the other side of the interface as well."
+        },
+        {
+            "author": "Zealousideal-Fan3033",
+            "score": "41",
+            "content": "Probably cause no one cares about the bigO of list reverse",
+            "replies": [
+                {
+                    "author": "Zealousideal-Fan3033",
+                    "score": "10",
+                    "content": "And if you do, make it yourself. Assuming it even actually works, depends how those negative indices really work."
+                }
+            ]
+        },
+        {
+            "author": "redditusername58",
+            "score": "12",
+            "content": "class ReversedView(Sequence): def __init__(self, sequence): self._value = sequence def __getitem__(self, key): return self._value[len(self._value) - 1 - key] def __len__(self): return len(self._value)",
+            "replies": [
+                {
+                    "author": "AaronOpfer",
+                    "score": "7",
+                    "content": "I believe this is missing support for slices, but is otherwise a sound idea."
+                }
+            ]
+        },
+        {
+            "author": "Skaperen",
+            "score": "5",
+            "content": "make a \"rev\" class (as opposed to a method) that does it. be sure it works correctly on all iterators and sequences. i sometimes do want strings or slices of strings in reverse."
+        },
+        {
+            "author": "nekokattt",
+            "score": "6",
+            "content": "so what reversed(obj) does? See collections.abc.Sequence, where it literally just returns an iterator across the items in reverse order. https://github.com/python/cpython/blob/68e279b37aae3019979a05ca55f462b11aac14be/Lib/_collections_abc.py#L1043 The contract of list.reverse is that it permanently changes the object. It is suitable for long term use of the result. For quick operations, you just use reversed, or work out the indexes yourself via (len - 1 - index) % len if you need indexable access. In a scenario where memory and CPU performance matters, I'd first argue that if this is your bottleneck, then you are likely to hit more in the future and should be considering using c extensions for whatever you are trying to do or use a faster language and runtime to implement your solution into. If you discard that point, then the use of indexes is likely going to be the most performant solution here."
+        }
+    ]
+}
+]
