@@ -157,9 +157,12 @@ class RedditScraper:
                 media_urls.update(img.get_attribute("src") for img in media_images)
             
                 # Find all video elements within the container
-                media_videos = container.find_elements(By.CSS_SELECTOR, 'video source')
+                media_videos = container.find_elements(By.CSS_SELECTOR, 'video')
                 media_urls.update(video.get_attribute("src") for video in media_videos)
             
+                media_and_gifs_palyers = self.driver.find_elements(By.CSS_SELECTOR, 'shreddit-player')
+                media_urls.update(media_and_gifs_palyer.get_attribute("src") for media_and_gifs_palyer in media_and_gifs_palyers)
+
                 # Find all iframe elements within the container
                 media_iframes = container.find_elements(By.CSS_SELECTOR, 'iframe')
                 media_urls.update(iframe.get_attribute("src") for iframe in media_iframes)
@@ -181,6 +184,7 @@ class RedditScraper:
                 media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
                 extract_media_urls(media_container, media_urls)
             except Exception as e:
+                print(f"Error extracting post information: {str(e)}") #-------> For Debugging
                 pass
             
             # Retrieve media URLs (images, videos, iframes) from content element
