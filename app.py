@@ -58,6 +58,7 @@ def initialize_shared_variables(output_path, format_type, subreddit=None, ping_m
                 shared.output_file_path = f"{os.path.splitext(output_path)[0]}.{format_type}"
         else:
             shared.output_file_path = os.path.join(DOWNLOAD_DIRECTORY, f"{subreddit}.{format_type}")
+            shared.format_type = format_type
 
         shared.original_filepath_path = shared.output_file_path
 
@@ -150,6 +151,7 @@ def start_scraping(subreddit, limit=None, categories=["hot", "new", "top"], outp
     DriverUtils.close_existing_chrome_instances()
 
     print("Working....")
+    
     initialize_shared_variables(output_path, format_type, subreddit, ping_mode)
 
     create_threads(subreddit, limit, categories, verbose)
