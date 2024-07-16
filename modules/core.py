@@ -184,7 +184,7 @@ class RedditScraper:
                 media_container = post_element.find_element(By.CSS_SELECTOR, 'div[slot="post-media-container"]')
                 extract_media_urls(media_container, media_urls)
             except Exception as e:
-                print(f"Error extracting post information: {str(e)}") #-------> For Debugging
+                #print(f"Error extracting post information: {str(e)}") #-------> For Debugging
                 pass
             
             # Retrieve media URLs (images, videos, iframes) from content element
