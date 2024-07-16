@@ -73,9 +73,13 @@ class DriverUtils:
             if community_modal:
 
                 # Find the "Yes, Continue" button by its text and click it
-                yes_continue_button = WebDriverWait(driver, 5).until(
-                    EC.element_to_be_clickable((By.XPATH, "//div[@slot='secondaryButton']//span[text()='Yes, Continue']/.."))
+                yes_continue_button = WebDriverWait(driver, 10).until(
+                    EC.any_of(
+                        EC.element_to_be_clickable((By.XPATH, "//div[@slot='secondaryButton']//span[text()='Yes, Continue']/..")),
+                        EC.element_to_be_clickable((By.XPATH, "//div[@slot='secondaryButton']//span[text()='Yes, I'm Over 18']/.."))
+                    )
                 )
+                
                 yes_continue_button.click()
 
         except Exception as e:
